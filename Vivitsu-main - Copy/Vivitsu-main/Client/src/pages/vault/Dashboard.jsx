@@ -39,7 +39,7 @@ export default function VaultDashboard() {
         animate="visible"
       >
         <motion.div variants={itemVariants} className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Savings Vault</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Dashboard</h1>
           <p className="txt-dim">Welcome back! Keep your streak alive ðŸ”¥</p>
         </motion.div>
 

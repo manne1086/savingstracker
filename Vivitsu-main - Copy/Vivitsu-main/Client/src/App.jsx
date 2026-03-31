@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,13 +7,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { VaultProvider } from "./contexts/VaultContext";
 import { WalletProvider } from "./contexts/WalletContext";
 import { ToastProvider } from "./contexts/ToastContext";
+import { isVaultSessionActive } from "./lib/vaultSession";
 
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const VaultLayout = lazy(() => import("./components/VaultLayout"));
-const VaultDashboard = lazy(() => import("./pages/vault/Dashboard"));
-const VaultGoals = lazy(() => import("./pages/vault/Goals"));
-const VaultRewards = lazy(() => import("./pages/vault/Rewards"));
-const VaultProfile = lazy(() => import("./pages/vault/Profile"));
+const VaultScreen = lazy(() => import("./pages/vault/VaultScreen"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
 const queryClient = new QueryClient();
@@ -30,6 +28,14 @@ function AppFallback() {
   );
 }
 
+function LandingRouteGate() {
+  if (isVaultSessionActive()) {
+    return <Navigate to="/vault" replace />;
+  }
+
+  return <LandingPage />;
+}
+
 function App() {
   return (
     <ToastProvider>
@@ -38,13 +44,24 @@ function App() {
           <VaultProvider>
             <Suspense fallback={<AppFallback />}>
               <Routes>
-                <Route path="/" element={<LandingPage />} />
+                <Route path="/" element={<LandingRouteGate />} />
 
                 <Route path="/vault" element={<VaultLayout />}>
-                  <Route index element={<VaultDashboard />} />
-                  <Route path="goals" element={<VaultGoals />} />
-                  <Route path="rewards" element={<VaultRewards />} />
-                  <Route path="profile" element={<VaultProfile />} />
+                  <Route index element={<VaultScreen screenKey="dashboard" />} />
+                  <Route path="dashboard" element={<VaultScreen screenKey="dashboard" />} />
+                  <Route path="deposit" element={<VaultScreen screenKey="deposit" />} />
+                  <Route
+                    path="activity-history"
+                    element={<VaultScreen screenKey="activity-history" />}
+                  />
+                  <Route path="milestones" element={<VaultScreen screenKey="milestones" />} />
+                  <Route path="portfolio" element={<VaultScreen screenKey="portfolio" />} />
+                  <Route
+                    path="insights-analytics"
+                    element={<VaultScreen screenKey="insights-analytics" />}
+                  />
+                  <Route path="vault-status" element={<VaultScreen screenKey="vault-status" />} />
+                  <Route path="settings" element={<VaultScreen screenKey="settings" />} />
                 </Route>
 
                 <Route path="*" element={<PageNotFound />} />

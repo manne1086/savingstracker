@@ -148,7 +148,7 @@ Original source: /Client/public/stitch/vaultsave/legacy_code/Dashboard.html
 </div>
 </div>
 <div class="flex gap-3">
-<button class="crimson-gradient text-on-primary-container px-8 py-4 rounded-2xl font-bold tracking-tight shadow-[0_10px_30px_rgba(224,0,55,0.3)] hover:scale-[1.02] transition-transform flex items-center gap-2">
+<button class="crimson-gradient text-on-primary-container px-8 py-4 rounded-2xl font-bold tracking-tight shadow-[0_10px_30px_rgba(224,0,55,0.3)] hover:scale-[1.02] transition-transform flex items-center gap-2" id="dashboard-deposit-algo-button" type="button">
 <span class="material-symbols-outlined">add_circle</span>
                                     Deposit ALGO
                                 </button>
@@ -294,5 +294,20 @@ Original source: /Client/public/stitch/vaultsave/legacy_code/Dashboard.html
 </div>
 </section>
 </main>
+<script>
+        (function () {
+            const depositButton = document.getElementById("dashboard-deposit-algo-button");
+            if (!depositButton) return;
+
+            depositButton.addEventListener("click", function () {
+                if (window.parent && window.parent !== window) {
+                    window.parent.postMessage(
+                        { type: "vaultsave:navigate", path: "/vault/deposit" },
+                        window.location.origin
+                    );
+                }
+            });
+        })();
+    </script>
 <!-- Contextual FAB (Suppressing as per mandate for detailed dashboard) -->
 </body></html>

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useVault } from "@/contexts/VaultContext";
+import { activateVaultSession } from "@/lib/vaultSession";
 
 function truncateAddress(address) {
   if (!address) {
@@ -18,6 +19,7 @@ function LandingPage() {
   };
 
   const handleLaunchApp = () => {
+    activateVaultSession();
     navigate("/vault");
   };
 

@@ -257,7 +257,7 @@ Original source: /Client/public/stitch/vaultsave/legacy_code/Settings.html
 </div>
 <!-- Footer Section -->
 <div class="pt-12 flex flex-col items-center">
-<button class="flex items-center gap-2 text-error font-bold opacity-60 hover:opacity-100 transition-opacity mb-8">
+<button class="flex items-center gap-2 text-error font-bold opacity-60 hover:opacity-100 transition-opacity mb-8" id="terminate-session-link" type="button">
 <span class="material-symbols-outlined">logout</span>
                         Terminate Session
                     </button>
@@ -268,6 +268,21 @@ Original source: /Client/public/stitch/vaultsave/legacy_code/Settings.html
 </div>
 </div>
 </div>
+<script>
+    (function () {
+      const terminateButton = document.getElementById("terminate-session-link");
+      if (!terminateButton) return;
+
+      terminateButton.addEventListener("click", function () {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage(
+            { type: "vaultsave:terminate-session" },
+            window.location.origin
+          );
+        }
+      });
+    })();
+  </script>
 <!-- Background Decoration -->
 <div class="fixed top-0 right-0 w-[500px] h-[500px] bg-primary-container/5 rounded-full blur-[120px] pointer-events-none -z-10 translate-x-1/2 -translate-y-1/2"></div>
 </main>
