@@ -1,4 +1,5 @@
 import logging
+import os
 
 import algokit_utils
 
@@ -7,16 +8,24 @@ logger = logging.getLogger(__name__)
 
 # define deployment behaviour based on supplied app spec
 def deploy() -> None:
-    from smart_contracts.artifacts.savings_wallet.savings_wallet_client import (
-        HelloArgs,
-        SavingsWalletFactory,
+    from smart_contracts.artifacts.savings_wallet.savings_vault_client import (
+        SavingsVaultFactory,
     )
 
     algorand = algokit_utils.AlgorandClient.from_environment()
-    deployer_ = algorand.account.from_environment("DEPLOYER")
+    
+    # Try to get deployer from environment, fallback to KMD for localnet
+    try:
+        deployer_ = algorand.account.from_environment("DEPLOYER")
+    except Exception as e:
+        logger.warning(f"Could not load DEPLOYER from environment: {e}")
+        logger.info("Attempting to use KMD default account for localnet")
+        # Use KMD provider for localnet
+        deployer_ = algorand.account.get_dispenser()
+        logger.info(f"Using KMD dispenser account: {deployer_.address}")
 
     factory = algorand.client.get_typed_app_factory(
-        SavingsWalletFactory, default_sender=deployer_.address
+        SavingsVaultFactory, default_sender=deployer_.address
     )
 
     app_client, result = factory.deploy(
@@ -36,9 +45,9 @@ def deploy() -> None:
             )
         )
 
-    name = "world"
-    response = app_client.send.hello(args=HelloArgs(name=name))
     logger.info(
-        f"Called hello on {app_client.app_name} ({app_client.app_id}) "
-        f"with name={name}, received: {response.abi_return}"
+        "Deployed %s (%s) via %s",
+        app_client.app_name,
+        app_client.app_id,
+        result.operation_performed,
     )

@@ -7,15 +7,27 @@ export const DepositModal = ({
   isOpen = false, 
   onClose = () => {},
 }) => {
-  const { address, isConnected, isConnecting, connect, depositALGO, error: walletError } = useWallet();
+  const {
+    address,
+    isConnected,
+    isConnecting,
+    connect,
+    depositALGO,
+    optInVault,
+    vaultData,
+    error: walletError,
+  } = useWallet();
   
   const [amount, setAmount] = useState("");
   const [selectedQuick, setSelectedQuick] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [pendingAction, setPendingAction] = useState(null);
   const [status, setStatus] = useState(null); // "success", "error", or null
   const [errorMessage, setErrorMessage] = useState(null);
+  const [statusMessage, setStatusMessage] = useState(null);
 
   const quickAmounts = [1, 5, 10, 50];
+  const isVaultActivated = Boolean(vaultData?.isOptedIn);
+  const isLoading = pendingAction !== null;
 
   useEffect(() => {
     // Close on Escape key
@@ -44,9 +56,37 @@ export const DepositModal = ({
   const handleConnectWallet = async () => {
     try {
       setErrorMessage(null);
+      setStatus(null);
+      setStatusMessage(null);
       await connect();
     } catch (err) {
       setErrorMessage(err instanceof Error ? err.message : "Failed to connect wallet");
+    }
+  };
+
+  const handleActivateVault = async () => {
+    if (!isConnected) {
+      setErrorMessage("Please connect your wallet first");
+      return;
+    }
+
+    setPendingAction("activate");
+    setErrorMessage(null);
+    setStatus(null);
+    setStatusMessage("Approve the vault activation in Pera. This is a one-time step.");
+
+    try {
+      await optInVault();
+      setStatus("success");
+      setStatusMessage("Vault activated. You can make your first deposit now.");
+    } catch (error) {
+      const errMsg =
+        error instanceof Error ? error.message : "Vault activation failed";
+      setErrorMessage(errMsg);
+      setStatus("error");
+      setStatusMessage(null);
+    } finally {
+      setPendingAction(null);
     }
   };
 
@@ -61,27 +101,37 @@ export const DepositModal = ({
       return;
     }
 
-    setIsLoading(true);
+    if (!isVaultActivated) {
+      setErrorMessage("Activate your vault in Pera before depositing.");
+      return;
+    }
+
+    setPendingAction("deposit");
     setErrorMessage(null);
+    setStatus(null);
+    setStatusMessage("Approve the deposit in Pera to submit it to TestNet.");
     
     try {
       const txnId = await depositALGO(parseFloat(amount));
       console.log("Deposit successful:", txnId);
       setStatus("success");
+      setStatusMessage("Deposit submitted to TestNet.");
       
       setTimeout(() => {
         setAmount("");
         setSelectedQuick(null);
         setStatus(null);
         setErrorMessage(null);
+        setStatusMessage(null);
         onClose();
       }, 2000);
     } catch (error) {
       const errMsg = error instanceof Error ? error.message : "Deposit failed";
       setErrorMessage(errMsg);
       setStatus("error");
+      setStatusMessage(null);
     } finally {
-      setIsLoading(false);
+      setPendingAction(null);
     }
   };
 
@@ -91,7 +141,7 @@ export const DepositModal = ({
         <>
           {/* Overlay */}
           <motion.div
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -100,12 +150,18 @@ export const DepositModal = ({
 
           {/* Modal */}
           <motion.div
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm z-50"
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.95, opacity: 0 }}
-            transition={{ type: "spring", damping: 20 }}
+            className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
+            <motion.div
+              className="w-full max-w-sm pointer-events-auto"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", damping: 20 }}
+            >
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
@@ -210,6 +266,37 @@ export const DepositModal = ({
                   </motion.button>
                 )}
 
+                {isConnected && !isVaultActivated && (
+                  <motion.div
+                    className="p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 space-y-3"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                  >
+                    <div>
+                      <p className="text-sm font-semibold text-amber-800 dark:text-amber-200">
+                        Activate your vault
+                      </p>
+                      <p className="text-xs text-amber-700 dark:text-amber-300">
+                        Your wallet is connected, but it has not opted into the Savings Vault app yet.
+                        Approve this one-time activation in Pera before your first deposit.
+                      </p>
+                    </div>
+                    <motion.button
+                      onClick={handleActivateVault}
+                      disabled={isLoading}
+                      className={`w-full py-2 px-4 rounded-lg font-semibold text-sm transition-colors ${
+                        isLoading
+                          ? "bg-amber-200 dark:bg-amber-800 text-amber-500 dark:text-amber-300 cursor-not-allowed"
+                          : "bg-amber-500 hover:bg-amber-600 text-white"
+                      }`}
+                      whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                      whileTap={{ scale: isLoading ? 1 : 0.98 }}
+                    >
+                      {pendingAction === "activate" ? "Waiting For Pera..." : "Activate Vault"}
+                    </motion.button>
+                  </motion.div>
+                )}
+
                 {/* Error messages */}
                 {(errorMessage || walletError) && (
                   <motion.div
@@ -220,6 +307,18 @@ export const DepositModal = ({
                     <AlertCircle className="w-4 h-4 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
                     <span className="text-sm font-medium text-red-700 dark:text-red-300">
                       {errorMessage || walletError}
+                    </span>
+                  </motion.div>
+                )}
+
+                {statusMessage && status !== "error" && (
+                  <motion.div
+                    className="p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                  >
+                    <span className="text-sm font-medium text-blue-700 dark:text-blue-300">
+                      {statusMessage}
                     </span>
                   </motion.div>
                 )}
@@ -257,12 +356,13 @@ export const DepositModal = ({
                     flex-1 py-2 px-4 rounded-lg font-semibold transition-all
                     ${
                       isLoading || !isConnected || !amount || parseFloat(amount) <= 0
+                        || !isVaultActivated
                         ? "bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed"
                         : "bg-red-500 hover:bg-red-600 text-white"
                     }
                   `}
-                  whileHover={{ scale: (isLoading || !isConnected || !amount || parseFloat(amount) <= 0) ? 1 : 1.02 }}
-                  whileTap={{ scale: (isLoading || !isConnected || !amount || parseFloat(amount) <= 0) ? 1 : 0.98 }}
+                  whileHover={{ scale: (isLoading || !isConnected || !amount || parseFloat(amount) <= 0 || !isVaultActivated) ? 1 : 1.02 }}
+                  whileTap={{ scale: (isLoading || !isConnected || !amount || parseFloat(amount) <= 0 || !isVaultActivated) ? 1 : 0.98 }}
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center gap-2">
@@ -271,7 +371,7 @@ export const DepositModal = ({
                         animate={{ rotate: 360 }}
                         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                       />
-                      Processing...
+                      {pendingAction === "activate" ? "Activating..." : "Processing..."}
                     </div>
                   ) : (
                     "Confirm Deposit"
@@ -279,6 +379,7 @@ export const DepositModal = ({
                 </motion.button>
               </div>
             </div>
+            </motion.div>
           </motion.div>
         </>
       )}

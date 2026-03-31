@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VaultSave | Activity History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffb3b3",
+                        "tertiary-container": "#706f6f",
+                        "surface-tint": "#ffb3b3",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#e4beba",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#ffb3ac",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary": "#313030",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#680014",
+                        "on-primary-fixed-variant": "#920021",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#fff2f1",
+                        "on-primary-fixed": "#400009",
+                        "on-secondary-container": "#ffaea6",
+                        "on-secondary-fixed": "#410003",
+                        "on-error": "#690005",
+                        "surface-variant": "#353534",
+                        "primary-fixed-dim": "#ffb3b3",
+                        "outline": "#ab8985",
+                        "on-secondary-fixed-variant": "#930010",
+                        "secondary-container": "#a40213",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#e00037",
+                        "tertiary": "#c8c6c5",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "outline-variant": "#5b403d",
+                        "on-secondary": "#680008",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-container": "#f7f3f3",
+                        "surface-container": "#201f1f",
+                        "primary-fixed": "#ffdad9",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#bf002e",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#ffb3ac",
+                        "on-background": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .crimson-gradient {
+            background: linear-gradient(135deg, #e00037 0%, #920021 100%);
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 flex-col fixed left-0 top-0 bg-[#131313] dark:bg-[#131313] shadow-[20px_0px_40px_rgba(224,0,55,0.05)] z-50 hidden md:flex">
+<div class="flex flex-col h-full py-8 px-6">
+<!-- Brand Anchor -->
+<div class="flex items-center gap-3 mb-12 px-2">
+<div class="w-10 h-10 rounded-xl crimson-gradient flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#e5e2e1] font-headline">VaultSave</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] opacity-40 font-bold">The Redacted Vault</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+                    Portfolio
+                </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    Deposit
+                </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+                    Milestones
+                </a>
+<!-- Active Tab: Activity -->
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] text-sm tracking-tight text-[#ffb3b3] font-bold border-r-2 border-[#e00037] bg-gradient-to-r from-[#e0003710] to-transparent transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                    Activity
+                </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+                    Insights
+                </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="enhanced_encryption">enhanced_encryption</span>
+                    Vault Status
+                </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+</nav>
+<!-- Wallet Connect / Footer -->
+<div class="mt-auto pt-8 border-t border-[#e0003715] space-y-4">
+<button class="w-full crimson-gradient text-on-primary-container font-headline font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 scale-95 active:scale-90 transition-transform">
+                    Connect Wallet
+                </button>
+<div class="space-y-1">
+<a class="flex items-center gap-4 py-2 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                        Support
+                    </a>
+<a class="flex items-center gap-4 py-2 px-4 rounded-xl font-['Manrope'] font-medium text-sm tracking-tight text-[#e5e2e1] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                        Logout
+                    </a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-64 min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 w-full md:w-[calc(100%-16rem)] z-40 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center h-20 px-6 md:px-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#e00037] md:hidden">menu</span>
+<h2 class="font-['Manrope'] font-semibold text-lg text-[#ffb3b3]">Activity Log</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full border border-outline-variant/20 text-label-sm font-bold tracking-widest text-primary">
+<div class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#e00037]"></div>
+                    CONNECTED
+                </div>
+<div class="flex items-center gap-4 text-[#e5e2e1]">
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="pt-28 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Page Header & Stats -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+<div>
+<h1 class="font-headline font-extrabold text-[3.5rem] leading-none tracking-tight mb-4 text-[#e5e2e1]">
+                        Vault <span class="text-primary-container">History</span>
+</h1>
+<p class="font-body text-on-surface-variant max-w-md">
+                        Review your cryptographic footprints. Every deposit, withdrawal, and contract interaction is logged within the obsidian ledger.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl min-w-[180px] shadow-sm">
+<p class="text-label-sm opacity-40 font-bold uppercase tracking-widest mb-1">Total Transactions</p>
+<p class="text-2xl font-headline font-bold text-primary">1,284</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl min-w-[180px] shadow-sm">
+<p class="text-label-sm opacity-40 font-bold uppercase tracking-widest mb-1">Volume (30D)</p>
+<p class="text-2xl font-headline font-bold text-on-surface">42.5k <span class="text-sm opacity-60">ALGO</span></p>
+</div>
+</div>
+</div>
+<!-- Filter & Search Bar Section -->
+<div class="bg-surface-container-low rounded-2xl p-4 mb-8 flex flex-col lg:flex-row items-center gap-6">
+<div class="relative w-full lg:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by transaction hash..." type="text"/>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest p-1 rounded-xl w-full lg:w-auto">
+<button class="px-6 py-2 rounded-lg text-sm font-bold bg-primary-container text-on-primary-container shadow-lg transition-all">All</button>
+<button class="px-6 py-2 rounded-lg text-sm font-medium text-on-surface opacity-60 hover:opacity-100 transition-all">Deposits</button>
+<button class="px-6 py-2 rounded-lg text-sm font-medium text-on-surface opacity-60 hover:opacity-100 transition-all">Recent</button>
+<button class="px-6 py-2 rounded-lg text-sm font-medium text-on-surface opacity-60 hover:opacity-100 transition-all">Successful</button>
+</div>
+<button class="ml-auto flex items-center gap-2 px-6 py-3 rounded-xl border border-outline-variant/20 text-sm font-medium hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                    Advanced Filters
+                </button>
+</div>
+<!-- Transaction Table -->
+<div class="bg-surface-container rounded-2xl overflow-hidden shadow-2xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/50 text-label-sm font-bold uppercase tracking-[0.15em] text-on-surface-variant">
+<th class="px-8 py-6">Date / Time</th>
+<th class="px-8 py-6">Transaction Ref</th>
+<th class="px-8 py-6">Amount (ALGO)</th>
+<th class="px-8 py-6">Status</th>
+<th class="px-8 py-6 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Oct 24, 2023</span>
+<span class="text-xs opacity-40">14:22:10 UTC</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2 font-mono text-sm text-primary/80">
+<span>0x7a25...f92b</span>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">arrow_downward</span>
+<span class="font-headline font-bold text-lg">+1,250.00</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-[10px] font-extrabold uppercase tracking-widest text-primary-container">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></div>
+                                        Successful
+                                    </div>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined opacity-40 group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Oct 23, 2023</span>
+<span class="text-xs opacity-40">09:12:45 UTC</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2 font-mono text-sm text-primary/80">
+<span>0x3b1c...a12e</span>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">arrow_downward</span>
+<span class="font-headline font-bold text-lg">+800.50</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-[10px] font-extrabold uppercase tracking-widest text-primary-container">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+                                        Successful
+                                    </div>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined opacity-40 group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Oct 23, 2023</span>
+<span class="text-xs opacity-40">08:05:12 UTC</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2 font-mono text-sm text-primary/80">
+<span>0x9d4e...e001</span>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">arrow_downward</span>
+<span class="font-headline font-bold text-lg">+12,000.00</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/30 text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">
+<div class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></div>
+                                        Pending
+                                    </div>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined opacity-40 group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Oct 21, 2023</span>
+<span class="text-xs opacity-40">22:40:01 UTC</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2 font-mono text-sm text-primary/80">
+<span>0x12ff...99cc</span>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">arrow_downward</span>
+<span class="font-headline font-bold text-lg">+450.00</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-[10px] font-extrabold uppercase tracking-widest text-primary-container">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+                                        Successful
+                                    </div>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined opacity-40 group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors cursor-pointer group">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Oct 19, 2023</span>
+<span class="text-xs opacity-40">11:15:33 UTC</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2 font-mono text-sm text-primary/80">
+<span>0x88e2...d2a1</span>
+<span class="material-symbols-outlined text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">arrow_downward</span>
+<span class="font-headline font-bold text-lg">+3,200.00</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-[10px] font-extrabold uppercase tracking-widest text-primary-container">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+                                        Successful
+                                    </div>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined opacity-40 group-hover:text-primary transition-colors" data-icon="open_in_new">open_in_new</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Shell -->
+<div class="px-8 py-6 bg-surface-container-low/50 flex items-center justify-between border-t border-outline-variant/10">
+<p class="text-sm opacity-40">Showing <span class="text-on-surface font-bold">1 - 5</span> of <span class="text-on-surface font-bold">1,284</span></p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-outline-variant/10 flex items-center justify-center opacity-40 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-xl crimson-gradient text-on-primary-container font-bold text-sm">1</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-outline-variant/10 flex items-center justify-center font-medium hover:bg-surface-container transition-all">2</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-outline-variant/10 flex items-center justify-center font-medium hover:bg-surface-container transition-all">3</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-outline-variant/10 flex items-center justify-center font-medium hover:bg-surface-container transition-all">...</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-outline-variant/10 flex items-center justify-center font-medium hover:bg-surface-container transition-all">257</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-lowest border border-outline-variant/10 flex items-center justify-center opacity-40 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Grid - Supplementary Insights -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Insight 1 -->
+<div class="md:col-span-2 glass-panel p-8 rounded-3xl relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl group-hover:bg-primary-container/20 transition-all duration-700"></div>
+<h3 class="font-headline text-2xl font-bold mb-4">Transaction Density</h3>
+<p class="text-on-surface-variant mb-6 max-w-sm">Your activity peaked during the last governance period. Secure your rewards before the next cycle begins.</p>
+<div class="flex items-end gap-1 h-24">
+<div class="flex-1 bg-primary-container/20 rounded-t-md h-12"></div>
+<div class="flex-1 bg-primary-container/40 rounded-t-md h-20"></div>
+<div class="flex-1 bg-primary-container/20 rounded-t-md h-8"></div>
+<div class="flex-1 bg-primary-container/60 rounded-t-md h-24"></div>
+<div class="flex-1 bg-primary-container/10 rounded-t-md h-4"></div>
+<div class="flex-1 bg-primary-container/30 rounded-t-md h-16"></div>
+<div class="flex-1 bg-primary-container/80 rounded-t-md h-28"></div>
+<div class="flex-1 bg-primary-container/20 rounded-t-md h-10"></div>
+</div>
+</div>
+<!-- Insight 2 -->
+<div class="bg-surface-container-low p-8 rounded-3xl flex flex-col justify-between border border-outline-variant/5">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2">Vault Audit</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">No unauthorized attempts detected in the last 180 days. Your encryption remains uncompromised.</p>
+</div>
+<button class="mt-6 text-primary font-bold text-sm flex items-center gap-2 hover:translate-x-1 transition-transform">
+                        Review Security Log <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#131313]/90 backdrop-blur-xl px-6 py-4 flex justify-between items-center z-50">
+<span class="material-symbols-outlined opacity-40" data-icon="dashboard">dashboard</span>
+<span class="material-symbols-outlined opacity-40" data-icon="account_balance_wallet">account_balance_wallet</span>
+<div class="w-14 h-14 -mt-10 rounded-full crimson-gradient flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-white" data-icon="add">add</span>
+</div>
+<span class="material-symbols-outlined text-primary font-bold" data-icon="history">history</span>
+<span class="material-symbols-outlined opacity-40" data-icon="settings">settings</span>
+</nav>
+</body></html>

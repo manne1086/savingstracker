@@ -9,7 +9,7 @@ import DepositModal from "@/components/vault/DepositModal";
 import { levelNames } from "@/mock/data";
 
 export default function VaultDashboard() {
-  const { user, walletConnected, makeDeposit } = useVault();
+  const { user } = useVault();
   const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
 
   const percentage = (user.totalSaved / user.goal) * 100;
@@ -31,20 +31,18 @@ export default function VaultDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-primary txt pb-24 md:pb-8">
+    <div className="min-h-screen bg-transparent txt pb-24 md:pb-8">
       <motion.div
         className="max-w-4xl mx-auto px-4 py-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Page header */}
         <motion.div variants={itemVariants} className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Savings Vault</h1>
-          <p className="txt-dim">Welcome back! Keep your streak alive 🔥</p>
+          <p className="txt-dim">Welcome back! Keep your streak alive ðŸ”¥</p>
         </motion.div>
 
-        {/* Circular progress (main focus) */}
         <motion.div
           variants={itemVariants}
           className="flex justify-center mb-8"
@@ -58,7 +56,6 @@ export default function VaultDashboard() {
           />
         </motion.div>
 
-        {/* Goal info card */}
         <motion.div
           variants={itemVariants}
           className="p-6 mb-6 rounded-lg bg-sec border border-[var(--border)]"
@@ -72,7 +69,7 @@ export default function VaultDashboard() {
                   : "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200"
               }`}
             >
-              {isOnTrack ? "✓ On Track" : "⚠️ Catch Up"}
+              {isOnTrack ? "âœ“ On Track" : "âš ï¸ Catch Up"}
             </span>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -89,7 +86,6 @@ export default function VaultDashboard() {
           </div>
         </motion.div>
 
-        {/* Daily save CTA */}
         <motion.div
           variants={itemVariants}
           className={`p-6 mb-6 rounded-lg border-2 transition-all ${
@@ -102,8 +98,8 @@ export default function VaultDashboard() {
             <div>
               <h3 className="font-semibold mb-1">
                 {user.dailySavedToday
-                  ? "✅ You saved today!"
-                  : "💰 Daily Save"}
+                  ? "âœ… You saved today!"
+                  : "ðŸ’° Daily Save"}
               </h3>
               <p className="text-sm txt-dim">
                 {user.dailySavedToday
@@ -124,9 +120,7 @@ export default function VaultDashboard() {
           </div>
         </motion.div>
 
-        {/* Stats grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {/* Streak Card */}
           <motion.div variants={itemVariants}>
             <StreakCard
               streak={user.streak}
@@ -135,7 +129,6 @@ export default function VaultDashboard() {
             />
           </motion.div>
 
-          {/* XP Progress */}
           <motion.div variants={itemVariants}>
             <XPProgressBar
               currentXP={user.xp}
@@ -146,22 +139,14 @@ export default function VaultDashboard() {
           </motion.div>
         </div>
 
-        {/* Future Self Card */}
         <motion.div variants={itemVariants}>
           <FutureSelfCard />
         </motion.div>
       </motion.div>
 
-      {/* Deposit Modal */}
       <DepositModal
         isOpen={isDepositModalOpen}
         onClose={() => setIsDepositModalOpen(false)}
-        onConfirm={async (amount) => {
-          await makeDeposit(amount);
-        }}
-        walletConnected={walletConnected}
-        walletAddress={user.address}
-        walletBalance={50000}
       />
     </div>
   );

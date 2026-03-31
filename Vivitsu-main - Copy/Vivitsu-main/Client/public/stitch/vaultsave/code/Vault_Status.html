@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vault Status | VaultSave</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode:"class",
+            theme: {
+                extend: {
+                    colors: {"primary":"#ffb3b3","tertiary-container":"#706f6f","surface-tint":"#ffb3b3","on-error-container":"#ffdad6","error-container":"#93000a","on-surface-variant":"#e4beba","inverse-on-surface":"#313030","surface-container-high":"#2a2a2a","secondary":"#ffb3ac","surface-container-lowest":"#0e0e0e","on-tertiary":"#313030","tertiary-fixed":"#e5e2e1","surface":"#131313","on-tertiary-fixed":"#1c1b1b","on-primary":"#680014","on-primary-fixed-variant":"#920021","error":"#ffb4ab","on-primary-container":"#fff2f1","on-primary-fixed":"#400009","on-secondary-container":"#ffaea6","on-secondary-fixed":"#410003","on-error":"#690005","surface-variant":"#353534","primary-fixed-dim":"#ffb3b3","outline":"#ab8985","on-secondary-fixed-variant":"#930010","secondary-container":"#a40213","background":"#131313","surface-container-highest":"#353534","primary-container":"#e00037","tertiary":"#c8c6c5","surface-dim":"#131313","surface-bright":"#3a3939","secondary-fixed":"#ffdad6","on-tertiary-fixed-variant":"#474646","outline-variant":"#5b403d","on-secondary":"#680008","inverse-surface":"#e5e2e1","on-tertiary-container":"#f7f3f3","surface-container":"#201f1f","primary-fixed":"#ffdad9","tertiary-fixed-dim":"#c8c6c5","inverse-primary":"#bf002e","on-surface":"#e5e2e1","surface-container-low":"#1c1b1b","secondary-fixed-dim":"#ffb3ac","on-background":"#e5e2e1"
+                    },
+                    fontFamily: {"headline": ["Manrope"],"body": ["Inter"],"label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-red-gradient {
+            background: radial-gradient(circle at top left, #e00037, #920021);
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!--
+LEGACY SIDEBAR MARKUP RETAINED (commented out).
+Original source: /Client/public/stitch/vaultsave/legacy_code/Vault_Status.html
+
+<!- - SideNavBar (Shared Component) - ->
+<aside class="h-screen w-64 flex-col fixed left-0 top-0 bg-[#131313] dark:bg-[#131313] shadow-[20px_0px_40px_rgba(224,0,55,0.05)] z-50 md:flex hidden">
+<div class="flex flex-col h-full py-8 px-6">
+<div class="mb-10 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#e5e2e1] font-headline">VaultSave</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold opacity-70">The Redacted Vault</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!- - Dashboard - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!- - Portfolio - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+<span>Portfolio</span>
+</a>
+<!- - Deposit - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Deposit</span>
+</a>
+<!- - Milestones - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">stars</span>
+<span>Milestones</span>
+</a>
+<!- - Activity - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">history</span>
+<span>Activity</span>
+</a>
+<!- - Insights - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">query_stats</span>
+<span>Insights</span>
+</a>
+<!- - Vault Status (ACTIVE) - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#ffb3b3] font-bold border-r-2 border-[#e00037] bg-gradient-to-r from-[#e0003710] to-transparent font-['Manrope'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+<span>Vault Status</span>
+</a>
+<!- - Settings - ->
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 pt-6 border-t border-outline-variant/10">
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</aside>
+-->
+
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 w-full z-40 bg-[#131313]/60 backdrop-blur-xl h-20 px-6 md:px-10 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<h2 class="text-[#ffb3b3] font-['Manrope'] font-semibold text-lg md:text-xl">System Integrity</h2>
+<div class="hidden md:flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#ffb3b3]"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface/60">Mainnet Live</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center gap-4">
+<button class="text-[#e5e2e1] hover:text-[#ffb3b3] transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="text-[#e5e2e1] hover:text-[#ffb3b3] transition-colors" onclick="window.top.location.href='/dashboard'"><span class="material-symbols-outlined">account_circle</span></button>
+</div>
+<button class="bg-red-gradient text-on-primary-container px-6 py-2.5 rounded-full font-headline font-bold text-sm shadow-lg shadow-primary-container/20 active:scale-95 transition-transform">
+                Wallet Connected
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-28 pb-12 px-6 md:pl-[18rem] md:pr-10 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Page Header Asymmetry -->
+<div class="mb-12">
+<h1 class="font-headline font-extrabold text-4xl md:text-5xl lg:text-6xl text-on-surface tracking-tighter mb-4 ml-[-2px]">
+                    Vault <span class="text-primary-container">Status</span>
+</h1>
+<p class="max-w-2xl text-on-surface/60 font-body leading-relaxed text-lg">
+                    Real-time diagnostic overview of your secure enclave. 
+                    Monitor on-chain synchronization, cryptographic integrity, and local state validation.
+                </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- System Health Large Card -->
+<div class="md:col-span-2 lg:col-span-2 row-span-2 bg-surface-container rounded-3xl p-8 flex flex-col justify-between border border-outline-variant/5 shadow-2xl relative overflow-hidden group">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-primary-container/5 rounded-full blur-3xl group-hover:bg-primary-container/10 transition-all"></div>
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="label-sm bg-primary-container/10 text-primary-container px-3 py-1 rounded-full font-bold uppercase tracking-widest text-[10px]">Security Engine</span>
+<span class="text-on-surface/40 text-sm font-medium">Uptime: 99.99%</span>
+</div>
+<h3 class="font-headline font-bold text-3xl text-on-surface mb-4">Core System Health</h3>
+<p class="text-on-surface/60 text-sm leading-relaxed mb-8">
+                            Your vault is currently operating under high-security protocols. All cryptographic primitives are validated and the hardware-level isolation is intact.
+                        </p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-on-surface/80">Last Sync Successful</span>
+<span class="text-sm font-mono text-primary">2023-11-24 14:02:11 UTC</span>
+</div>
+<button class="w-full bg-surface-container-highest/50 hover:bg-surface-container-highest border border-outline-variant/20 text-on-surface py-4 rounded-2xl font-headline font-bold flex items-center justify-center gap-3 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-primary">sync</span>
+                            Sync Now
+                        </button>
+</div>
+</div>
+<!-- Status Indicator Cards -->
+<div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/5 flex flex-col items-center justify-center text-center group hover:bg-surface-container-high transition-colors">
+<div class="w-14 h-14 rounded-full bg-primary-container/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<span class="text-xs font-bold text-on-surface/40 uppercase tracking-tighter mb-1">Network</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">Wallet Connected</h4>
+<div class="mt-3 flex items-center gap-1.5 px-3 py-1 bg-green-500/10 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold text-green-500 uppercase">Secure</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/5 flex flex-col items-center justify-center text-center group hover:bg-surface-container-high transition-colors">
+<div class="w-14 h-14 rounded-full bg-primary-container/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<span class="text-xs font-bold text-on-surface/40 uppercase tracking-tighter mb-1">Encryption</span>
+<h4 class="font-headline font-bold text-lg text-on-surface">Vault Active</h4>
+<div class="mt-3 flex items-center gap-1.5 px-3 py-1 bg-green-500/10 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold text-green-500 uppercase">Operational</span>
+</div>
+</div>
+<!-- Secondary Row Cards -->
+<div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">database</span>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Local State Synced</h4>
+</div>
+<p class="text-on-surface/50 text-xs leading-relaxed">
+                        Local cache is aligned with on-chain merkle roots. 0 blocks behind.
+                    </p>
+</div>
+<div class="bg-surface-container rounded-3xl p-6 border border-outline-variant/5 group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">gavel</span>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Global Rules Loaded</h4>
+</div>
+<p class="text-on-surface/50 text-xs leading-relaxed">
+                        Protocol governance parameters and vault-specific rules are active.
+                    </p>
+</div>
+<!-- Full Width Status Log -->
+<div class="md:col-span-3 lg:col-span-4 bg-surface-container-lowest rounded-3xl p-8 border border-outline-variant/5">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+<div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-1">System Audit Log</h3>
+<p class="text-on-surface/40 text-sm">Real-time trace of protocol interactions</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container rounded-2xl px-4 py-2 border border-outline-variant/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-on-surface/30 w-32 md:w-48" placeholder="Filter logs..." type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Log Item 1 -->
+<div class="flex items-start gap-6 p-4 rounded-2xl hover:bg-surface-container transition-colors group">
+<span class="font-mono text-[10px] text-on-surface/30 mt-1 whitespace-nowrap">14:02:11</span>
+<div class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+<div class="flex-1">
+<p class="text-sm font-medium text-on-surface group-hover:text-primary transition-colors">Smart Contract Healthy</p>
+<p class="text-xs text-on-surface/50 mt-1">Consistency check performed on contract 0x71C...3e92. All state variables consistent with cryptographic proofs.</p>
+</div>
+<span class="text-[10px] font-bold text-on-surface/20 uppercase tracking-widest hidden sm:block">Verified</span>
+</div>
+<!-- Log Item 2 -->
+<div class="flex items-start gap-6 p-4 rounded-2xl hover:bg-surface-container transition-colors group">
+<span class="font-mono text-[10px] text-on-surface/30 mt-1 whitespace-nowrap">13:45:04</span>
+<div class="w-2 h-2 rounded-full bg-primary/40 mt-2 flex-shrink-0"></div>
+<div class="flex-1">
+<p class="text-sm font-medium text-on-surface group-hover:text-primary transition-colors">New Global Rule Propagated</p>
+<p class="text-xs text-on-surface/50 mt-1">Updated Withdrawal_Latency parameter from 24h to 12h as per DAO Proposal #142.</p>
+</div>
+<span class="text-[10px] font-bold text-on-surface/20 uppercase tracking-widest hidden sm:block">Protocol</span>
+</div>
+<!-- Log Item 3 -->
+<div class="flex items-start gap-6 p-4 rounded-2xl hover:bg-surface-container transition-colors group">
+<span class="font-mono text-[10px] text-on-surface/30 mt-1 whitespace-nowrap">12:10:59</span>
+<div class="w-2 h-2 rounded-full bg-primary/40 mt-2 flex-shrink-0"></div>
+<div class="flex-1">
+<p class="text-sm font-medium text-on-surface group-hover:text-primary transition-colors">Heartbeat Beacon Sent</p>
+<p class="text-xs text-on-surface/50 mt-1">Automatic keep-alive signal dispatched to regional validators. Response time: 42ms.</p>
+</div>
+<span class="text-[10px] font-bold text-on-surface/20 uppercase tracking-widest hidden sm:block">Network</span>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 text-center">
+<button class="text-primary hover:text-primary-container font-headline font-bold text-sm tracking-tight transition-colors">
+                            View Full Technical Audit Trail
+                        </button>
+</div>
+</div>
+<!-- Technical Microcopy Panel -->
+<div class="md:col-span-3 lg:col-span-4 glass-panel rounded-3xl p-10 mt-6 relative overflow-hidden border border-primary-container/10">
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+<div class="w-full md:w-1/3">
+<div class="aspect-square bg-surface-container-highest rounded-full flex items-center justify-center relative">
+<div class="absolute inset-0 bg-primary-container/5 rounded-full animate-pulse"></div>
+<span class="material-symbols-outlined text-6xl text-primary-container" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+</div>
+<div class="flex-1">
+<h2 class="font-headline font-bold text-2xl text-on-surface mb-6">Synchronization Protocol</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-2">
+<h5 class="text-xs font-bold text-primary uppercase tracking-widest">On-Chain Consensus</h5>
+<p class="text-sm text-on-surface/60 leading-relaxed">
+                                        VaultSave utilizes a decentralized proof-of-state mechanism. Your local vault environment verifies every transaction against a rolling hash of the global ledger before execution.
+                                    </p>
+</div>
+<div class="space-y-2">
+<h5 class="text-xs font-bold text-primary uppercase tracking-widest">Self-Healing Logic</h5>
+<p class="text-sm text-on-surface/60 leading-relaxed">
+                                        If a discrepancy is detected between local state and global rules, the"Sync Now" protocol forces a complete re-validation of the Merkle tree to ensure absolute integrity.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary-container/10 rounded-full blur-[100px]"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile BottomNavBar (Shared Component Pivot) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-[#131313]/90 backdrop-blur-xl z-50 px-4 py-3 flex justify-around items-center border-t border-outline-variant/5">
+<a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Dash</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold">Assets</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+<span class="text-[10px] font-bold">Status</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Config</span>
+</a>
+</div>
+</body></html>

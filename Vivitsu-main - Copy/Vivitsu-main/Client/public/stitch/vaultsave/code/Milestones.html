@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode:"class",
+      theme: {
+        extend: {
+          colors: {"primary":"#ffb3b3","tertiary-container":"#706f6f","surface-tint":"#ffb3b3","on-error-container":"#ffdad6","error-container":"#93000a","on-surface-variant":"#e4beba","inverse-on-surface":"#313030","surface-container-high":"#2a2a2a","secondary":"#ffb3ac","surface-container-lowest":"#0e0e0e","on-tertiary":"#313030","tertiary-fixed":"#e5e2e1","surface":"#131313","on-tertiary-fixed":"#1c1b1b","on-primary":"#680014","on-primary-fixed-variant":"#920021","error":"#ffb4ab","on-primary-container":"#fff2f1","on-primary-fixed":"#400009","on-secondary-container":"#ffaea6","on-secondary-fixed":"#410003","on-error":"#690005","surface-variant":"#353534","primary-fixed-dim":"#ffb3b3","outline":"#ab8985","on-secondary-fixed-variant":"#930010","secondary-container":"#a40213","background":"#131313","surface-container-highest":"#353534","primary-container":"#e00037","tertiary":"#c8c6c5","surface-dim":"#131313","surface-bright":"#3a3939","secondary-fixed":"#ffdad6","on-tertiary-fixed-variant":"#474646","outline-variant":"#5b403d","on-secondary":"#680008","inverse-surface":"#e5e2e1","on-tertiary-container":"#f7f3f3","surface-container":"#201f1f","primary-fixed":"#ffdad9","tertiary-fixed-dim":"#c8c6c5","inverse-primary":"#bf002e","on-surface":"#e5e2e1","surface-container-low":"#1c1b1b","secondary-fixed-dim":"#ffb3ac","on-background":"#e5e2e1"
+          },
+          fontFamily: {"headline": ["Manrope"],"body": ["Inter"],"label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(53, 53, 52, 0.4);
+      backdrop-filter: blur(20px);
+    }
+    .crimson-gradient {
+      background: linear-gradient(135deg, #e00037 0%, #920021 100%);
+    }
+    .obsidian-shadow {
+      box-shadow: 0 20px 40px rgba(224, 0, 55, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!--
+LEGACY SIDEBAR MARKUP RETAINED (commented out).
+Original source: /Client/public/stitch/vaultsave/legacy_code/Milestones.html
+
+<!- - SideNavBar Anchor - ->
+<aside class="h-screen w-64 flex-col fixed left-0 top-0 bg-[#131313] dark:bg-[#131313] shadow-[20px_0px_40px_rgba(224,0,55,0.05)] z-50 flex flex-col h-full py-8 px-6">
+<div class="mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 crimson-gradient rounded-xl flex items-center justify-center obsidian-shadow">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#e5e2e1] font-headline">VaultSave</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-primary opacity-60">The Redacted Vault</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span>Portfolio</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Deposit</span>
+</a>
+<!- - Active Tab: Milestones - ->
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl text-[#ffb3b3] font-bold border-r-2 border-[#e00037] bg-gradient-to-r from-[#e0003710] to-transparent font-['Manrope'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Milestones</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>Activity</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span>Insights</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">enhanced_encryption</span>
+<span>Vault Status</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl hover:opacity-100 hover:bg-[#201f1f] transition-all duration-300 text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4 pt-8 border-t border-outline-variant/10">
+<button class="w-full py-3 crimson-gradient text-on-primary-container font-bold rounded-xl obsidian-shadow hover:opacity-90 transition-opacity">
+        Connect Wallet
+      </button>
+<div class="space-y-1">
+<a class="flex items-center gap-4 py-2 px-4 rounded-xl hover:bg-[#201f1f] transition-all text-[#e5e2e1] opacity-60 text-sm" href="#">
+<span class="material-symbols-outlined text-lg">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-4 py-2 px-4 rounded-xl hover:bg-[#201f1f] transition-all text-[#e5e2e1] opacity-60 text-sm" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</aside>
+-->
+
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 w-full z-40 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10 transition-all duration-500 hover:backdrop-blur-2xl">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold tracking-[0.3em] text-primary-container uppercase">Archive / Progression</span>
+<h2 class="text-xl font-headline font-semibold text-[#e5e2e1]">Vault Milestones</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-xs font-label font-bold text-on-surface">Wallet Connected</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#e5e2e1] hover:text-[#ffb3b3] transition-colors">notifications</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center overflow-hidden cursor-pointer" onclick="window.top.location.href='/dashboard'">
+<img alt="User Profile" data-alt="Close up portrait of a stylized digital avatar with holographic facial features and neon accents on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjaxiFEuLok5TUyKIyQR_VWjg5yCOE3RUpdJqZZ2IzANcGzV_5vaOasMuuWgRXm-49ZV6wCmU5EywIsRwBD9XpLvcsT14njbLGwyWrDTQVxef6TdKqlm2aShoA0VxPRAGhC-tpVoDhPpqlQylMylF-RURcCZ3yD5pSo5tvq4rc0V2582eypDe2SIXhv64G7uFm5PZQRCeSjiDUqQYRDObcdy_mnNJgiWhOQvQabrVV0a9pTB8Ahvn03rwTCVbB61ddNQUAINXkVZTr"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-28 px-12 pb-20">
+<!-- Hero Section / Active Progress -->
+<section class="mb-16">
+<div class="grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-7">
+<div class="relative overflow-hidden glass-card rounded-[2rem] p-10 obsidian-shadow border border-outline-variant/10">
+<!-- Decorative Background Element -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/20 blur-[100px] rounded-full"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="px-3 py-1 bg-primary-container/20 text-primary-container text-[10px] font-bold tracking-widest rounded-full uppercase">Gold Unlock in Progress</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-[10px] font-bold tracking-widest rounded-full uppercase">Silver Tier Active</span>
+</div>
+<h3 class="text-5xl font-headline font-extrabold tracking-tighter text-[#e5e2e1] mb-4">
+                The Gilded <span class="text-primary-container">Vault</span>
+</h3>
+<p class="text-on-surface/60 max-w-md mb-10 leading-relaxed font-body">
+                Keep saving to unlock your next vault badge and exclusive rewards. You're currently performing in the top 12% of vault holders.
+              </p>
+<!-- Monolith Progress Bar -->
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-sm font-label font-bold text-primary-container uppercase tracking-widest">Progress to Gold</span>
+<span class="text-2xl font-headline font-bold text-[#e5e2e1]">68<span class="text-sm opacity-40 ml-1">%</span></span>
+</div>
+<div class="h-4 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full crimson-gradient rounded-full shadow-[0_0_20px_rgba(224,0,55,0.4)] transition-all duration-1000" style="width: 68%;"></div>
+</div>
+<div class="flex justify-between text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest pt-2">
+<span>Current: 14.2 ETH</span>
+<span>Target: 20.0 ETH</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-low rounded-3xl p-8 border-l-4 border-primary-container">
+<h4 class="text-lg font-headline font-bold text-[#e5e2e1] mb-2">Next Reward Unlocking</h4>
+<p class="text-sm text-on-surface/60 mb-6">Unlocking the Gold Tier grants you 0% withdrawal fees for 30 days and a limited edition NFT badge.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">card_membership</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-on-surface uppercase">Fee Waiver Pass</span>
+<span class="text-[10px] text-primary/60">Estimated: 14 days</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-1 bg-surface-container-low rounded-3xl p-6 flex flex-col items-center justify-center text-center">
+<span class="text-2xl font-headline font-bold text-[#e5e2e1] mb-1">12</span>
+<span class="text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest">Badges Earned</span>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-3xl p-6 flex flex-col items-center justify-center text-center">
+<span class="text-2xl font-headline font-bold text-primary-container mb-1">Top 5%</span>
+<span class="text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest">Global Rank</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Milestone Grid -->
+<section>
+<div class="flex justify-between items-end mb-10">
+<div>
+<h3 class="text-3xl font-headline font-bold text-[#e5e2e1] mb-2">Vault Tiers</h3>
+<p class="text-on-surface/50 text-sm">Review your progression through the vault ranks.</p>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-2 hover:opacity-80 transition-opacity uppercase tracking-widest">
+          View All Rewards <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+<!-- Bronze Card -->
+<div class="group relative bg-surface-container-low rounded-[2rem] p-8 transition-all duration-500 hover:bg-surface-container border border-transparent hover:border-outline-variant/10 flex flex-col">
+<div class="mb-8 relative self-start">
+<div class="w-16 h-16 rounded-2xl bg-[#cd7f32]/20 flex items-center justify-center text-[#cd7f32] transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-surface-container-low flex items-center justify-center group-hover:border-surface-container transition-colors">
+<span class="material-symbols-outlined text-[12px] text-white font-bold">check</span>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold text-[#e5e2e1] mb-2">Bronze Guardian</h4>
+<p class="text-sm text-on-surface/40 mb-8 flex-1 leading-relaxed">The entry into the redacted vaults. Secured your first 1 ETH in liquidity.</p>
+<div class="pt-6 border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest">Status</span>
+<span class="text-[10px] font-label font-bold text-green-500 uppercase tracking-widest">Claimed</span>
+</div>
+</div>
+<!-- Silver Card (Active) -->
+<div class="group relative bg-surface-container rounded-[2rem] p-8 transition-all duration-500 obsidian-shadow ring-2 ring-primary-container/20 flex flex-col">
+<div class="absolute top-6 right-8">
+<span class="text-[10px] font-label font-bold text-primary-container uppercase tracking-widest">Active</span>
+</div>
+<div class="mb-8 relative self-start">
+<div class="w-16 h-16 rounded-2xl bg-slate-400/20 flex items-center justify-center text-slate-300 transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="absolute -bottom-2 -right-2 w-6 h-6 bg-primary-container rounded-full border-4 border-surface-container flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[12px] text-white font-bold">star</span>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold text-[#e5e2e1] mb-2">Silver Sentinel</h4>
+<p class="text-sm text-on-surface/40 mb-8 flex-1 leading-relaxed">A proven saver. Maintained 10 ETH liquidity for over 30 consecutive days.</p>
+<div class="pt-6 border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest">Governance</span>
+<span class="text-[10px] font-label font-bold text-primary-container uppercase tracking-widest">Lv 2 Access</span>
+</div>
+</div>
+<!-- Gold Card (Locked/Progress) -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] p-8 transition-all duration-500 hover:bg-surface-container-low border border-outline-variant/5 flex flex-col">
+<div class="mb-8 relative self-start opacity-40 group-hover:opacity-100 transition-opacity">
+<div class="w-16 h-16 rounded-2xl bg-amber-400/10 flex items-center justify-center text-amber-500 transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">badge</span>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold text-[#e5e2e1] mb-2">Gold Architect</h4>
+<p class="text-sm text-on-surface/40 mb-8 flex-1 leading-relaxed">The hallmark of digital wealth. Requires 20 ETH cumulative vault balance.</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mb-6">
+<div class="h-full bg-amber-500 rounded-full" style="width: 68%;"></div>
+</div>
+<div class="pt-6 border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest">In Progress</span>
+<span class="text-[10px] font-label font-bold text-on-surface uppercase tracking-widest">68%</span>
+</div>
+</div>
+<!-- Platinum Card (Locked) -->
+<div class="group relative bg-surface-container-lowest rounded-[2rem] p-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 border border-outline-variant/5 flex flex-col">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-surface-container-highest text-8xl opacity-10">lock</span>
+</div>
+<div class="mb-8 relative self-start">
+<div class="w-16 h-16 rounded-2xl bg-indigo-400/10 flex items-center justify-center text-indigo-300 transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl">diamond</span>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold text-[#e5e2e1] mb-2">Platinum Sovereign</h4>
+<p class="text-sm text-on-surface/40 mb-8 flex-1 leading-relaxed">Elite status. Requires 100+ ETH liquidity and lifetime contribution score of 5000+.</p>
+<div class="pt-6 border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-[10px] font-label font-bold text-on-surface/40 uppercase tracking-widest">Locked</span>
+<span class="material-symbols-outlined text-sm text-on-surface/20">lock</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Asymmetric Stats / Info -->
+<section class="mt-20 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-4 glass-card p-10 rounded-[2.5rem] obsidian-shadow border border-outline-variant/10">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary-container">auto_awesome</span>
+</div>
+<h5 class="text-2xl font-headline font-bold text-[#e5e2e1] mb-4">Milestone Streaks</h5>
+<p class="text-sm text-on-surface/60 mb-8 leading-relaxed">Maintain your current tier for 6 months to unlock"Perpetual Status" and double your governance voting power.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center bg-surface/40 p-4 rounded-2xl">
+<span class="text-xs font-bold text-on-surface/60 uppercase">Current Streak</span>
+<span class="text-lg font-headline font-bold text-primary">42 Days</span>
+</div>
+<div class="flex justify-between items-center bg-surface/40 p-4 rounded-2xl">
+<span class="text-xs font-bold text-on-surface/60 uppercase">Record Streak</span>
+<span class="text-lg font-headline font-bold text-[#e5e2e1]">128 Days</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col gap-8">
+<div class="relative w-full h-full min-h-[300px] rounded-[2.5rem] overflow-hidden group">
+<img alt="Abstract Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of a futuristic dark vault room with red laser grids and floating glass data panels in high resolution 3D render style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBckS24X2jiSxQ6hcKMPJuWfHUwSarpsEtNKsXKnAbZ-mHYMlJi7AGUneUwnhBeYRBzxphj0n1BIoEP-P81GlAVSZV4Wry-FfDpiRk_pn7rArRrFLS_92UUf0mz6iaQrsv2zDT2Mh4BOCWxExFiYptJ1Vi15BzLBSqnzG5NVtNXh4-fbNk1qWW893btW1SCCMmieH7bBq1giYi16snnGKbfhZb86KH_cqvDkFT68TCOcEvxSvwD0HkM1Ij4ytW8EJgx7glO6ZcK-fvZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent p-10 flex flex-col justify-end">
+<div class="max-w-md">
+<span class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-2 block">Exclusive Access</span>
+<h4 class="text-3xl font-headline font-bold text-[#e5e2e1] mb-4">The Obsidian Council</h4>
+<p class="text-sm text-on-surface/80 leading-relaxed">Silver tier holders and above gain private access to the 'Alpha-Redacted' community channel and weekly market insights.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Contextual FAB (Hidden as per logic for specialized pages, but demonstrating design for future relevance) -->
+<!-- We suppress FAB on specialized pages as per instructions -->
+</body></html>

@@ -4,7 +4,7 @@ import { useVault } from "@/contexts/VaultContext";
 import { Copy, LogOut } from "lucide-react";
 
 export default function ProfilePage() {
-  const { user, walletConnected, walletAddress, disconnectWallet } = useVault();
+  const { user, walletConnected, walletAddress, disconnectWallet, connectWallet } = useVault();
   const [copiedAddress, setCopiedAddress] = useState(false);
 
   const containerVariants = {
@@ -33,7 +33,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-primary txt pb-24 md:pb-8">
+    <div className="min-h-screen bg-transparent txt pb-24 md:pb-8">
       <motion.div
         className="max-w-4xl mx-auto px-4 py-8"
         variants={containerVariants}
@@ -103,6 +103,7 @@ export default function ProfilePage() {
                 No wallet connected. Connect your Pera Wallet to start saving.
               </p>
               <motion.button
+                onClick={connectWallet}
                 className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

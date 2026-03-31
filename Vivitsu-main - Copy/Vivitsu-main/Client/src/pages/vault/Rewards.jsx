@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useVault } from "@/contexts/VaultContext";
 import BadgeGrid from "@/components/vault/BadgeGrid";
-import { levelNames, levelThresholds, mockBadges } from "@/mock/data";
+import { levelNames } from "@/mock/data";
 
 export default function RewardsPage() {
-  const { user } = useVault();
+  const { user, badges } = useVault();
   const [showRewardPopup, setShowRewardPopup] = useState(false);
 
   const containerVariants = {
@@ -21,27 +21,25 @@ export default function RewardsPage() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const unlockedBadges = mockBadges.filter((b) => b.unlocked);
+  const unlockedBadges = badges.filter((badge) => badge.unlocked);
 
   return (
-    <div className="min-h-screen bg-primary txt pb-24 md:pb-8">
+    <div className="min-h-screen bg-transparent txt pb-24 md:pb-8">
       <motion.div
         className="max-w-4xl mx-auto px-4 py-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Header */}
         <motion.div variants={itemVariants} className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Rewards & Badges</h1>
           <p className="txt-dim">Unlock achievements as you save</p>
         </motion.div>
 
-        {/* Level progression bar */}
         <motion.div variants={itemVariants} className="mb-8">
           <h2 className="font-semibold mb-4">Level Progression</h2>
           <div className="flex gap-1 md:gap-2 overflow-x-auto pb-2">
-            {levelNames.slice(0, 10).map((name, idx) => {
+            {levelNames.slice(0, 10).map((_, idx) => {
               const levelNum = idx + 1;
               const isCurrentLevel = levelNum === user.level;
               const isUnlocked = levelNum < user.level;
@@ -71,7 +69,7 @@ export default function RewardsPage() {
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
-                      ⭐
+                      â­
                     </motion.div>
                   )}
                 </motion.button>
@@ -80,18 +78,16 @@ export default function RewardsPage() {
           </div>
         </motion.div>
 
-        {/* Badges section */}
         <motion.div variants={itemVariants} className="mb-8">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-lg">Badges</h2>
             <span className="text-xs bg-sec px-3 py-1 rounded-full txt-dim">
-              {unlockedBadges.length} / {mockBadges.length}
+              {unlockedBadges.length} / {badges.length}
             </span>
           </div>
-          <BadgeGrid badges={mockBadges} />
+          <BadgeGrid badges={badges} />
         </motion.div>
 
-        {/* Rewards catalog */}
         <motion.div variants={itemVariants}>
           <h2 className="font-semibold mb-4">Reward Catalog</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -100,25 +96,25 @@ export default function RewardsPage() {
                 name: "Lucky Save",
                 description: "20% chance on each deposit",
                 xp: 50,
-                icon: "🍀",
+                icon: "ðŸ€",
               },
               {
                 name: "Streak Bonus",
                 description: "7+ day streak unlocks",
                 xp: 100,
-                icon: "🔥",
+                icon: "ðŸ”¥",
               },
               {
                 name: "Milestone Hitter",
                 description: "Complete a milestone",
                 xp: 150,
-                icon: "🎯",
+                icon: "ðŸŽ¯",
               },
               {
                 name: "Level Up",
                 description: "Reach a new level",
                 xp: 200,
-                icon: "⬆️",
+                icon: "â¬†ï¸",
               },
             ].map((reward, idx) => (
               <motion.div
@@ -146,7 +142,6 @@ export default function RewardsPage() {
           </div>
         </motion.div>
 
-        {/* Random reward popup (mock) */}
         {showRewardPopup && (
           <motion.div
             className="fixed inset-0 flex items-center justify-center z-50 p-4"
@@ -163,13 +158,13 @@ export default function RewardsPage() {
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 0.5, repeat: 3 }}
               >
-                🎉
+                ðŸŽ‰
               </motion.div>
               <h2 className="text-2xl font-bold mb-2 txt">
                 You unlocked: Vault Guard Badge!
               </h2>
               <p className="txt-dim mb-6">
-                Congratulations on saving 100 ALGO! 🛡️
+                Congratulations on saving 100 ALGO! ðŸ›¡ï¸
               </p>
               <motion.button
                 onClick={() => setShowRewardPopup(false)}

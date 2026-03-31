@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VaultSave | Insights &amp; Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffb3b3",
+                        "tertiary-container": "#706f6f",
+                        "surface-tint": "#ffb3b3",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#e4beba",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#ffb3ac",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary": "#313030",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#680014",
+                        "on-primary-fixed-variant": "#920021",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#fff2f1",
+                        "on-primary-fixed": "#400009",
+                        "on-secondary-container": "#ffaea6",
+                        "on-secondary-fixed": "#410003",
+                        "on-error": "#690005",
+                        "surface-variant": "#353534",
+                        "primary-fixed-dim": "#ffb3b3",
+                        "outline": "#ab8985",
+                        "on-secondary-fixed-variant": "#930010",
+                        "secondary-container": "#a40213",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#e00037",
+                        "tertiary": "#c8c6c5",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "outline-variant": "#5b403d",
+                        "on-secondary": "#680008",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-container": "#f7f3f3",
+                        "surface-container": "#201f1f",
+                        "primary-fixed": "#ffdad9",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#bf002e",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#ffb3ac",
+                        "on-background": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .text-obsidian-gradient {
+            background: linear-gradient(135deg, #e5e2e1 0%, #706f6f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .crimson-glow {
+            box-shadow: 0 0 20px rgba(224, 0, 55, 0.15);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 flex-col fixed left-0 top-0 bg-[#131313] dark:bg-[#131313] shadow-[20px_0px_40px_rgba(224,0,55,0.05)] z-50 flex flex-col h-full py-8 px-6 font-['Manrope'] font-medium text-sm tracking-tight border-r border-outline-variant/10">
+<div class="mb-10 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center crimson-glow">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#e5e2e1]">VaultSave</h1>
+<p class="text-[10px] uppercase tracking-widest text-primary opacity-60">The Redacted Vault</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span>Portfolio</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span>Deposit</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+<span>Milestones</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Activity</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#ffb3b3] font-bold border-r-2 border-[#e00037] bg-gradient-to-r from-[#e0003710] to-transparent scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span>Insights</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="enhanced_encryption">enhanced_encryption</span>
+<span>Vault Status</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] scale-95 active:scale-90 text-[#e5e2e1] opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<button class="w-full mb-6 bg-gradient-to-br from-[#e00037] to-[#920021] text-on-primary-container py-3 rounded-xl font-bold text-sm crimson-glow transition-transform active:scale-95">
+                Connect Wallet
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 rounded-xl text-[#e5e2e1] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-xl text-[#e5e2e1] opacity-60 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10 font-['Manrope'] font-semibold text-lg hover:backdrop-blur-2xl duration-500">
+<div class="flex items-center gap-4">
+<span class="text-primary tracking-tight">Insights</span>
+<span class="w-px h-4 bg-outline-variant/30"></span>
+<span class="text-on-surface opacity-40 text-sm font-normal">Analytics &amp; Performance</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface hover:text-[#ffb3b3] cursor-pointer transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface hover:text-[#ffb3b3] cursor-pointer transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+<button class="px-5 py-2 bg-surface-container-high rounded-full text-xs font-bold border border-outline-variant/20 hover:border-primary/40 transition-all flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                    Wallet Connected
+                </button>
+</div>
+</header>
+<div class="pt-32 pb-16 px-10">
+<!-- Header Section -->
+<div class="mb-12 flex items-end justify-between">
+<div>
+<h2 class="text-5xl font-extrabold font-headline tracking-tighter text-obsidian-gradient mb-2">Wealth Velocity</h2>
+<p class="text-on-surface-variant max-w-xl body-md">Your savings behavior analyzed through 128 unique metrics. The vault remains secure while your assets breathe.</p>
+</div>
+<div class="flex gap-4">
+<div class="px-6 py-4 bg-surface-container rounded-xl border border-outline-variant/10 text-right">
+<p class="label-sm text-primary uppercase tracking-widest mb-1">Savings Habits</p>
+<p class="text-sm font-medium opacity-80 italic">"Consistent accumulation identified. Your portfolio velocity is higher than 84% of private vaults."</p>
+</div>
+</div>
+</div>
+<!-- KPI Row (Top) -->
+<div class="grid grid-cols-4 gap-6 mb-12">
+<!-- Average Deposit -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container opacity-40 group-hover:opacity-100 transition-opacity" data-icon="payments">payments</span>
+<span class="text-[10px] bg-primary-container/10 text-primary-container px-2 py-0.5 rounded uppercase font-bold">Stable</span>
+</div>
+<p class="label-sm text-on-surface-variant mb-1">Average Deposit</p>
+<p class="text-3xl font-bold font-headline tracking-tight">$4,250.00</p>
+</div>
+<!-- Last Deposit -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container opacity-40 group-hover:opacity-100 transition-opacity" data-icon="event_available">event_available</span>
+<span class="text-[10px] bg-surface-container-highest text-on-surface px-2 py-0.5 rounded uppercase font-bold">2 days ago</span>
+</div>
+<p class="label-sm text-on-surface-variant mb-1">Last Deposit</p>
+<p class="text-3xl font-bold font-headline tracking-tight">$1,120.45</p>
+</div>
+<!-- Monthly Trend -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-container opacity-40 group-hover:opacity-100 transition-opacity" data-icon="trending_up">trending_up</span>
+<div class="flex items-center text-primary text-xs font-bold gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="arrow_upward">arrow_upward</span>
+                            12%
+                        </div>
+</div>
+<p class="label-sm text-on-surface-variant mb-1">Monthly Trend</p>
+<p class="text-3xl font-bold font-headline tracking-tight">+$840.00</p>
+</div>
+<!-- Savings Streak -->
+<div class="bg-primary-container p-6 rounded-xl crimson-glow transition-all duration-500 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl" data-icon="bolt">bolt</span>
+</div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="shield_moon" style="font-variation-settings: 'FILL' 1;">shield_moon</span>
+<span class="text-[10px] bg-white/20 text-on-primary-container px-2 py-0.5 rounded uppercase font-bold">Elite</span>
+</div>
+<p class="label-sm text-on-primary-container/70 mb-1 relative z-10">Savings Streak</p>
+<p class="text-3xl font-bold font-headline tracking-tight text-on-primary-container relative z-10">12 Weeks</p>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-12 gap-8 mb-12">
+<!-- Large Line Chart: Growth Over Time -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl p-8 border border-outline-variant/10">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="title-md font-bold mb-1">Growth Over Time</h3>
+<p class="text-xs text-on-surface-variant">Asset accumulation across fiscal quarters</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-container-highest rounded text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20">All Time</button>
+<button class="px-3 py-1 bg-surface-container-lowest rounded text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors">1 Year</button>
+</div>
+</div>
+<!-- SVG Chart Mock -->
+<div class="h-80 w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 300">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#e00037" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#e00037" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#353534" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line stroke="#353534" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line stroke="#353534" stroke-width="1" x1="0" x2="800" y1="250" y2="250"></line>
+<!-- Area Fill -->
+<path d="M0,280 L50,260 L100,270 L150,220 L200,240 L250,180 L300,160 L350,190 L400,130 L450,110 L500,120 L550,80 L600,95 L650,40 L700,60 L750,20 L800,30 L800,300 L0,300 Z" fill="url(#chartGradient)"></path>
+<!-- Main Line -->
+<path d="M0,280 L50,260 L100,270 L150,220 L200,240 L250,180 L300,160 L350,190 L400,130 L450,110 L500,120 L550,80 L600,95 L650,40 L700,60 L750,20 L800,30" fill="none" stroke="#e00037" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Key Dots -->
+<circle cx="650" cy="40" fill="#e5e2e1" r="4"></circle>
+<circle cx="750" cy="20" fill="#ffb3b3" r="4"></circle>
+</svg>
+<!-- Floating Data Tooltip -->
+<div class="absolute top-[30px] left-[78%] bg-surface-container-highest/80 backdrop-blur-md p-3 rounded-lg border border-primary/30 shadow-2xl">
+<p class="text-[10px] text-primary uppercase font-bold tracking-tighter">Peak Growth</p>
+<p class="text-sm font-bold">$142,480.00</p>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest px-2">
+<span>Jan 23</span>
+<span>Mar 23</span>
+<span>Jun 23</span>
+<span>Sep 23</span>
+<span>Dec 23</span>
+<span>Mar 24</span>
+</div>
+</div>
+<!-- Sidebar Content / Bar Chart -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Bar Chart: Monthly Contribution Trend -->
+<div class="bg-surface-container rounded-xl p-6 border border-outline-variant/10">
+<div class="mb-8">
+<h3 class="title-md font-bold mb-1">Monthly Trend</h3>
+<p class="text-xs text-on-surface-variant">Volume comparison last 6 months</p>
+</div>
+<div class="flex items-end justify-between h-48 gap-3">
+<div class="w-full flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-md h-[40%] group hover:bg-primary-container transition-colors relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">$1.2k</span>
+</div>
+<span class="text-[10px] font-bold opacity-40">OCT</span>
+</div>
+<div class="w-full flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-md h-[55%] group hover:bg-primary-container transition-colors relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">$1.8k</span>
+</div>
+<span class="text-[10px] font-bold opacity-40">NOV</span>
+</div>
+<div class="w-full flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-md h-[45%] group hover:bg-primary-container transition-colors relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">$1.4k</span>
+</div>
+<span class="text-[10px] font-bold opacity-40">DEC</span>
+</div>
+<div class="w-full flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-md h-[75%] group hover:bg-primary-container transition-colors relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">$2.9k</span>
+</div>
+<span class="text-[10px] font-bold opacity-40">JAN</span>
+</div>
+<div class="w-full flex flex-col items-center gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-md h-[90%] group hover:bg-primary-container transition-colors relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">$3.4k</span>
+</div>
+<span class="text-[10px] font-bold opacity-40">FEB</span>
+</div>
+<div class="w-full flex flex-col items-center gap-2">
+<div class="w-full bg-primary-container rounded-t-md h-[100%] shadow-[0_-4px_10px_rgba(224,0,55,0.2)] relative">
+<span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] text-primary">$4.1k</span>
+</div>
+<span class="text-[10px] font-bold text-primary">MAR</span>
+</div>
+</div>
+</div>
+<!-- Small Asset Card -->
+<div class="bg-surface-container-low rounded-xl p-1 overflow-hidden group">
+<div class="bg-[#0e0e0e] rounded-xl p-5 border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<img class="w-12 h-12 rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up of golden cryptocurrency coin on dark glass surface with deep red and amber lighting reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwlO-c_eyKYE7lD0j1egGAJ5xKbTXNuU_D3yLlWjqmpqDGAm-BtsHbccU1kwdsj23ozziR9Morb7oVfaMY1FATMtg7fTjuuSxXXFCRfJz04QcwTUPW3bh0RdBixSrkJDGbKY_6kv_IfK_QUq8FlMG7mlx7UnW5eFxvERJQT3DQN-XFnFMWPpyvyN6rZ66jCIe5QAmS-Gncvv7O10a4rkdl7893VvQxOiDdlCg7OLcdqW652VtRXoZj4pK5o4KJ8iCWzTAU9iFtsl1i"/>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Top Asset</p>
+<p class="font-bold">Vault Bitcoin (vBTC)</p>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="label-sm opacity-50">Allocation</p>
+<p class="text-xl font-bold font-headline tracking-tight">64.2%</p>
+</div>
+<div class="text-right">
+<p class="label-sm opacity-50">Yield (APY)</p>
+<p class="text-xl font-bold font-headline tracking-tight text-primary">8.4%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Deposits Logged / Bottom Details -->
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-7 bg-surface-container rounded-xl overflow-hidden border border-outline-variant/10">
+<div class="px-8 py-6 bg-surface-container-high border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="title-md font-bold">Deposits Logged</h3>
+<button class="text-xs text-primary font-bold hover:underline">Export CSV</button>
+</div>
+<div class="p-0 overflow-x-auto no-scrollbar">
+<table class="w-full text-left">
+<thead class="text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-lowest/50">
+<tr>
+<th class="px-8 py-4 font-bold">Transaction Hash</th>
+<th class="px-8 py-4 font-bold">Date</th>
+<th class="px-8 py-4 font-bold">Amount</th>
+<th class="px-8 py-4 font-bold">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-container-highest/20 transition-colors">
+<td class="px-8 py-5 font-mono text-xs opacity-60">0x4a2c...9e31</td>
+<td class="px-8 py-5 text-sm">Mar 12, 2024</td>
+<td class="px-8 py-5 text-sm font-bold">$1,200.00</td>
+<td class="px-8 py-5"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/10 text-green-400">Success</span></td>
+</tr>
+<tr class="hover:bg-surface-container-highest/20 transition-colors">
+<td class="px-8 py-5 font-mono text-xs opacity-60">0x88f1...2c0a</td>
+<td class="px-8 py-5 text-sm">Mar 05, 2024</td>
+<td class="px-8 py-5 text-sm font-bold">$3,150.20</td>
+<td class="px-8 py-5"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/10 text-green-400">Success</span></td>
+</tr>
+<tr class="hover:bg-surface-container-highest/20 transition-colors">
+<td class="px-8 py-5 font-mono text-xs opacity-60">0x33b9...cc81</td>
+<td class="px-8 py-5 text-sm">Feb 24, 2024</td>
+<td class="px-8 py-5 text-sm font-bold">$5,000.00</td>
+<td class="px-8 py-5"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/10 text-green-400">Success</span></td>
+</tr>
+<tr class="hover:bg-surface-container-highest/20 transition-colors">
+<td class="px-8 py-5 font-mono text-xs opacity-60">0xfa42...44d0</td>
+<td class="px-8 py-5 text-sm">Feb 18, 2024</td>
+<td class="px-8 py-5 text-sm font-bold">$800.50</td>
+<td class="px-8 py-5"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/10 text-green-400">Success</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+<div class="bg-gradient-to-br from-surface-container to-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 flex-1 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-6xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h4 class="title-md font-bold text-primary mb-4">Habit Analysis</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="alarm_on">alarm_on</span>
+</div>
+<div>
+<p class="text-sm font-bold">Punctuality</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">98% of your deposits occur within 24 hours of your set schedule. Your vault stability remains optimal.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<p class="text-sm font-bold">Wealth Momentum</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Deposit sizes have increased by an average of 4.2% month-over-month. You are on track for early vault maturity.</p>
+</div>
+</div>
+<div class="mt-6 p-4 rounded-lg bg-primary-container/5 border border-primary/10">
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Vault Recommendation</p>
+<p class="text-xs italic text-on-surface opacity-80">"Increase your monthly milestone by $250 to unlock the 'Diamond Hands' status tier."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

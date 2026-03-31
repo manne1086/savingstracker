@@ -20,13 +20,11 @@ command = "poetry run python -m smart_contracts deploy"
 [project.deploy.testnet]
 environment_secrets = [
   "DEPLOYER_MNEMONIC",
-  "DISPENSER_MNEMONIC",
 ]
 
 [project.deploy.mainnet]
 environment_secrets = [
   "DEPLOYER_MNEMONIC",
-  "DISPENSER_MNEMONIC",
 ]
 
 [project.run]

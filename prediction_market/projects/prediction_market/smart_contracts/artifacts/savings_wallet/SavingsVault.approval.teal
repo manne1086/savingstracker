@@ -1,0 +1,998 @@
+#pragma version 11
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 1 5 4
+    bytecblock "total_deposited_global" "total_saved" "total_users" "deposit_count" "highest_milestone" "streak_days" "xp_points" 0x151f7c75 "milestone_10" "milestone_50" "milestone_100" "milestone_500" "milestone_1000" "last_deposit_round" "level"
+    intc_0 // 0
+    pushbytes ""
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/savings_wallet/contract.py:36
+    // key="milestone_10",
+    bytec 8 // "milestone_10"
+    // smart_contracts/savings_wallet/contract.py:35
+    // UInt64(10_000_000),
+    pushint 10000000
+    // smart_contracts/savings_wallet/contract.py:34-38
+    // self.milestone_10 = GlobalState(
+    //     UInt64(10_000_000),
+    //     key="milestone_10",
+    //     description="Threshold for 10 ALGO milestone",
+    // )
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:41
+    // key="milestone_50",
+    bytec 9 // "milestone_50"
+    // smart_contracts/savings_wallet/contract.py:40
+    // UInt64(50_000_000),
+    pushint 50000000
+    // smart_contracts/savings_wallet/contract.py:39-43
+    // self.milestone_50 = GlobalState(
+    //     UInt64(50_000_000),
+    //     key="milestone_50",
+    //     description="Threshold for 50 ALGO milestone",
+    // )
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:46
+    // key="milestone_100",
+    bytec 10 // "milestone_100"
+    // smart_contracts/savings_wallet/contract.py:45
+    // UInt64(100_000_000),
+    pushint 100000000
+    // smart_contracts/savings_wallet/contract.py:44-48
+    // self.milestone_100 = GlobalState(
+    //     UInt64(100_000_000),
+    //     key="milestone_100",
+    //     description="Threshold for 100 ALGO milestone",
+    // )
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:51
+    // key="milestone_500",
+    bytec 11 // "milestone_500"
+    // smart_contracts/savings_wallet/contract.py:50
+    // UInt64(500_000_000),
+    pushint 500000000
+    // smart_contracts/savings_wallet/contract.py:49-53
+    // self.milestone_500 = GlobalState(
+    //     UInt64(500_000_000),
+    //     key="milestone_500",
+    //     description="Threshold for 500 ALGO milestone",
+    // )
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:56
+    // key="milestone_1000",
+    bytec 12 // "milestone_1000"
+    // smart_contracts/savings_wallet/contract.py:55
+    // UInt64(1_000_000_000),
+    pushint 1000000000
+    // smart_contracts/savings_wallet/contract.py:54-58
+    // self.milestone_1000 = GlobalState(
+    //     UInt64(1_000_000_000),
+    //     key="milestone_1000",
+    //     description="Threshold for 1000 ALGO milestone",
+    // )
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:61
+    // key="total_deposited_global",
+    bytec_0 // "total_deposited_global"
+    // smart_contracts/savings_wallet/contract.py:60
+    // UInt64(0),
+    intc_0 // 0
+    // smart_contracts/savings_wallet/contract.py:59-63
+    // self.total_deposited_global = GlobalState(
+    //     UInt64(0),
+    //     key="total_deposited_global",
+    //     description="Sum of all user deposits",
+    // )
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:66
+    // key="total_users",
+    bytec_2 // "total_users"
+    // smart_contracts/savings_wallet/contract.py:65
+    // UInt64(0),
+    intc_0 // 0
+    // smart_contracts/savings_wallet/contract.py:64-68
+    // self.total_users = GlobalState(
+    //     UInt64(0),
+    //     key="total_users",
+    //     description="Count of opted-in users",
+    // )
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/savings_wallet/contract.py:30
+    // class SavingsVault(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@15
+    txn OnCompletion
+    !
+    assert
+    txn ApplicationID
+    assert
+    pushbytess 0x3625e4eb 0x21f1ddff 0xf901a4b4 0x6a0629ec 0xe3fee53a 0x2b7d3b98 // method "deposit(pay)void", method "withdraw(uint64)void", method "get_savings()uint64", method "get_stats()(uint64,uint64,uint64,uint64,uint64,uint64)", method "get_global_stats()(uint64,uint64)", method "get_milestone_thresholds()(uint64,uint64,uint64,uint64,uint64)"
+    txna ApplicationArgs 0
+    match deposit withdraw get_savings get_stats get_global_stats get_milestone_thresholds
+    err
+
+main_bare_routing@15:
+    // smart_contracts/savings_wallet/contract.py:30
+    // class SavingsVault(ARC4Contract):
+    txn OnCompletion
+    switch main___algopy_default_create@16 main_opt_in@17 main_close_out@18
+    err
+
+main_close_out@18:
+    // smart_contracts/savings_wallet/contract.py:242
+    // @arc4.baremethod(allow_actions=["CloseOut"], create="disallow")
+    txn ApplicationID
+    assert
+    // smart_contracts/savings_wallet/contract.py:244
+    // account = Txn.sender
+    txn Sender
+    dup
+    bury 3
+    // smart_contracts/savings_wallet/contract.py:245
+    // total_saved = self.total_saved.get(account, UInt64(0))
+    intc_0 // 0
+    bytec_1 // "total_saved"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    dup
+    bury 2
+    // smart_contracts/savings_wallet/contract.py:247
+    // if total_saved > UInt64(0):
+    bz main_after_if_else@23
+    // smart_contracts/savings_wallet/contract.py:248-252
+    // itxn.Payment(
+    //     receiver=account,
+    //     amount=total_saved,
+    //     note=b"Closing account from SavingsVault",
+    // ).submit()
+    itxn_begin
+    // smart_contracts/savings_wallet/contract.py:251
+    // note=b"Closing account from SavingsVault",
+    pushbytes 0x436c6f73696e67206163636f756e742066726f6d20536176696e67735661756c74
+    itxn_field Note
+    dupn 2
+    itxn_field Amount
+    dig 2
+    itxn_field Receiver
+    // smart_contracts/savings_wallet/contract.py:248
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/savings_wallet/contract.py:248-252
+    // itxn.Payment(
+    //     receiver=account,
+    //     amount=total_saved,
+    //     note=b"Closing account from SavingsVault",
+    // ).submit()
+    itxn_submit
+    // smart_contracts/savings_wallet/contract.py:254
+    // self.total_deposited_global.value - total_saved
+    intc_0 // 0
+    bytec_0 // "total_deposited_global"
+    app_global_get_ex
+    assert // check self.total_deposited_global exists
+    swap
+    -
+    // smart_contracts/savings_wallet/contract.py:253
+    // self.total_deposited_global.value = (
+    bytec_0 // "total_deposited_global"
+    // smart_contracts/savings_wallet/contract.py:253-255
+    // self.total_deposited_global.value = (
+    //     self.total_deposited_global.value - total_saved
+    // )
+    swap
+    app_global_put
+
+main_after_if_else@23:
+    // smart_contracts/savings_wallet/contract.py:257
+    // if self.total_users.value > UInt64(0):
+    intc_0 // 0
+    bytec_2 // "total_users"
+    app_global_get_ex
+    assert // check self.total_users exists
+    bz main_after_if_else@25
+    // smart_contracts/savings_wallet/contract.py:258
+    // self.total_users.value = self.total_users.value - UInt64(1)
+    intc_0 // 0
+    bytec_2 // "total_users"
+    app_global_get_ex
+    assert // check self.total_users exists
+    intc_1 // 1
+    -
+    bytec_2 // "total_users"
+    swap
+    app_global_put
+
+main_after_if_else@25:
+    // smart_contracts/savings_wallet/contract.py:260
+    // log("Account closed")
+    pushbytes "Account closed"
+    log
+    // smart_contracts/savings_wallet/contract.py:242
+    // @arc4.baremethod(allow_actions=["CloseOut"], create="disallow")
+    intc_1 // 1
+    return
+
+main_opt_in@17:
+    // smart_contracts/savings_wallet/contract.py:140
+    // @arc4.baremethod(allow_actions=["OptIn"], create="disallow")
+    txn ApplicationID
+    assert
+    // smart_contracts/savings_wallet/contract.py:142
+    // account = Txn.sender
+    txn Sender
+    // smart_contracts/savings_wallet/contract.py:144
+    // self.total_saved[account] = UInt64(0)
+    dup
+    bytec_1 // "total_saved"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:145
+    // self.deposit_count[account] = UInt64(0)
+    dup
+    bytec_3 // "deposit_count"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:146
+    // self.highest_milestone[account] = UInt64(0)
+    dup
+    bytec 4 // "highest_milestone"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:147
+    // self.last_deposit_round[account] = UInt64(0)
+    dup
+    bytec 13 // "last_deposit_round"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:148
+    // self.streak_days[account] = UInt64(0)
+    dup
+    bytec 5 // "streak_days"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:149
+    // self.xp_points[account] = UInt64(0)
+    dup
+    bytec 6 // "xp_points"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:150
+    // self.level[account] = UInt64(1)
+    bytec 14 // "level"
+    intc_1 // 1
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:152
+    // self.total_users.value = self.total_users.value + UInt64(1)
+    intc_0 // 0
+    bytec_2 // "total_users"
+    app_global_get_ex
+    assert // check self.total_users exists
+    intc_1 // 1
+    +
+    bytec_2 // "total_users"
+    swap
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:153
+    // log("User opted in")
+    pushbytes "User opted in"
+    log
+    // smart_contracts/savings_wallet/contract.py:140
+    // @arc4.baremethod(allow_actions=["OptIn"], create="disallow")
+    intc_1 // 1
+    return
+
+main___algopy_default_create@16:
+    txn ApplicationID
+    !
+    return
+
+
+// smart_contracts.savings_wallet.contract.SavingsVault.deposit[routing]() -> void:
+deposit:
+    pushbytes ""
+    dup
+    // smart_contracts/savings_wallet/contract.py:155
+    // @arc4.abimethod
+    txn GroupIndex
+    intc_1 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_1 // pay
+    ==
+    assert // transaction type is pay
+    // smart_contracts/savings_wallet/contract.py:157
+    // account = Txn.sender
+    txn Sender
+    dup
+    cover 2
+    // smart_contracts/savings_wallet/contract.py:108
+    // current_total_saved, exists = self.total_saved.maybe(account)
+    dup
+    intc_0 // 0
+    bytec_1 // "total_saved"
+    app_local_get_ex
+    // smart_contracts/savings_wallet/contract.py:109
+    // assert exists, "Account must opt in first"
+    assert // Account must opt in first
+    // smart_contracts/savings_wallet/contract.py:160
+    // assert payment.sender == account, "Payment sender mismatch"
+    dig 2
+    gtxns Sender
+    dig 2
+    ==
+    assert // Payment sender mismatch
+    // smart_contracts/savings_wallet/contract.py:162
+    // payment.receiver == Global.current_application_address
+    dig 2
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    // smart_contracts/savings_wallet/contract.py:161-163
+    // assert (
+    //     payment.receiver == Global.current_application_address
+    // ), "Payment must target the app"
+    assert // Payment must target the app
+    // smart_contracts/savings_wallet/contract.py:164
+    // assert payment.amount > UInt64(0), "Deposit amount must be positive"
+    uncover 2
+    gtxns Amount
+    dup
+    cover 3
+    dup
+    assert // Deposit amount must be positive
+    // smart_contracts/savings_wallet/contract.py:167
+    // deposit_count = self.deposit_count[account]
+    dig 2
+    intc_0 // 0
+    bytec_3 // "deposit_count"
+    app_local_get_ex
+    assert // check self.deposit_count exists for account
+    // smart_contracts/savings_wallet/contract.py:168
+    // last_round = self.last_deposit_round[account]
+    dig 3
+    intc_0 // 0
+    bytec 13 // "last_deposit_round"
+    app_local_get_ex
+    assert // check self.last_deposit_round exists for account
+    // smart_contracts/savings_wallet/contract.py:169
+    // streak_days = self.streak_days[account]
+    dig 4
+    intc_0 // 0
+    bytec 5 // "streak_days"
+    app_local_get_ex
+    swap
+    cover 6
+    assert // check self.streak_days exists for account
+    // smart_contracts/savings_wallet/contract.py:170
+    // xp_points = self.xp_points[account]
+    dig 4
+    intc_0 // 0
+    bytec 6 // "xp_points"
+    app_local_get_ex
+    swap
+    cover 6
+    assert // check self.xp_points exists for account
+    // smart_contracts/savings_wallet/contract.py:171
+    // highest_milestone = self.highest_milestone[account]
+    dig 4
+    intc_0 // 0
+    bytec 4 // "highest_milestone"
+    app_local_get_ex
+    swap
+    cover 6
+    assert // check self.highest_milestone exists for account
+    // smart_contracts/savings_wallet/contract.py:173
+    // new_total_saved = total_saved + payment.amount
+    uncover 3
+    uncover 3
+    +
+    dup
+    cover 4
+    // smart_contracts/savings_wallet/contract.py:174
+    // self.total_saved[account] = new_total_saved
+    dig 3
+    bytec_1 // "total_saved"
+    uncover 2
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:175
+    // self.deposit_count[account] = deposit_count + UInt64(1)
+    swap
+    intc_1 // 1
+    +
+    dig 2
+    bytec_3 // "deposit_count"
+    uncover 2
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:176
+    // self.last_deposit_round[account] = Global.round
+    global Round
+    uncover 2
+    bytec 13 // "last_deposit_round"
+    uncover 2
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:178
+    // rounds_since_last = Global.round - last_round
+    global Round
+    dig 1
+    -
+    swap
+    // smart_contracts/savings_wallet/contract.py:179
+    // if last_round == UInt64(0):
+    bnz deposit_else_body@3
+    // smart_contracts/savings_wallet/contract.py:180
+    // new_streak = UInt64(1)
+    intc_1 // 1
+
+deposit_after_if_else@10:
+    // smart_contracts/savings_wallet/contract.py:187
+    // self.streak_days[account] = new_streak
+    dig 7
+    dup
+    bytec 5 // "streak_days"
+    uncover 3
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:189
+    // algo_amount = payment.amount // MICRO_ALGO
+    dig 6
+    pushint 1000000
+    /
+    // smart_contracts/savings_wallet/contract.py:190
+    // xp_gained = algo_amount * UInt64(10)
+    pushint 10
+    *
+    // smart_contracts/savings_wallet/contract.py:191
+    // new_xp = xp_points + xp_gained
+    dig 5
+    +
+    dup
+    bury 10
+    // smart_contracts/savings_wallet/contract.py:192
+    // self.xp_points[account] = new_xp
+    swap
+    bytec 6 // "xp_points"
+    dig 2
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:114
+    // if xp < UInt64(500):
+    pushint 500
+    <
+    bz deposit_after_if_else@15
+    // smart_contracts/savings_wallet/contract.py:115
+    // return UInt64(1)
+    intc_1 // 1
+
+deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24:
+    // smart_contracts/savings_wallet/contract.py:193
+    // self.level[account] = self._calculate_level(new_xp)
+    dig 7
+    bytec 14 // "level"
+    uncover 2
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:128
+    // if total_saved >= self.milestone_1000.value:
+    intc_0 // 0
+    bytec 12 // "milestone_1000"
+    app_global_get_ex
+    assert // check self.milestone_1000 exists
+    dig 2
+    <=
+    bz deposit_after_if_else@27
+    // smart_contracts/savings_wallet/contract.py:129
+    // return UInt64(5)
+    intc_2 // 5
+    bury 9
+
+deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36:
+    // smart_contracts/savings_wallet/contract.py:196
+    // if new_milestone > highest_milestone:
+    dig 8
+    dig 3
+    >
+    bz deposit_after_if_else@12
+    // smart_contracts/savings_wallet/contract.py:197
+    // self.highest_milestone[account] = new_milestone
+    dig 6
+    bytec 4 // "highest_milestone"
+    dig 10
+    app_local_put
+
+deposit_after_if_else@12:
+    // smart_contracts/savings_wallet/contract.py:200
+    // self.total_deposited_global.value + payment.amount
+    intc_0 // 0
+    bytec_0 // "total_deposited_global"
+    app_global_get_ex
+    assert // check self.total_deposited_global exists
+    dig 6
+    +
+    // smart_contracts/savings_wallet/contract.py:199
+    // self.total_deposited_global.value = (
+    bytec_0 // "total_deposited_global"
+    // smart_contracts/savings_wallet/contract.py:199-201
+    // self.total_deposited_global.value = (
+    //     self.total_deposited_global.value + payment.amount
+    // )
+    swap
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:202
+    // log("Deposit successful")
+    pushbytes "Deposit successful"
+    log
+    // smart_contracts/savings_wallet/contract.py:155
+    // @arc4.abimethod
+    intc_1 // 1
+    return
+
+deposit_after_if_else@27:
+    // smart_contracts/savings_wallet/contract.py:130
+    // if total_saved >= self.milestone_500.value:
+    intc_0 // 0
+    bytec 11 // "milestone_500"
+    app_global_get_ex
+    assert // check self.milestone_500 exists
+    dig 2
+    <=
+    bz deposit_after_if_else@29
+    // smart_contracts/savings_wallet/contract.py:131
+    // return UInt64(4)
+    intc_3 // 4
+    bury 9
+    // smart_contracts/savings_wallet/contract.py:195
+    // new_milestone = self._check_milestone(new_total_saved)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36
+
+deposit_after_if_else@29:
+    // smart_contracts/savings_wallet/contract.py:132
+    // if total_saved >= self.milestone_100.value:
+    intc_0 // 0
+    bytec 10 // "milestone_100"
+    app_global_get_ex
+    assert // check self.milestone_100 exists
+    dig 2
+    <=
+    bz deposit_after_if_else@31
+    // smart_contracts/savings_wallet/contract.py:133
+    // return UInt64(3)
+    pushint 3
+    bury 9
+    // smart_contracts/savings_wallet/contract.py:195
+    // new_milestone = self._check_milestone(new_total_saved)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36
+
+deposit_after_if_else@31:
+    // smart_contracts/savings_wallet/contract.py:134
+    // if total_saved >= self.milestone_50.value:
+    intc_0 // 0
+    bytec 9 // "milestone_50"
+    app_global_get_ex
+    assert // check self.milestone_50 exists
+    dig 2
+    <=
+    bz deposit_after_if_else@33
+    // smart_contracts/savings_wallet/contract.py:135
+    // return UInt64(2)
+    pushint 2
+    bury 9
+    // smart_contracts/savings_wallet/contract.py:195
+    // new_milestone = self._check_milestone(new_total_saved)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36
+
+deposit_after_if_else@33:
+    // smart_contracts/savings_wallet/contract.py:136
+    // if total_saved >= self.milestone_10.value:
+    intc_0 // 0
+    bytec 8 // "milestone_10"
+    app_global_get_ex
+    assert // check self.milestone_10 exists
+    dig 2
+    <=
+    bz deposit_after_if_else@35
+    // smart_contracts/savings_wallet/contract.py:137
+    // return UInt64(1)
+    intc_1 // 1
+    bury 9
+    // smart_contracts/savings_wallet/contract.py:195
+    // new_milestone = self._check_milestone(new_total_saved)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36
+
+deposit_after_if_else@35:
+    // smart_contracts/savings_wallet/contract.py:138
+    // return UInt64(0)
+    intc_0 // 0
+    bury 9
+    // smart_contracts/savings_wallet/contract.py:195
+    // new_milestone = self._check_milestone(new_total_saved)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36
+
+deposit_after_if_else@15:
+    // smart_contracts/savings_wallet/contract.py:116
+    // if xp < UInt64(1_500):
+    dig 7
+    pushint 1500
+    <
+    bz deposit_after_if_else@17
+    // smart_contracts/savings_wallet/contract.py:117
+    // return UInt64(2)
+    pushint 2
+    // smart_contracts/savings_wallet/contract.py:193
+    // self.level[account] = self._calculate_level(new_xp)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24
+
+deposit_after_if_else@17:
+    // smart_contracts/savings_wallet/contract.py:118
+    // if xp < UInt64(3_000):
+    dig 7
+    pushint 3000
+    <
+    bz deposit_after_if_else@19
+    // smart_contracts/savings_wallet/contract.py:119
+    // return UInt64(3)
+    pushint 3
+    // smart_contracts/savings_wallet/contract.py:193
+    // self.level[account] = self._calculate_level(new_xp)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24
+
+deposit_after_if_else@19:
+    // smart_contracts/savings_wallet/contract.py:120
+    // if xp < UInt64(5_000):
+    dig 7
+    pushint 5000
+    <
+    bz deposit_after_if_else@21
+    // smart_contracts/savings_wallet/contract.py:121
+    // return UInt64(4)
+    intc_3 // 4
+    // smart_contracts/savings_wallet/contract.py:193
+    // self.level[account] = self._calculate_level(new_xp)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24
+
+deposit_after_if_else@21:
+    // smart_contracts/savings_wallet/contract.py:122
+    // if xp < UInt64(8_000):
+    dig 7
+    pushint 8000
+    <
+    bz deposit_after_if_else@23
+    // smart_contracts/savings_wallet/contract.py:123
+    // return UInt64(5)
+    intc_2 // 5
+    // smart_contracts/savings_wallet/contract.py:193
+    // self.level[account] = self._calculate_level(new_xp)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24
+
+deposit_after_if_else@23:
+    // smart_contracts/savings_wallet/contract.py:124
+    // return UInt64(6)
+    pushint 6
+    // smart_contracts/savings_wallet/contract.py:193
+    // self.level[account] = self._calculate_level(new_xp)
+    b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24
+
+deposit_else_body@3:
+    // smart_contracts/savings_wallet/contract.py:181
+    // elif rounds_since_last <= ONE_DAY_ROUNDS:
+    dup
+    pushint 1440
+    <=
+    bz deposit_else_body@5
+    // smart_contracts/savings_wallet/contract.py:182
+    // new_streak = streak_days + UInt64(1)
+    dig 4
+    intc_1 // 1
+    +
+    b deposit_after_if_else@10
+
+deposit_else_body@5:
+    // smart_contracts/savings_wallet/contract.py:183
+    // elif rounds_since_last <= TWO_DAY_ROUNDS:
+    dup
+    pushint 2880
+    <=
+    bz deposit_else_body@7
+    // smart_contracts/savings_wallet/contract.py:184
+    // new_streak = UInt64(1)
+    intc_1 // 1
+    b deposit_after_if_else@10
+
+deposit_else_body@7:
+    // smart_contracts/savings_wallet/contract.py:186
+    // new_streak = UInt64(1)
+    intc_1 // 1
+    b deposit_after_if_else@10
+
+
+// smart_contracts.savings_wallet.contract.SavingsVault.withdraw[routing]() -> void:
+withdraw:
+    // smart_contracts/savings_wallet/contract.py:204
+    // @arc4.abimethod
+    txna ApplicationArgs 1
+    dup
+    len
+    pushint 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    btoi
+    // smart_contracts/savings_wallet/contract.py:206
+    // account = Txn.sender
+    txn Sender
+    // smart_contracts/savings_wallet/contract.py:108
+    // current_total_saved, exists = self.total_saved.maybe(account)
+    dup
+    intc_0 // 0
+    bytec_1 // "total_saved"
+    app_local_get_ex
+    // smart_contracts/savings_wallet/contract.py:109
+    // assert exists, "Account must opt in first"
+    assert // Account must opt in first
+    // smart_contracts/savings_wallet/contract.py:209
+    // assert amount > UInt64(0), "Withdraw amount must be positive"
+    dig 2
+    assert // Withdraw amount must be positive
+    // smart_contracts/savings_wallet/contract.py:212
+    // assert amount <= total_saved, "Insufficient balance"
+    dig 2
+    dig 1
+    <=
+    assert // Insufficient balance
+    // smart_contracts/savings_wallet/contract.py:214-218
+    // itxn.Payment(
+    //     receiver=account,
+    //     amount=amount,
+    //     note=b"Withdrawal from SavingsVault",
+    // ).submit()
+    itxn_begin
+    // smart_contracts/savings_wallet/contract.py:217
+    // note=b"Withdrawal from SavingsVault",
+    pushbytes 0x5769746864726177616c2066726f6d20536176696e67735661756c74
+    itxn_field Note
+    dig 2
+    itxn_field Amount
+    dig 1
+    itxn_field Receiver
+    // smart_contracts/savings_wallet/contract.py:214
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // smart_contracts/savings_wallet/contract.py:214-218
+    // itxn.Payment(
+    //     receiver=account,
+    //     amount=amount,
+    //     note=b"Withdrawal from SavingsVault",
+    // ).submit()
+    itxn_submit
+    // smart_contracts/savings_wallet/contract.py:220
+    // self.total_saved[account] = total_saved - amount
+    dig 2
+    -
+    bytec_1 // "total_saved"
+    swap
+    app_local_put
+    // smart_contracts/savings_wallet/contract.py:222
+    // self.total_deposited_global.value - amount
+    intc_0 // 0
+    bytec_0 // "total_deposited_global"
+    app_global_get_ex
+    assert // check self.total_deposited_global exists
+    swap
+    -
+    // smart_contracts/savings_wallet/contract.py:221
+    // self.total_deposited_global.value = (
+    bytec_0 // "total_deposited_global"
+    // smart_contracts/savings_wallet/contract.py:221-223
+    // self.total_deposited_global.value = (
+    //     self.total_deposited_global.value - amount
+    // )
+    swap
+    app_global_put
+    // smart_contracts/savings_wallet/contract.py:224
+    // log("Withdrawal successful")
+    pushbytes "Withdrawal successful"
+    log
+    // smart_contracts/savings_wallet/contract.py:204
+    // @arc4.abimethod
+    intc_1 // 1
+    return
+
+
+// smart_contracts.savings_wallet.contract.SavingsVault.get_savings[routing]() -> void:
+get_savings:
+    // smart_contracts/savings_wallet/contract.py:228
+    // return self.total_saved.get(Txn.sender, UInt64(0))
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "total_saved"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:226
+    // @arc4.abimethod(readonly=True)
+    itob
+    bytec 7 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.savings_wallet.contract.SavingsVault.get_stats[routing]() -> void:
+get_stats:
+    // smart_contracts/savings_wallet/contract.py:232
+    // account = Txn.sender
+    txn Sender
+    // smart_contracts/savings_wallet/contract.py:234
+    // self.total_saved.get(account, UInt64(0)),
+    dup
+    intc_0 // 0
+    bytec_1 // "total_saved"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:235
+    // self.deposit_count.get(account, UInt64(0)),
+    dig 1
+    intc_0 // 0
+    bytec_3 // "deposit_count"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:236
+    // self.streak_days.get(account, UInt64(0)),
+    dig 2
+    intc_0 // 0
+    bytec 5 // "streak_days"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:237
+    // self.xp_points.get(account, UInt64(0)),
+    dig 3
+    intc_0 // 0
+    bytec 6 // "xp_points"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:238
+    // self.level.get(account, UInt64(1)),
+    dig 4
+    intc_0 // 0
+    bytec 14 // "level"
+    app_local_get_ex
+    intc_1 // 1
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:239
+    // self.highest_milestone.get(account, UInt64(0)),
+    uncover 5
+    intc_0 // 0
+    bytec 4 // "highest_milestone"
+    app_local_get_ex
+    intc_0 // 0
+    cover 2
+    select
+    // smart_contracts/savings_wallet/contract.py:230
+    // @arc4.abimethod(readonly=True)
+    uncover 5
+    itob
+    uncover 5
+    itob
+    concat
+    uncover 4
+    itob
+    concat
+    uncover 3
+    itob
+    concat
+    uncover 2
+    itob
+    concat
+    swap
+    itob
+    concat
+    bytec 7 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.savings_wallet.contract.SavingsVault.get_global_stats[routing]() -> void:
+get_global_stats:
+    // smart_contracts/savings_wallet/contract.py:264
+    // return (self.total_deposited_global.value, self.total_users.value)
+    intc_0 // 0
+    bytec_0 // "total_deposited_global"
+    app_global_get_ex
+    assert // check self.total_deposited_global exists
+    intc_0 // 0
+    bytec_2 // "total_users"
+    app_global_get_ex
+    assert // check self.total_users exists
+    // smart_contracts/savings_wallet/contract.py:262
+    // @arc4.abimethod(readonly=True)
+    swap
+    itob
+    swap
+    itob
+    concat
+    bytec 7 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+
+// smart_contracts.savings_wallet.contract.SavingsVault.get_milestone_thresholds[routing]() -> void:
+get_milestone_thresholds:
+    // smart_contracts/savings_wallet/contract.py:271
+    // self.milestone_10.value,
+    intc_0 // 0
+    bytec 8 // "milestone_10"
+    app_global_get_ex
+    assert // check self.milestone_10 exists
+    // smart_contracts/savings_wallet/contract.py:272
+    // self.milestone_50.value,
+    intc_0 // 0
+    bytec 9 // "milestone_50"
+    app_global_get_ex
+    assert // check self.milestone_50 exists
+    // smart_contracts/savings_wallet/contract.py:273
+    // self.milestone_100.value,
+    intc_0 // 0
+    bytec 10 // "milestone_100"
+    app_global_get_ex
+    assert // check self.milestone_100 exists
+    // smart_contracts/savings_wallet/contract.py:274
+    // self.milestone_500.value,
+    intc_0 // 0
+    bytec 11 // "milestone_500"
+    app_global_get_ex
+    assert // check self.milestone_500 exists
+    // smart_contracts/savings_wallet/contract.py:275
+    // self.milestone_1000.value,
+    intc_0 // 0
+    bytec 12 // "milestone_1000"
+    app_global_get_ex
+    assert // check self.milestone_1000 exists
+    // smart_contracts/savings_wallet/contract.py:266
+    // @arc4.abimethod(readonly=True)
+    uncover 4
+    itob
+    uncover 4
+    itob
+    concat
+    uncover 3
+    itob
+    concat
+    uncover 2
+    itob
+    concat
+    swap
+    itob
+    concat
+    bytec 7 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return

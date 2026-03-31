@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VaultSave Settings | The Redacted Vault</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ffb3b3",
+                "tertiary-container": "#706f6f",
+                "surface-tint": "#ffb3b3",
+                "on-error-container": "#ffdad6",
+                "error-container": "#93000a",
+                "on-surface-variant": "#e4beba",
+                "inverse-on-surface": "#313030",
+                "surface-container-high": "#2a2a2a",
+                "secondary": "#ffb3ac",
+                "surface-container-lowest": "#0e0e0e",
+                "on-tertiary": "#313030",
+                "tertiary-fixed": "#e5e2e1",
+                "surface": "#131313",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-primary": "#680014",
+                "on-primary-fixed-variant": "#920021",
+                "error": "#ffb4ab",
+                "on-primary-container": "#fff2f1",
+                "on-primary-fixed": "#400009",
+                "on-secondary-container": "#ffaea6",
+                "on-secondary-fixed": "#410003",
+                "on-error": "#690005",
+                "surface-variant": "#353534",
+                "primary-fixed-dim": "#ffb3b3",
+                "outline": "#ab8985",
+                "on-secondary-fixed-variant": "#930010",
+                "secondary-container": "#a40213",
+                "background": "#131313",
+                "surface-container-highest": "#353534",
+                "primary-container": "#e00037",
+                "tertiary": "#c8c6c5",
+                "surface-dim": "#131313",
+                "surface-bright": "#3a3939",
+                "secondary-fixed": "#ffdad6",
+                "on-tertiary-fixed-variant": "#474646",
+                "outline-variant": "#5b403d",
+                "on-secondary": "#680008",
+                "inverse-surface": "#e5e2e1",
+                "on-tertiary-container": "#f7f3f3",
+                "surface-container": "#201f1f",
+                "primary-fixed": "#ffdad9",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "inverse-primary": "#bf002e",
+                "on-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b",
+                "secondary-fixed-dim": "#ffb3ac",
+                "on-background": "#e5e2e1"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .red-gradient-btn {
+            background: linear-gradient(135deg, #e00037 0%, #920021 100%);
+        }
+    </style>
+</head>
+<body class="flex min-h-screen bg-surface">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="h-screen w-64 flex-col fixed left-0 top-0 bg-[#131313] dark:bg-[#131313] shadow-[20px_0px_40px_rgba(224,0,55,0.05)] z-50 md:flex hidden">
+<div class="flex flex-col h-full py-8 px-6">
+<div class="mb-12">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#e5e2e1]">VaultSave</h1>
+<p class="text-[10px] uppercase tracking-widest text-primary opacity-70">The Redacted Vault</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Navigation Items -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span>Portfolio</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Deposit</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">stars</span>
+<span>Milestones</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>Activity</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span>Insights</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#e5e2e1] opacity-60 hover:opacity-100 hover:bg-[#201f1f] font-['Manrope'] font-medium text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">enhanced_encryption</span>
+<span>Vault Status</span>
+</a>
+<!-- ACTIVE STATE: Settings -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-[#ffb3b3] font-bold border-r-2 border-[#e00037] bg-gradient-to-r from-[#e0003710] to-transparent font-['Manrope'] text-sm tracking-tight scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 border-t border-outline-variant/10 pt-6">
+<button class="w-full red-gradient-btn text-on-primary-container font-bold py-3 rounded-xl text-sm transition-transform active:scale-95 shadow-lg shadow-primary-container/20">
+                    Connect Wallet
+                </button>
+<div class="pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-[#e5e2e1] opacity-60 hover:opacity-100 font-['Manrope'] text-sm transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-error/60 hover:text-error font-['Manrope'] text-sm transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 min-h-screen bg-surface relative">
+<!-- TopNavBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 w-full md:w-[calc(100%-16rem)] z-40 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10">
+<div class="flex items-center">
+<h2 class="font-['Manrope'] font-semibold text-lg text-[#e5e2e1]">Settings</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#e5e2e1] hover:text-[#ffb3b3] transition-colors">notifications</button>
+<button class="material-symbols-outlined text-[#e5e2e1] hover:text-[#ffb3b3] transition-colors">account_circle</button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/20"></div>
+<button class="text-[#ffb3b3] font-['Manrope'] font-semibold text-sm flex items-center gap-2 hover:opacity-80 transition-opacity">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    Wallet Connected
+                </button>
+</div>
+</header>
+<!-- Page Content -->
+<div class="pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
+<div class="mb-12">
+<h3 class="font-headline font-extrabold text-4xl tracking-tighter text-on-surface mb-2">Account Management</h3>
+<p class="font-body text-on-surface-variant max-w-lg">Configure your vault security, privacy protocols, and digital footprint across the network.</p>
+</div>
+<div class="space-y-8">
+<!-- Wallet Settings -->
+<section class="bg-surface-container rounded-xl p-8 shadow-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<div class="flex items-start gap-6 relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface mb-4">Wallet Settings</h4>
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/10">
+<div>
+<p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant mb-1">Active Address</p>
+<code class="font-mono text-sm text-primary tracking-wider">0x71...8ef2</code>
+</div>
+<button class="flex items-center gap-2 text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                                        Reveal
+                                    </button>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-semibold text-on-surface">Auto-Disconnect</p>
+<p class="text-xs text-on-surface-variant">Sever wallet connection after 30 minutes of inactivity.</p>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full p-1 flex justify-end cursor-pointer">
+<div class="h-4 w-4 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Settings -->
+<section class="bg-surface-container rounded-xl p-8">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">shield</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface mb-4">Privacy Settings</h4>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-semibold text-on-surface">Mask Wallet Address</p>
+<p class="text-xs text-on-surface-variant">Mask your public address in all UI components and shared exports.</p>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full p-1 flex justify-end cursor-pointer">
+<div class="h-4 w-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-semibold text-on-surface">Anonymized Analytics</p>
+<p class="text-xs text-on-surface-variant">Allow restricted metadata collection to improve vault performance.</p>
+</div>
+<div class="w-12 h-6 bg-surface-variant rounded-full p-1 flex justify-start cursor-pointer">
+<div class="h-4 w-4 bg-on-surface-variant rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Notification Preferences -->
+<section class="bg-surface-container rounded-xl p-8">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-xl text-on-surface mb-4">Notification Preferences</h4>
+<div class="space-y-4">
+<label class="flex items-center gap-4 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant bg-surface-container-lowest text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-on-surface font-medium group-hover:text-primary transition-colors">Transaction Confirmations</span>
+</label>
+<label class="flex items-center gap-4 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant bg-surface-container-lowest text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-on-surface font-medium group-hover:text-primary transition-colors">Price Volatility Alerts (&gt;5%)</span>
+</label>
+<label class="flex items-center gap-4 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant bg-surface-container-lowest text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-on-surface font-medium group-hover:text-primary transition-colors">Weekly Portfolio Insights</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Security & Export (Bento Grid Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container rounded-xl p-8 flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">history</span>
+</div>
+<h4 class="font-headline font-bold text-xl text-on-surface mb-2">Data Integrity</h4>
+<p class="text-xs text-on-surface-variant mb-6">Download a cryptographic record of all ledger movements.</p>
+<div class="mt-auto flex gap-3">
+<button class="flex-1 bg-surface-container-high hover:bg-surface-variant transition-colors py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+                                CSV
+                            </button>
+<button class="flex-1 bg-surface-container-high hover:bg-surface-variant transition-colors py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">data_object</span>
+                                JSON
+                            </button>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-8 flex flex-col">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<h4 class="font-headline font-bold text-xl text-on-surface mb-2">Security Level</h4>
+<p class="text-xs text-on-surface-variant mb-6">Current encryption strength: <span class="text-primary font-bold">MIL-SPEC 256</span></p>
+<button class="mt-auto w-full outline outline-1 outline-outline-variant/30 hover:outline-primary transition-all py-3 rounded-xl text-xs font-bold">
+                            Update Security Protocol
+                        </button>
+</div>
+</div>
+<!-- Footer Section -->
+<div class="pt-12 flex flex-col items-center">
+<button class="flex items-center gap-2 text-error font-bold opacity-60 hover:opacity-100 transition-opacity mb-8">
+<span class="material-symbols-outlined">logout</span>
+                        Terminate Session
+                    </button>
+<div class="text-center opacity-30">
+<p class="text-[10px] uppercase tracking-widest mb-1">Encrypted Infrastructure</p>
+<p class="text-[10px] uppercase tracking-widest">© 2024 VaultSave Systems Ltd.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="fixed top-0 right-0 w-[500px] h-[500px] bg-primary-container/5 rounded-full blur-[120px] pointer-events-none -z-10 translate-x-1/2 -translate-y-1/2"></div>
+</main>
+<!-- Mobile Navigation Toggle (Visible only on small screens) -->
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+<div class="bg-surface-container-highest/60 backdrop-blur-xl px-6 py-4 rounded-full flex gap-8 items-center shadow-2xl shadow-black">
+<span class="material-symbols-outlined text-on-surface-variant">dashboard</span>
+<span class="material-symbols-outlined text-on-surface-variant">account_balance_wallet</span>
+<div class="w-10 h-10 red-gradient-btn rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">add</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">settings</span>
+</div>
+</div>
+</body></html>

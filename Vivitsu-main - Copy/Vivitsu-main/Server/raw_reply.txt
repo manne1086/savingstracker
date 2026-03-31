@@ -1,6 +1,0 @@
-Authenticated as: Rithivkesh Manne (@mannerithivkesh)
----------------------------------------------------
-Here is your downloaded pdf about the required topic:
-
-<a href="http://127.0.0.1:3000/public/downloads/studia-ai-QVlv3u.pdf" target="_blank" style="color: #ef4444; text-decoration: underline; font-weight: bold;">Download Machine Learning Basics.pdf</a>
----------------------------------------------------

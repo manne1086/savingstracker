@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VaultSave | Deposit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ffb3b3",
+                "tertiary-container": "#706f6f",
+                "surface-tint": "#ffb3b3",
+                "on-error-container": "#ffdad6",
+                "error-container": "#93000a",
+                "on-surface-variant": "#e4beba",
+                "inverse-on-surface": "#313030",
+                "surface-container-high": "#2a2a2a",
+                "secondary": "#ffb3ac",
+                "surface-container-lowest": "#0e0e0e",
+                "on-tertiary": "#313030",
+                "tertiary-fixed": "#e5e2e1",
+                "surface": "#131313",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-primary": "#680014",
+                "on-primary-fixed-variant": "#920021",
+                "error": "#ffb4ab",
+                "on-primary-container": "#fff2f1",
+                "on-primary-fixed": "#400009",
+                "on-secondary-container": "#ffaea6",
+                "on-secondary-fixed": "#410003",
+                "on-error": "#690005",
+                "surface-variant": "#353534",
+                "primary-fixed-dim": "#ffb3b3",
+                "outline": "#ab8985",
+                "on-secondary-fixed-variant": "#930010",
+                "secondary-container": "#a40213",
+                "background": "#131313",
+                "surface-container-highest": "#353534",
+                "primary-container": "#e00037",
+                "tertiary": "#c8c6c5",
+                "surface-dim": "#131313",
+                "surface-bright": "#3a3939",
+                "secondary-fixed": "#ffdad6",
+                "on-tertiary-fixed-variant": "#474646",
+                "outline-variant": "#5b403d",
+                "on-secondary": "#680008",
+                "inverse-surface": "#e5e2e1",
+                "on-tertiary-container": "#f7f3f3",
+                "surface-container": "#201f1f",
+                "primary-fixed": "#ffdad9",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "inverse-primary": "#bf002e",
+                "on-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b",
+                "secondary-fixed-dim": "#ffb3ac",
+                "on-background": "#e5e2e1"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .red-glow-btn {
+            background: linear-gradient(135deg, #e00037 0%, #920021 100%);
+            box-shadow: 0 4px 20px rgba(224, 0, 55, 0.4);
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        .text-obsidian {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="h-screen w-64 flex-col fixed left-0 top-0 bg-[#131313] dark:bg-[#131313] shadow-[20px_0px_40px_rgba(224,0,55,0.05)] flex flex-col h-full py-8 px-6 z-50">
+<div class="mb-12">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="VaultSave Logo" class="w-6 h-6" data-alt="Abstract geometric logo for a secure vault application with minimalist red and black lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7bTyVDw5_hNE0yiVxCZ9LCSyF3eURhTEh19_RBNygzYRm9nw4kzDeKuuC6lrDtxFOWLkNE8Qzg1oGOpHmWJ-ZLyUZKbtvsIzYSaEcL5ZpLcx88h-9iqsSkwlcf1f-W_JVvbUMyMXvTQK32C_4JujBhfJp_sCItNKZpdDgCLwZEVDBpT0QTqygopLRT_CXmFRexR-5jU46wftiarDyu52YuOmdBe42IWoblEfnsysdXBWauyTqnNx8j3Vm099rVJkAT3DkSwK92TlC"/>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#e5e2e1] font-['Manrope']">VaultSave</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] opacity-40 font-bold">The Redacted Vault</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active State: Deposit (Determined by Intent) -->
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+                Portfolio
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 text-[#ffb3b3] font-bold border-r-2 border-[#e00037] bg-gradient-to-r from-[#e0003710] to-transparent font-['Manrope'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+                Deposit
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">stars</span>
+                Milestones
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">history</span>
+                Activity
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+                Insights
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">enhanced_encryption</span>
+                Vault Status
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-xl transition-all duration-300 hover:opacity-100 hover:bg-[#201f1f] group text-[#e5e2e1] opacity-60 font-['Manrope'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto space-y-4 pt-8">
+<button class="w-full py-3 bg-[#e00037] text-white font-bold rounded-xl scale-95 active:scale-90 transition-transform text-xs uppercase tracking-widest">Connect Wallet</button>
+<div class="space-y-1">
+<a class="flex items-center gap-4 py-2 px-4 rounded-xl opacity-60 hover:opacity-100 transition-all font-['Manrope'] text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">help</span>
+                    Support
+                </a>
+<a class="flex items-center gap-4 py-2 px-4 rounded-xl opacity-60 hover:opacity-100 transition-all font-['Manrope'] text-sm tracking-tight text-error" href="#">
+<span class="material-symbols-outlined">logout</span>
+                    Logout
+                </a>
+</div>
+</div>
+</aside>
+<!-- TopNavBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center h-20 px-10 hover:backdrop-blur-2xl duration-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ffb3b3]">shield_locked</span>
+<span class="font-['Manrope'] font-semibold text-lg text-[#ffb3b3]">Deposit Assets</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container border border-outline-variant/20">
+<div class="w-2 h-2 rounded-full bg-[#00ff9d] animate-pulse"></div>
+<span class="label-sm font-bold text-[10px] tracking-widest">WALLET CONNECTED</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#e5e2e1] cursor-pointer hover:text-[#ffb3b3] transition-colors">notifications</span>
+<span class="material-symbols-outlined text-[#e5e2e1] cursor-pointer hover:text-[#ffb3b3] transition-colors">account_circle</span>
+<span class="material-symbols-outlined text-error cursor-pointer hover:text-[#ffb3b3] transition-colors">logout</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-32 px-12 pb-20 min-h-screen bg-[#131313]">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Section: Transaction UI -->
+<div class="lg:col-span-7 space-y-8">
+<div>
+<h2 class="text-[3.5rem] font-bold font-['Manrope'] tracking-tight text-white leading-none mb-4 -ml-1">Deposit <span class="text-primary-container">Funds</span></h2>
+<p class="text-on-surface-variant font-['Inter'] body-md max-w-md">Securely fund your redacted vault. All assets are managed through audited smart contracts.</p>
+</div>
+<!-- Central Deposit Card -->
+<div class="bg-surface-container rounded-[2rem] p-10 relative overflow-hidden group">
+<!-- Subtle Glow Texture -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity"></div>
+<div class="space-y-8 relative z-10">
+<div class="space-y-4">
+<label class="block text-xs font-bold tracking-[0.2em] text-on-surface-variant uppercase">Deposit Amount</label>
+<div class="flex items-center justify-between bg-surface-container-lowest p-6 rounded-2xl border-b-2 border-transparent focus-within:border-primary-container transition-all">
+<input class="bg-transparent border-none focus:ring-0 text-4xl font-bold font-['Manrope'] text-white placeholder-surface-container-highest w-full" placeholder="0.00" type="number" value="50.00"/>
+<div class="flex items-center gap-3 bg-surface-container p-2 px-4 rounded-xl">
+<img alt="ALGO Logo" class="w-6 h-6" data-alt="Algorand cryptocurrency logo icon, minimalist geometric design in white and silver" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uIkoNoVAcjiHehboMvUyn-hkrZKnMKSswXx_dagMRSSZeSwEaKpg1uNkvd0UCSgeHrWTmjhmMEN76xL2pdGBFNYgYP75lrNsnXW6pWT41yHfd1RdhbEmgiryMM_QoayttwRIeBpdZky1qnRDnFkZQaLlcj-my9hbxfI0q_J6prl9CG7zKX2FRFpFn5vqrHmSISRZTPqMMSHjM0o66y5GIUKg3IPJgN0SuMqJRq_a0437mBnc1SNtgn1hMGfySaJwaw_ocp4vKOsp"/>
+<span class="font-bold font-['Manrope']">ALGO</span>
+</div>
+</div>
+</div>
+<!-- Quick Deposit Chips -->
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded-full bg-surface-container-highest/30 border border-outline-variant/10 hover:border-primary-container/40 transition-all font-['Inter'] font-semibold text-sm">+5 ALGO</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-highest/30 border border-outline-variant/10 hover:border-primary-container/40 transition-all font-['Inter'] font-semibold text-sm">+10 ALGO</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-highest/30 border border-outline-variant/10 hover:border-primary-container/40 transition-all font-['Inter'] font-semibold text-sm">+25 ALGO</button>
+<button class="px-6 py-3 rounded-full bg-primary-container/10 border border-primary-container/30 text-primary-container font-['Inter'] font-bold text-sm">+50 ALGO</button>
+</div>
+<!-- Main CTA -->
+<button class="w-full py-5 rounded-[1.5rem] red-glow-btn text-white font-bold text-lg font-['Manrope'] transition-transform active:scale-[0.98]">
+                            Deposit Into Vault
+                        </button>
+<div class="flex gap-4 items-start bg-surface-container-lowest/50 p-6 rounded-2xl">
+<span class="material-symbols-outlined text-primary-container mt-0.5">info</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                                Grouped payment + app call keeps funds and savings state synchronized. This transaction will incur a standard network fee of 0.002 ALGO.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Section: Supporting Info (Bento Style) -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Unlock Progress Card -->
+<div class="bg-surface-container rounded-[2rem] p-8 space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-['Manrope'] font-bold text-xl mb-1">Next Unlock Progress</h3>
+<p class="text-sm text-on-surface-variant">Reward Tiers</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-bold text-white">95%</span>
+</div>
+</div>
+<div class="h-6 w-full bg-surface-container-highest rounded-full overflow-hidden p-1">
+<div class="h-full bg-gradient-to-r from-primary-container to-[#ffb3b3] rounded-full relative" style="width: 95%;">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+</div>
+</div>
+<div class="bg-primary-container/10 p-4 rounded-xl border border-primary-container/20">
+<p class="text-sm font-['Inter'] text-primary font-medium text-center">
+                            This deposit will put you 95% of the way to <span class="font-bold underline">Gold Tier</span>.
+                        </p>
+</div>
+</div>
+<!-- Transaction Details Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-[2rem] space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl">lock_clock</span>
+<p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Min. Lock-up</p>
+<p class="text-xl font-bold font-['Manrope']">45 Days</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[2rem] space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+<p class="text-[10px] uppercase tracking-widest font-bold opacity-40">Variable APY</p>
+<p class="text-xl font-bold font-['Manrope']">8.42%</p>
+</div>
+</div>
+<!-- Security Assurance -->
+<div class="glass-panel p-8 rounded-[2rem] border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-[#131313] flex items-center justify-center border border-primary-container/30">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h4 class="font-['Manrope'] font-bold">Audit Verified</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        VaultSave smart contracts have been audited by <span class="text-white font-bold">Runtime Verification</span>. Funds are non-custodial and locked in individual smart-accounts.
+                    </p>
+</div>
+<!-- Visual Asset / Decoration -->
+<div class="relative h-48 rounded-[2rem] overflow-hidden group">
+<img alt="Obsidian and Red Light" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" data-alt="High-end 3D render of black obsidian shards floating in a dark space with dramatic red neon lighting and smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5OiQ1IVMOAfYFIENAh-lBn6FNssZOots0CtzBVPDxThtzWqzpEIdVB1uUsgIy6Nx80c6SpXbXRI3JKD3A-HbnZO8SGMwGCoM4aATmZLMsw4usHoowmQw5JjvrEAYG1kih9s0BHSo-hJkysC07Y90mBzo2zccO9VGaKK0PdYENumsj1cmw2vh0RaeOIbj1NOfuYyTYIbAji9vBFbWZ0-VUvv8Px0wo1FlB4EXZHb3kjbx9gOuBN4LDXveZWHEjMmIKNsbWYRthTxLZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<p class="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Redacted Ecosystem</p>
+<p class="text-xl font-bold font-['Manrope'] text-white">Secure. Private. Elite.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Security Tag -->
+<div class="fixed bottom-10 right-10 flex items-center gap-4 glass-panel py-3 px-6 rounded-full border border-outline-variant/10 z-50">
+<div class="flex -space-x-2">
+<img alt="Auditor 1" class="w-6 h-6 rounded-full border-2 border-surface" data-alt="Small round avatar portrait of a security expert in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsusfT2RxpTxoPipuUolm4qBND0v1N_5NNDJ9rvaRxFLi0GgWxHsIpFX7zfer61pJOluFhgFH6xtpMSOinJ5OaOOaxfGxVOTqmZVXx8T5du457fcwL3FK0sPKpiWgjYy58XW26WT3MZieowHZOln8vOGGIdlLQfky30WCa9Rv37RmepVUSClz3Xa3jgLl0Im8YlBv_eicuP-rKQSj7JWvWUYN2UQx074ADHCjLtl9U6zUyRtEq4-cVhNbuH_Zr1bMptlci1Hq03dzT"/>
+<img alt="Auditor 2" class="w-6 h-6 rounded-full border-2 border-surface" data-alt="Small round avatar portrait of a blockchain developer with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGID_d6TynCySyzUQ1B6Xxz8HV4_cTpD7Po6gsb3ImqDOuk-rZov1vBxqYiEeZzRkpKaLw7ekfJXkBjg2iSI0-DAiTpEWiv8G7PrHXnhizjeMINAhoPExW6isdNrC3AC8G5_learS2eN5Y91Gow6Aw_ZX-Xoz-Ly14hQFPQ-F6bxy4tCFQPG8Ul8BigbST5wlk349h48lY0JcLSQYo0NAxfXjLlA-RsuoRz2FV2RS26XFqMLpkfdVrBFIIhXtC2jjTcw71c53v9YOO"/>
+</div>
+<p class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">1,240 Nodes Securing Vault</p>
+</div>
+</body></html>

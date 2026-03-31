@@ -1,9 +1,17 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  ReactNode,
+} from "react";
 import {
   connectPeraWallet,
   disconnectWallet,
   peraWallet,
   optInToApp,
+  isVaultAppConfigured,
   getSavingsData,
   depositALGO as depositALGOLib,
   withdrawALGO as withdrawALGOLib,
@@ -11,10 +19,6 @@ import {
   getGlobalStats,
   GlobalStats,
 } from "@/lib/algorand";
-
-// ════════════════════════════════════════════════════════════════════
-// TYPES
-// ════════════════════════════════════════════════════════════════════
 
 export interface WalletContextType {
   address: string | null;
@@ -24,20 +28,16 @@ export interface WalletContextType {
   vaultData: VaultData | null;
   globalStats: GlobalStats | null;
   isLoadingVault: boolean;
-
-  // Methods
   connect: () => Promise<void>;
   disconnect: () => void;
   refreshVaultData: () => Promise<void>;
+  optInVault: () => Promise<string>;
   depositALGO: (amount: number) => Promise<string>;
   withdrawALGO: (amount: number) => Promise<string>;
 }
 
-// ════════════════════════════════════════════════════════════════════
-// CONTEXT
-// ════════════════════════════════════════════════════════════════════
-
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
+let hasAttemptedInitialReconnect = false;
 
 export const useWallet = () => {
   const context = useContext(WalletContext);
@@ -46,10 +46,6 @@ export const useWallet = () => {
   }
   return context;
 };
-
-// ════════════════════════════════════════════════════════════════════
-// PROVIDER
-// ════════════════════════════════════════════════════════════════════
 
 interface WalletProviderProps {
   children: ReactNode;
@@ -64,20 +60,22 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
   const [isLoadingVault, setIsLoadingVault] = useState(false);
 
-  // Poll interval reference
-  const pollIntervalRef = React.useRef<NodeJS.Timeout | null>(null);
+  const pollIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isMountedRef = useRef(true);
 
-  // ────────────────────────────────────────────────────────────────
-  // EFFECTS
-  // ────────────────────────────────────────────────────────────────
-
-  // On mount: Try to reconnect to existing session
   useEffect(() => {
+    isMountedRef.current = true;
+
     const reconnect = async () => {
+      if (hasAttemptedInitialReconnect) {
+        return;
+      }
+
+      hasAttemptedInitialReconnect = true;
+
       try {
-        // Use a timeout to avoid hanging if Pera is not available
         const reconnectPromise = peraWallet.reconnectSession();
-        const timeoutPromise = new Promise((_, reject) =>
+        const timeoutPromise = new Promise<never>((_, reject) =>
           setTimeout(() => reject(new Error("Reconnect timeout")), 3000)
         );
 
@@ -86,18 +84,15 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
           timeoutPromise,
         ]);
 
-        if (accounts && accounts.length > 0) {
-          setAddress(accounts[0]);
-          setIsConnected(true);
-
-          // Fetch initial vault data
-          await fetchVaultData(accounts[0]);
-
-          // Start polling
-          startPolling(accounts[0]);
+        if (!isMountedRef.current || !accounts || accounts.length === 0) {
+          return;
         }
-      } catch (error) {
-        // Silently fail - no existing session or Pera not available
+
+        setAddress(accounts[0]);
+        setIsConnected(true);
+        await fetchVaultData(accounts[0]);
+        startPolling(accounts[0]);
+      } catch {
         console.log("No existing Pera session to reconnect to");
       }
     };
@@ -105,42 +100,51 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     reconnect();
 
     return () => {
+      isMountedRef.current = false;
+
       if (pollIntervalRef.current) {
         clearInterval(pollIntervalRef.current);
       }
     };
   }, []);
 
-  // ────────────────────────────────────────────────────────────────
-  // INTERNAL HELPERS
-  // ────────────────────────────────────────────────────────────────
-
   const fetchVaultData = async (addr: string) => {
     try {
-      setIsLoadingVault(true);
-      const data = await getSavingsData(addr);
+      if (isMountedRef.current) {
+        setIsLoadingVault(true);
+      }
+
+      const [data, stats] = await Promise.all([
+        getSavingsData(addr),
+        getGlobalStats(),
+      ]);
+
+      if (!isMountedRef.current) {
+        return;
+      }
+
       setVaultData(data);
-
-      // Also fetch global stats
-      const stats = await getGlobalStats();
       setGlobalStats(stats);
-
       setError(null);
     } catch (err) {
+      if (!isMountedRef.current) {
+        return;
+      }
+
       console.error("Error fetching vault data:", err);
       setError(err instanceof Error ? err.message : "Failed to fetch vault data");
     } finally {
-      setIsLoadingVault(false);
+      if (isMountedRef.current) {
+        setIsLoadingVault(false);
+      }
     }
   };
 
   const startPolling = (addr: string) => {
-    // Clear existing poll
     if (pollIntervalRef.current) {
       clearInterval(pollIntervalRef.current);
     }
 
-    // Poll every 30 seconds
     pollIntervalRef.current = setInterval(() => {
       fetchVaultData(addr);
     }, 30000);
@@ -153,10 +157,6 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     }
   };
 
-  // ────────────────────────────────────────────────────────────────
-  // PUBLIC METHODS
-  // ────────────────────────────────────────────────────────────────
-
   const connect = async () => {
     try {
       setIsConnecting(true);
@@ -166,17 +166,15 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
       setAddress(connectedAddress);
       setIsConnected(true);
 
-      // Opt into app if not already opted in
-      try {
-        await optInToApp(connectedAddress);
-      } catch (err) {
-        console.log("Already opted in or opt-in skipped:", err);
-      }
+      const postConnectError = isVaultAppConfigured()
+        ? null
+        : 
+          "Wallet connected on TestNet, but the vault is not deployed yet. Set VITE_SAVINGS_VAULT_APP_ID to your TestNet app ID to enable deposits and withdrawals.";
 
-      // Fetch vault data
       await fetchVaultData(connectedAddress);
-
-      // Start polling
+      if (postConnectError && isMountedRef.current) {
+        setError(postConnectError);
+      }
       startPolling(connectedAddress);
     } catch (err) {
       const errorMsg =
@@ -205,7 +203,26 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
       setError("Not connected");
       return;
     }
+
     await fetchVaultData(address);
+  };
+
+  const optInVault = async (): Promise<string> => {
+    if (!address) {
+      throw new Error("Wallet not connected");
+    }
+
+    try {
+      setError(null);
+      const txnId = await optInToApp(address);
+      await fetchVaultData(address);
+      return txnId;
+    } catch (err) {
+      const errorMsg =
+        err instanceof Error ? err.message : "Vault activation failed";
+      setError(errorMsg);
+      throw err;
+    }
   };
 
   const depositALGO = async (amount: number): Promise<string> => {
@@ -216,11 +233,7 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     try {
       setError(null);
       const txnId = await depositALGOLib(address, amount);
-
-      // Refresh vault data after deposit
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait 2s for indexing
       await fetchVaultData(address);
-
       return txnId;
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : "Deposit failed";
@@ -237,11 +250,7 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     try {
       setError(null);
       const txnId = await withdrawALGOLib(address, amount);
-
-      // Refresh vault data after withdrawal
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait 2s for indexing
       await fetchVaultData(address);
-
       return txnId;
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : "Withdrawal failed";
@@ -249,10 +258,6 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
       throw err;
     }
   };
-
-  // ────────────────────────────────────────────────────────────────
-  // CONTEXT VALUE
-  // ────────────────────────────────────────────────────────────────
 
   const value: WalletContextType = {
     address,
@@ -265,6 +270,7 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     connect,
     disconnect,
     refreshVaultData,
+    optInVault,
     depositALGO,
     withdrawALGO,
   };

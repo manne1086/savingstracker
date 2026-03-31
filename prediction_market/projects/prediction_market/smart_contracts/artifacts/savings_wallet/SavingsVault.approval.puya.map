@@ -1,0 +1,7770 @@
+{
+  "version": 3,
+  "sources": [
+    "../../savings_wallet/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAmCgB;;AADJ;;;;;AADJ;AAOQ;;AADJ;;;;;AADJ;AAOQ;;AADJ;;;;;AADJ;AAOQ;;AADJ;;;;;;AADJ;AAOQ;;AADJ;;;;;;AADJ;AAOQ;AADJ;AADJ;AAOQ;AADJ;AADJ;AAlCR;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;AAAA;;AAAA;;;;;;;;AAAA;AAoNK;;AAAA;AAEa;;AAAA;AAAA;;AACI;AAAA;AAAA;AAA8B;AAA9B;;AAAA;AAAA;AAAA;;AAEtB;;;AACY;AAGS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAHT;;;AAAA;;;AAAA;AAMI;AAAA;AAAA;AAAA;AAAA;AAAA;AADJ;AAAA;AAAA;AAID;AAAA;AAAA;AAAA;AAAX;;;AACqC;AAAA;AAAA;AAAA;AAAyB;AAAzB;AAAzB;AAAA;AAAA;AAEA;;;;;;;;;;;;;;;;AAAJ;AAlBH;AAAA;AAtGA;;AAAA;AAEa;;AAEV;AAAA;AAA4B;AAA5B;AACA;AAAA;AAA8B;AAA9B;AACA;AAAA;;AAAkC;AAAlC;AACA;AAAA;;AAAmC;AAAnC;AACA;AAAA;;AAA4B;AAA5B;AACA;AAAA;;AAA0B;AAA1B;AACA;;AAAsB;AAAtB;AAEyB;AAAA;AAAA;AAAA;AAAyB;AAAzB;AAAzB;AAAA;AAAA;AACI;;;;;;;;;;;;;;;AAAJ;AAbH;AAAA;;;;;;;;AAeA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAEa;;AAAA;AAAA;;AAjDoB;AAAA;AAAA;AAAA;AAC9B;AAmDO;;AAAA;;AAAA;;AAAA;AAAP;AAEI;;AAAA;;AAAoB;;AAApB;AADJ;AAGO;;AAAA;;AAAA;AAAA;;AAAP;AAAA;AAGgB;;AAAA;AAAA;AAAA;AAAA;AACH;;AAAA;AAAA;;AAAA;AAAA;AACC;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AACF;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AACQ;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAEF;;AAAA;;AAAA;AAAA;AAAA;;AAClB;;AAAA;AAAA;;AAAA;AAC8B;AAAgB;AAAhB;AAA9B;;AAAA;AAAA;;AAAA;AACmC;;AAAnC;;AAAA;;AAAA;;AAAA;AAEoB;;AAAA;;AAAA;AAAA;AAC5B;;;AACyB;AAOjB;;AAAA;AAAA;;AAAA;;AAAA;AAEc;;AAAkB;;;;AAAlB;AACY;;AAAd;AACH;;AAAA;AAAA;AAAA;;AACT;AAAA;;AAAA;;AAAA;AA9EQ;;;AAAL;AAAX;;;AACmB;AA8EX;;AAAA;;AAAA;;AAAA;AAjEkB;AAAA;;AAAA;AAAA;AAAf;;AAAA;AAAX;;;AACmB;;;AAmER;;AAAA;;AAAA;AAAX;;;AACY;;AAAA;;AAAA;;AAAA;AAGA;AAAA;AAAA;AAAA;AAAA;;AAAA;AADJ;AAAA;AAAA;AAGI;;;;;;;;;;;;;;;;;;;;AAAJ;AA/CH;AAAA;AAzBqB;AAAA;;AAAA;AAAA;AAAf;;AAAA;AAAX;;;AACmB;;;AAgEK;;;AA/DE;AAAA;;AAAA;AAAA;AAAf;;AAAA;AAAX;;;AACmB;;;;AA8DK;;;AA7DE;AAAA;;AAAA;AAAA;AAAf;;AAAA;AAAX;;;AACmB;;;;AA4DK;;;AA3DE;AAAA;;AAAA;AAAA;AAAf;;AAAA;AAAX;;;AACmB;;;AA0DK;;;AAzDT;;;AAyDS;;;AA/Eb;;AAAK;;;AAAL;AAAX;;;AACmB;;AA4EW;;;AA3EnB;;AAAK;;;AAAL;AAAX;;;AACmB;;AA0EW;;;AAzEnB;;AAAK;;;AAAL;AAAX;;;AACmB;AAwEW;;;AAvEnB;;AAAK;;;AAAL;AAAX;;;AACmB;AAsEW;;;AArEf;;AAqEe;;;AAZjB;AAAqB;;;AAArB;AAAb;;;AACyB;;AAAc;AAAd;;;;AACZ;AAAqB;;;AAArB;AAAb;;;AACyB;;;;AAEA;;;;AAkBpB;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAEa;;AAlGoB;AAAA;AAAA;AAAA;AAC9B;AAoGA;;AAAA;AAGO;;AAAA;;AAAA;AAAP;AAEA;AAGS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAHT;;;AAAA;;;AAAA;AAM4B;;AAAA;AAA5B;AAAA;AAAA;AAEI;AAAA;AAAA;AAAA;AAAA;AAAA;AADJ;AAAA;AAAA;AAGI;;;;;;;;;;;;;;;;;;;;;;;AAAJ;AApBH;AAAA;AAwB+B;;AAArB;AAAA;AAAA;AAAiC;AAAjC;;AAAA;AAFV;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAMa;;AAEN;AAAA;AAAA;AAAA;AAA8B;AAA9B;;AAAA;AACA;;AAAA;AAAA;AAAA;AAAgC;AAAhC;;AAAA;AACA;;AAAA;AAAA;;AAAA;AAA8B;AAA9B;;AAAA;AACA;;AAAA;AAAA;;AAAA;AAA4B;AAA5B;;AAAA;AACA;;AAAA;AAAA;;AAAA;AAAwB;AAAxB;;AAAA;AACA;;AAAA;AAAA;;AAAA;AAAoC;AAApC;;AAAA;AATP;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAkCW;AAAA;AAAA;AAAA;AAAmC;AAAA;AAAA;AAAA;AAF9C;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AASO;AAAA;;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AATP;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 5 4"
+    },
+    "7": {
+      "op": "bytecblock \"total_deposited_global\" \"total_saved\" \"total_users\" \"deposit_count\" \"highest_milestone\" \"streak_days\" \"xp_points\" 0x151f7c75 \"milestone_10\" \"milestone_50\" \"milestone_100\" \"milestone_500\" \"milestone_1000\" \"last_deposit_round\" \"level\""
+    },
+    "209": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0"
+      ]
+    },
+    "210": {
+      "op": "pushbytes \"\"",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "212": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%0#0"
+      ]
+    },
+    "214": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "217": {
+      "op": "bytec 8 // \"milestone_10\"",
+      "defined_out": [
+        "\"milestone_10\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_10\""
+      ]
+    },
+    "219": {
+      "op": "pushint 10000000",
+      "defined_out": [
+        "\"milestone_10\"",
+        "10000000"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_10\"",
+        "10000000"
+      ]
+    },
+    "224": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "225": {
+      "op": "bytec 9 // \"milestone_50\"",
+      "defined_out": [
+        "\"milestone_50\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_50\""
+      ]
+    },
+    "227": {
+      "op": "pushint 50000000",
+      "defined_out": [
+        "\"milestone_50\"",
+        "50000000"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_50\"",
+        "50000000"
+      ]
+    },
+    "232": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "233": {
+      "op": "bytec 10 // \"milestone_100\"",
+      "defined_out": [
+        "\"milestone_100\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_100\""
+      ]
+    },
+    "235": {
+      "op": "pushint 100000000",
+      "defined_out": [
+        "\"milestone_100\"",
+        "100000000"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_100\"",
+        "100000000"
+      ]
+    },
+    "240": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "241": {
+      "op": "bytec 11 // \"milestone_500\"",
+      "defined_out": [
+        "\"milestone_500\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_500\""
+      ]
+    },
+    "243": {
+      "op": "pushint 500000000",
+      "defined_out": [
+        "\"milestone_500\"",
+        "500000000"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_500\"",
+        "500000000"
+      ]
+    },
+    "249": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "250": {
+      "op": "bytec 12 // \"milestone_1000\"",
+      "defined_out": [
+        "\"milestone_1000\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_1000\""
+      ]
+    },
+    "252": {
+      "op": "pushint 1000000000",
+      "defined_out": [
+        "\"milestone_1000\"",
+        "1000000000"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"milestone_1000\"",
+        "1000000000"
+      ]
+    },
+    "258": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "259": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "defined_out": [
+        "\"total_deposited_global\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "260": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_deposited_global\"",
+        "0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_deposited_global\"",
+        "0"
+      ]
+    },
+    "261": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "262": {
+      "op": "bytec_2 // \"total_users\"",
+      "defined_out": [
+        "\"total_users\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_users\""
+      ]
+    },
+    "263": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_users\"",
+        "0"
+      ]
+    },
+    "264": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "265": {
+      "block": "main_after_if_else@2",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%0#1"
+      ]
+    },
+    "267": {
+      "op": "bz main_bare_routing@15",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "270": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%2#0"
+      ]
+    },
+    "272": {
+      "op": "!",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%3#0"
+      ]
+    },
+    "273": {
+      "op": "assert",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "274": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%4#0"
+      ]
+    },
+    "276": {
+      "op": "assert",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "277": {
+      "op": "pushbytess 0x3625e4eb 0x21f1ddff 0xf901a4b4 0x6a0629ec 0xe3fee53a 0x2b7d3b98 // method \"deposit(pay)void\", method \"withdraw(uint64)void\", method \"get_savings()uint64\", method \"get_stats()(uint64,uint64,uint64,uint64,uint64,uint64)\", method \"get_global_stats()(uint64,uint64)\", method \"get_milestone_thresholds()(uint64,uint64,uint64,uint64,uint64)\"",
+      "defined_out": [
+        "Method(deposit(pay)void)",
+        "Method(get_global_stats()(uint64,uint64))",
+        "Method(get_milestone_thresholds()(uint64,uint64,uint64,uint64,uint64))",
+        "Method(get_savings()uint64)",
+        "Method(get_stats()(uint64,uint64,uint64,uint64,uint64,uint64))",
+        "Method(withdraw(uint64)void)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "Method(deposit(pay)void)",
+        "Method(withdraw(uint64)void)",
+        "Method(get_savings()uint64)",
+        "Method(get_stats()(uint64,uint64,uint64,uint64,uint64,uint64))",
+        "Method(get_global_stats()(uint64,uint64))",
+        "Method(get_milestone_thresholds()(uint64,uint64,uint64,uint64,uint64))"
+      ]
+    },
+    "309": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(deposit(pay)void)",
+        "Method(get_global_stats()(uint64,uint64))",
+        "Method(get_milestone_thresholds()(uint64,uint64,uint64,uint64,uint64))",
+        "Method(get_savings()uint64)",
+        "Method(get_stats()(uint64,uint64,uint64,uint64,uint64,uint64))",
+        "Method(withdraw(uint64)void)",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "Method(deposit(pay)void)",
+        "Method(withdraw(uint64)void)",
+        "Method(get_savings()uint64)",
+        "Method(get_stats()(uint64,uint64,uint64,uint64,uint64,uint64))",
+        "Method(get_global_stats()(uint64,uint64))",
+        "Method(get_milestone_thresholds()(uint64,uint64,uint64,uint64,uint64))",
+        "tmp%6#0"
+      ]
+    },
+    "312": {
+      "op": "match deposit withdraw get_savings get_stats get_global_stats get_milestone_thresholds",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "326": {
+      "op": "err"
+    },
+    "327": {
+      "block": "main_bare_routing@15",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%7#0"
+      ]
+    },
+    "329": {
+      "op": "switch main___algopy_default_create@16 main_opt_in@17 main_close_out@18",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "337": {
+      "op": "err"
+    },
+    "338": {
+      "block": "main_close_out@18",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%12#0"
+      ]
+    },
+    "340": {
+      "op": "assert",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "341": {
+      "op": "txn Sender"
+    },
+    "343": {
+      "op": "dup",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0"
+      ]
+    },
+    "344": {
+      "op": "bury 3",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "346": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "0"
+      ]
+    },
+    "347": {
+      "op": "bytec_1 // \"total_saved\"",
+      "defined_out": [
+        "\"total_saved\"",
+        "0",
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "0",
+        "\"total_saved\""
+      ]
+    },
+    "348": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "349": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0",
+        "0"
+      ]
+    },
+    "350": {
+      "op": "cover 2",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "352": {
+      "op": "select",
+      "defined_out": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "353": {
+      "op": "dup",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "354": {
+      "op": "bury 2",
+      "defined_out": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "356": {
+      "op": "bz main_after_if_else@23",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "359": {
+      "op": "itxn_begin"
+    },
+    "360": {
+      "op": "pushbytes 0x436c6f73696e67206163636f756e742066726f6d20536176696e67735661756c74",
+      "defined_out": [
+        "0x436c6f73696e67206163636f756e742066726f6d20536176696e67735661756c74",
+        "account#0",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0x436c6f73696e67206163636f756e742066726f6d20536176696e67735661756c74"
+      ]
+    },
+    "395": {
+      "op": "itxn_field Note",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "397": {
+      "op": "dupn 2",
+      "defined_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "total_saved#0 (copy)"
+      ]
+    },
+    "399": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "401": {
+      "op": "dig 2",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "403": {
+      "op": "itxn_field Receiver",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "405": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "account#0",
+        "pay",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "pay"
+      ]
+    },
+    "406": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "408": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "0"
+      ]
+    },
+    "409": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0"
+      ]
+    },
+    "411": {
+      "op": "itxn_submit"
+    },
+    "412": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "0"
+      ]
+    },
+    "413": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "defined_out": [
+        "\"total_deposited_global\"",
+        "0",
+        "account#0",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "414": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "415": {
+      "error": "check self.total_deposited_global exists",
+      "op": "assert // check self.total_deposited_global exists",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "total_saved#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "416": {
+      "op": "swap",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%1#0",
+        "total_saved#0"
+      ]
+    },
+    "417": {
+      "op": "-",
+      "defined_out": [
+        "account#0",
+        "tmp%2#0",
+        "total_saved#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%2#0"
+      ]
+    },
+    "418": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%2#0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "419": {
+      "op": "swap",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_deposited_global\"",
+        "tmp%2#0"
+      ]
+    },
+    "420": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "421": {
+      "block": "main_after_if_else@23",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0"
+      ]
+    },
+    "422": {
+      "op": "bytec_2 // \"total_users\"",
+      "defined_out": [
+        "\"total_users\"",
+        "0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0",
+        "\"total_users\""
+      ]
+    },
+    "423": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "424": {
+      "error": "check self.total_users exists",
+      "op": "assert // check self.total_users exists",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "425": {
+      "op": "bz main_after_if_else@25",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "428": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0"
+      ]
+    },
+    "429": {
+      "op": "bytec_2 // \"total_users\"",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0",
+        "\"total_users\""
+      ]
+    },
+    "430": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "431": {
+      "error": "check self.total_users exists",
+      "op": "assert // check self.total_users exists",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "432": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%3#0",
+        "1"
+      ]
+    },
+    "433": {
+      "op": "-",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%4#0"
+      ]
+    },
+    "434": {
+      "op": "bytec_2 // \"total_users\"",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%4#0",
+        "\"total_users\""
+      ]
+    },
+    "435": {
+      "op": "swap",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_users\"",
+        "tmp%4#0"
+      ]
+    },
+    "436": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "437": {
+      "block": "main_after_if_else@25",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "pushbytes \"Account closed\"",
+      "defined_out": [
+        "\"Account closed\""
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"Account closed\""
+      ]
+    },
+    "453": {
+      "op": "log",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "454": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "1"
+      ]
+    },
+    "455": {
+      "op": "return",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "456": {
+      "block": "main_opt_in@17",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%10#0"
+      ]
+    },
+    "458": {
+      "op": "assert",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "459": {
+      "op": "txn Sender",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "461": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "462": {
+      "op": "bytec_1 // \"total_saved\"",
+      "defined_out": [
+        "\"total_saved\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"total_saved\""
+      ]
+    },
+    "463": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_saved\"",
+        "0",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"total_saved\"",
+        "0"
+      ]
+    },
+    "464": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "465": {
+      "op": "dup",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "466": {
+      "op": "bytec_3 // \"deposit_count\"",
+      "defined_out": [
+        "\"deposit_count\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"deposit_count\""
+      ]
+    },
+    "467": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"deposit_count\"",
+        "0"
+      ]
+    },
+    "468": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "469": {
+      "op": "dup",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "470": {
+      "op": "bytec 4 // \"highest_milestone\"",
+      "defined_out": [
+        "\"highest_milestone\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"highest_milestone\""
+      ]
+    },
+    "472": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"highest_milestone\"",
+        "0"
+      ]
+    },
+    "473": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "474": {
+      "op": "dup",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "475": {
+      "op": "bytec 13 // \"last_deposit_round\"",
+      "defined_out": [
+        "\"last_deposit_round\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"last_deposit_round\""
+      ]
+    },
+    "477": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"last_deposit_round\"",
+        "0"
+      ]
+    },
+    "478": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "479": {
+      "op": "dup",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "480": {
+      "op": "bytec 5 // \"streak_days\"",
+      "defined_out": [
+        "\"streak_days\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"streak_days\""
+      ]
+    },
+    "482": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"streak_days\"",
+        "0"
+      ]
+    },
+    "483": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "484": {
+      "op": "dup",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "485": {
+      "op": "bytec 6 // \"xp_points\"",
+      "defined_out": [
+        "\"xp_points\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"xp_points\""
+      ]
+    },
+    "487": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"xp_points\"",
+        "0"
+      ]
+    },
+    "488": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0"
+      ]
+    },
+    "489": {
+      "op": "bytec 14 // \"level\"",
+      "defined_out": [
+        "\"level\"",
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "\"level\""
+      ]
+    },
+    "491": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "\"level\"",
+        "1",
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "account#0",
+        "\"level\"",
+        "1"
+      ]
+    },
+    "492": {
+      "op": "app_local_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "493": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0"
+      ]
+    },
+    "494": {
+      "op": "bytec_2 // \"total_users\"",
+      "defined_out": [
+        "\"total_users\"",
+        "0",
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "0",
+        "\"total_users\""
+      ]
+    },
+    "495": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "496": {
+      "error": "check self.total_users exists",
+      "op": "assert // check self.total_users exists",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "497": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "maybe_value%0#0",
+        "1"
+      ]
+    },
+    "498": {
+      "op": "+",
+      "defined_out": [
+        "account#0",
+        "tmp%1#3"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%1#3"
+      ]
+    },
+    "499": {
+      "op": "bytec_2 // \"total_users\"",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%1#3",
+        "\"total_users\""
+      ]
+    },
+    "500": {
+      "op": "swap",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"total_users\"",
+        "tmp%1#3"
+      ]
+    },
+    "501": {
+      "op": "app_global_put",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "502": {
+      "op": "pushbytes \"User opted in\"",
+      "defined_out": [
+        "\"User opted in\"",
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "\"User opted in\""
+      ]
+    },
+    "517": {
+      "op": "log",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "518": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "1"
+      ]
+    },
+    "519": {
+      "op": "return",
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "520": {
+      "block": "main___algopy_default_create@16",
+      "stack_in": [
+        "account#0",
+        "total_saved#0"
+      ],
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%8#0"
+      ]
+    },
+    "522": {
+      "op": "!",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "total_saved#0",
+        "tmp%9#0"
+      ]
+    },
+    "523": {
+      "op": "return",
+      "defined_out": [],
+      "stack_out": [
+        "account#0",
+        "total_saved#0"
+      ]
+    },
+    "524": {
+      "subroutine": "smart_contracts.savings_wallet.contract.SavingsVault.deposit[routing]",
+      "params": {},
+      "block": "deposit",
+      "stack_in": [],
+      "op": "pushbytes \"\"",
+      "stack_out": [
+        "new_milestone#0"
+      ]
+    },
+    "526": {
+      "op": "dup",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0"
+      ]
+    },
+    "527": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "tmp%0#0"
+      ]
+    },
+    "529": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "530": {
+      "op": "-",
+      "defined_out": [
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0"
+      ]
+    },
+    "531": {
+      "op": "dup",
+      "defined_out": [
+        "payment#0",
+        "payment#0 (copy)"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "532": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "534": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "pay",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "535": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_type_matches%0#0",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "536": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0"
+      ]
+    },
+    "537": {
+      "op": "txn Sender"
+    },
+    "539": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "payment#0",
+        "account#0",
+        "account#0"
+      ]
+    },
+    "540": {
+      "op": "cover 2",
+      "defined_out": [
+        "account#0",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0"
+      ]
+    },
+    "542": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "account#0 (copy)",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "543": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "544": {
+      "op": "bytec_1 // \"total_saved\"",
+      "defined_out": [
+        "\"total_saved\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "account#0 (copy)",
+        "0",
+        "\"total_saved\""
+      ]
+    },
+    "545": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "exists#0",
+        "payment#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "exists#0"
+      ]
+    },
+    "546": {
+      "error": "Account must opt in first",
+      "op": "assert // Account must opt in first",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "547": {
+      "op": "dig 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "549": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "payment#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%1#0"
+      ]
+    },
+    "551": {
+      "op": "dig 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%1#0",
+        "account#0 (copy)"
+      ]
+    },
+    "553": {
+      "op": "==",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "payment#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%2#0"
+      ]
+    },
+    "554": {
+      "error": "Payment sender mismatch",
+      "op": "assert // Payment sender mismatch",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "555": {
+      "op": "dig 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "557": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "payment#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%3#0"
+      ]
+    },
+    "559": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "payment#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "561": {
+      "op": "==",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "payment#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%5#0"
+      ]
+    },
+    "562": {
+      "error": "Payment must target the app",
+      "op": "assert // Payment must target the app",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "payment#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "563": {
+      "op": "uncover 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "account#0",
+        "current_total_saved#0",
+        "payment#0"
+      ]
+    },
+    "565": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ]
+    },
+    "567": {
+      "op": "dup",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "tmp%6#0"
+      ]
+    },
+    "568": {
+      "op": "cover 3",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ]
+    },
+    "570": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "tmp%6#0 (copy)"
+      ]
+    },
+    "571": {
+      "error": "Deposit amount must be positive",
+      "op": "assert // Deposit amount must be positive",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ]
+    },
+    "572": {
+      "op": "dig 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "account#0 (copy)"
+      ]
+    },
+    "574": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "575": {
+      "op": "bytec_3 // \"deposit_count\"",
+      "defined_out": [
+        "\"deposit_count\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "account#0 (copy)",
+        "0",
+        "\"deposit_count\""
+      ]
+    },
+    "576": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "maybe_exists%1#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "577": {
+      "error": "check self.deposit_count exists for account",
+      "op": "assert // check self.deposit_count exists for account",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0"
+      ]
+    },
+    "578": {
+      "op": "dig 3",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "account#0 (copy)"
+      ]
+    },
+    "580": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "581": {
+      "op": "bytec 13 // \"last_deposit_round\"",
+      "defined_out": [
+        "\"last_deposit_round\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "account#0 (copy)",
+        "0",
+        "\"last_deposit_round\""
+      ]
+    },
+    "583": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%2#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "584": {
+      "error": "check self.last_deposit_round exists for account",
+      "op": "assert // check self.last_deposit_round exists for account",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0"
+      ]
+    },
+    "585": {
+      "op": "dig 4",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)"
+      ]
+    },
+    "587": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "588": {
+      "op": "bytec 5 // \"streak_days\"",
+      "defined_out": [
+        "\"streak_days\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "0",
+        "\"streak_days\""
+      ]
+    },
+    "590": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%3#0",
+        "streak_days#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "streak_days#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "591": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%3#0",
+        "streak_days#0"
+      ]
+    },
+    "592": {
+      "op": "cover 6",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%3#0",
+        "streak_days#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "594": {
+      "error": "check self.streak_days exists for account",
+      "op": "assert // check self.streak_days exists for account",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0"
+      ]
+    },
+    "595": {
+      "op": "dig 4",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)"
+      ]
+    },
+    "597": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "598": {
+      "op": "bytec 6 // \"xp_points\"",
+      "defined_out": [
+        "\"xp_points\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "streak_days#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "0",
+        "\"xp_points\""
+      ]
+    },
+    "600": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%4#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "xp_points#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "601": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%4#0",
+        "xp_points#0"
+      ]
+    },
+    "602": {
+      "op": "cover 6",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%4#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "604": {
+      "error": "check self.xp_points exists for account",
+      "op": "assert // check self.xp_points exists for account",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0"
+      ]
+    },
+    "605": {
+      "op": "dig 4",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)"
+      ]
+    },
+    "607": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "608": {
+      "op": "bytec 4 // \"highest_milestone\"",
+      "defined_out": [
+        "\"highest_milestone\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "last_round#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "0",
+        "\"highest_milestone\""
+      ]
+    },
+    "610": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "maybe_exists%5#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "highest_milestone#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "611": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%5#0",
+        "highest_milestone#0"
+      ]
+    },
+    "612": {
+      "op": "cover 6",
+      "defined_out": [
+        "account#0",
+        "current_total_saved#0",
+        "deposit_count#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "maybe_exists%5#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "614": {
+      "error": "check self.highest_milestone exists for account",
+      "op": "assert // check self.highest_milestone exists for account",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0"
+      ]
+    },
+    "615": {
+      "op": "uncover 3",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "account#0",
+        "tmp%6#0",
+        "deposit_count#0",
+        "last_round#0",
+        "current_total_saved#0"
+      ]
+    },
+    "617": {
+      "op": "uncover 3",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "current_total_saved#0",
+        "tmp%6#0"
+      ]
+    },
+    "619": {
+      "op": "+",
+      "defined_out": [
+        "account#0",
+        "deposit_count#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "new_total_saved#0"
+      ]
+    },
+    "620": {
+      "op": "dup",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "new_total_saved#0"
+      ]
+    },
+    "621": {
+      "op": "cover 4",
+      "defined_out": [
+        "account#0",
+        "deposit_count#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "new_total_saved#0"
+      ]
+    },
+    "623": {
+      "op": "dig 3",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "account#0 (copy)"
+      ]
+    },
+    "625": {
+      "op": "bytec_1 // \"total_saved\"",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "account#0 (copy)",
+        "\"total_saved\""
+      ]
+    },
+    "626": {
+      "op": "uncover 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "\"total_saved\"",
+        "new_total_saved#0"
+      ]
+    },
+    "628": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "deposit_count#0",
+        "last_round#0"
+      ]
+    },
+    "629": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "deposit_count#0"
+      ]
+    },
+    "630": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "deposit_count#0",
+        "1"
+      ]
+    },
+    "631": {
+      "op": "+",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "streak_days#0",
+        "tmp%10#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "tmp%10#0"
+      ]
+    },
+    "632": {
+      "op": "dig 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "tmp%10#0",
+        "account#0 (copy)"
+      ]
+    },
+    "634": {
+      "op": "bytec_3 // \"deposit_count\"",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "tmp%10#0",
+        "account#0 (copy)",
+        "\"deposit_count\""
+      ]
+    },
+    "635": {
+      "op": "uncover 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "account#0 (copy)",
+        "\"deposit_count\"",
+        "tmp%10#0"
+      ]
+    },
+    "637": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0"
+      ]
+    },
+    "638": {
+      "op": "global Round",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "streak_days#0",
+        "tmp%11#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "account#0",
+        "last_round#0",
+        "tmp%11#0"
+      ]
+    },
+    "640": {
+      "op": "uncover 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0",
+        "tmp%11#0",
+        "account#0"
+      ]
+    },
+    "642": {
+      "op": "bytec 13 // \"last_deposit_round\"",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0",
+        "tmp%11#0",
+        "account#0",
+        "\"last_deposit_round\""
+      ]
+    },
+    "644": {
+      "op": "uncover 2",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0",
+        "account#0",
+        "\"last_deposit_round\"",
+        "tmp%11#0"
+      ]
+    },
+    "646": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0"
+      ]
+    },
+    "647": {
+      "op": "global Round",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "streak_days#0",
+        "tmp%12#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0",
+        "tmp%12#0"
+      ]
+    },
+    "649": {
+      "op": "dig 1",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "last_round#0 (copy)",
+        "new_total_saved#0",
+        "streak_days#0",
+        "tmp%12#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0",
+        "tmp%12#0",
+        "last_round#0 (copy)"
+      ]
+    },
+    "651": {
+      "op": "-",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "last_round#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "last_round#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "652": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "last_round#0"
+      ]
+    },
+    "653": {
+      "op": "bnz deposit_else_body@3",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "656": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "new_streak#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "streak_days#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0"
+      ]
+    },
+    "657": {
+      "block": "deposit_after_if_else@10",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0"
+      ],
+      "op": "dig 7",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0",
+        "account#0"
+      ]
+    },
+    "659": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "660": {
+      "op": "bytec 5 // \"streak_days\"",
+      "defined_out": [
+        "\"streak_days\"",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"streak_days\""
+      ]
+    },
+    "662": {
+      "op": "uncover 3",
+      "defined_out": [
+        "\"streak_days\"",
+        "account#0",
+        "account#0 (copy)",
+        "new_streak#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "account#0 (copy)",
+        "\"streak_days\"",
+        "new_streak#0"
+      ]
+    },
+    "664": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0"
+      ]
+    },
+    "665": {
+      "op": "dig 6",
+      "defined_out": [
+        "account#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "tmp%6#0"
+      ]
+    },
+    "667": {
+      "op": "pushint 1000000",
+      "defined_out": [
+        "1000000",
+        "account#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "tmp%6#0",
+        "1000000"
+      ]
+    },
+    "671": {
+      "op": "/",
+      "defined_out": [
+        "account#0",
+        "algo_amount#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "algo_amount#0"
+      ]
+    },
+    "672": {
+      "op": "pushint 10",
+      "defined_out": [
+        "10",
+        "account#0",
+        "algo_amount#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "algo_amount#0",
+        "10"
+      ]
+    },
+    "674": {
+      "op": "*",
+      "defined_out": [
+        "account#0",
+        "tmp%6#0",
+        "xp_gained#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "xp_gained#0"
+      ]
+    },
+    "675": {
+      "op": "dig 5",
+      "defined_out": [
+        "account#0",
+        "tmp%6#0",
+        "xp_gained#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "xp_gained#0",
+        "xp_points#0"
+      ]
+    },
+    "677": {
+      "op": "+",
+      "defined_out": [
+        "account#0",
+        "new_xp#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "new_xp#0"
+      ]
+    },
+    "678": {
+      "op": "dup",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "new_xp#0",
+        "new_xp#0"
+      ]
+    },
+    "679": {
+      "op": "bury 10",
+      "defined_out": [
+        "account#0",
+        "new_xp#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "new_xp#0"
+      ]
+    },
+    "681": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "account#0"
+      ]
+    },
+    "682": {
+      "op": "bytec 6 // \"xp_points\"",
+      "defined_out": [
+        "\"xp_points\"",
+        "account#0",
+        "new_xp#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "account#0",
+        "\"xp_points\""
+      ]
+    },
+    "684": {
+      "op": "dig 2",
+      "defined_out": [
+        "\"xp_points\"",
+        "account#0",
+        "new_xp#0",
+        "new_xp#0 (copy)",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "account#0",
+        "\"xp_points\"",
+        "new_xp#0 (copy)"
+      ]
+    },
+    "686": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0"
+      ]
+    },
+    "687": {
+      "op": "pushint 500",
+      "defined_out": [
+        "500",
+        "account#0",
+        "new_xp#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "500"
+      ]
+    },
+    "690": {
+      "op": "<",
+      "defined_out": [
+        "account#0",
+        "new_xp#0",
+        "tmp%0#1",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%0#1"
+      ]
+    },
+    "691": {
+      "op": "bz deposit_after_if_else@15",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "694": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "account#0",
+        "new_xp#0",
+        "tmp%22#0",
+        "tmp%6#0",
+        "xp_points#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ]
+    },
+    "695": {
+      "block": "deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ],
+      "op": "dig 7",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0",
+        "account#0"
+      ]
+    },
+    "697": {
+      "op": "bytec 14 // \"level\"",
+      "defined_out": [
+        "\"level\"",
+        "account#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0",
+        "account#0",
+        "\"level\""
+      ]
+    },
+    "699": {
+      "op": "uncover 2",
+      "defined_out": [
+        "\"level\"",
+        "account#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "\"level\"",
+        "tmp%22#0"
+      ]
+    },
+    "701": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "702": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "account#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0"
+      ]
+    },
+    "703": {
+      "op": "bytec 12 // \"milestone_1000\"",
+      "defined_out": [
+        "\"milestone_1000\"",
+        "0",
+        "account#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0",
+        "\"milestone_1000\""
+      ]
+    },
+    "705": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%0#1",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#1"
+      ]
+    },
+    "706": {
+      "error": "check self.milestone_1000 exists",
+      "op": "assert // check self.milestone_1000 exists",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "707": {
+      "op": "dig 2",
+      "defined_out": [
+        "account#0",
+        "maybe_value%0#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%0#0",
+        "new_total_saved#0"
+      ]
+    },
+    "709": {
+      "op": "<=",
+      "defined_out": [
+        "account#0",
+        "new_total_saved#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%0#1"
+      ]
+    },
+    "710": {
+      "op": "bz deposit_after_if_else@27",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "713": {
+      "op": "intc_2 // 5",
+      "defined_out": [
+        "account#0",
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "714": {
+      "op": "bury 9",
+      "defined_out": [
+        "account#0",
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "716": {
+      "block": "deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dig 8",
+      "defined_out": [
+        "new_milestone#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "718": {
+      "op": "dig 3",
+      "defined_out": [
+        "highest_milestone#0",
+        "new_milestone#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0",
+        "highest_milestone#0"
+      ]
+    },
+    "720": {
+      "op": ">",
+      "defined_out": [
+        "highest_milestone#0",
+        "new_milestone#0",
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%24#0"
+      ]
+    },
+    "721": {
+      "op": "bz deposit_after_if_else@12",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "724": {
+      "op": "dig 6",
+      "defined_out": [
+        "account#0",
+        "highest_milestone#0",
+        "new_milestone#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0"
+      ]
+    },
+    "726": {
+      "op": "bytec 4 // \"highest_milestone\"",
+      "defined_out": [
+        "\"highest_milestone\"",
+        "account#0",
+        "highest_milestone#0",
+        "new_milestone#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "\"highest_milestone\""
+      ]
+    },
+    "728": {
+      "op": "dig 10",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "account#0",
+        "\"highest_milestone\"",
+        "new_milestone#0"
+      ]
+    },
+    "730": {
+      "op": "app_local_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "731": {
+      "block": "deposit_after_if_else@12",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0"
+      ]
+    },
+    "732": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "defined_out": [
+        "\"total_deposited_global\"",
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "733": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%6#0",
+        "maybe_value%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%6#0",
+        "maybe_exists%6#0"
+      ]
+    },
+    "734": {
+      "error": "check self.total_deposited_global exists",
+      "op": "assert // check self.total_deposited_global exists",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%6#0"
+      ]
+    },
+    "735": {
+      "op": "dig 6",
+      "defined_out": [
+        "maybe_value%6#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%6#0",
+        "tmp%6#0"
+      ]
+    },
+    "737": {
+      "op": "+",
+      "defined_out": [
+        "tmp%26#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%26#0"
+      ]
+    },
+    "738": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%26#0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "739": {
+      "op": "swap",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "\"total_deposited_global\"",
+        "tmp%26#0"
+      ]
+    },
+    "740": {
+      "op": "app_global_put",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "741": {
+      "op": "pushbytes \"Deposit successful\"",
+      "defined_out": [
+        "\"Deposit successful\"",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "\"Deposit successful\""
+      ]
+    },
+    "761": {
+      "op": "log",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "762": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "1"
+      ]
+    },
+    "763": {
+      "op": "return",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "764": {
+      "block": "deposit_after_if_else@27",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0"
+      ]
+    },
+    "765": {
+      "op": "bytec 11 // \"milestone_500\"",
+      "defined_out": [
+        "\"milestone_500\"",
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0",
+        "\"milestone_500\""
+      ]
+    },
+    "767": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "768": {
+      "error": "check self.milestone_500 exists",
+      "op": "assert // check self.milestone_500 exists",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "769": {
+      "op": "dig 2",
+      "defined_out": [
+        "maybe_value%1#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%1#0",
+        "new_total_saved#0"
+      ]
+    },
+    "771": {
+      "op": "<=",
+      "defined_out": [
+        "new_total_saved#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%1#1"
+      ]
+    },
+    "772": {
+      "op": "bz deposit_after_if_else@29",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "775": {
+      "op": "intc_3 // 4",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "776": {
+      "op": "bury 9",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "778": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36"
+    },
+    "781": {
+      "block": "deposit_after_if_else@29",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0"
+      ]
+    },
+    "782": {
+      "op": "bytec 10 // \"milestone_100\"",
+      "defined_out": [
+        "\"milestone_100\"",
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0",
+        "\"milestone_100\""
+      ]
+    },
+    "784": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "785": {
+      "error": "check self.milestone_100 exists",
+      "op": "assert // check self.milestone_100 exists",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "786": {
+      "op": "dig 2",
+      "defined_out": [
+        "maybe_value%2#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%2#0",
+        "new_total_saved#0"
+      ]
+    },
+    "788": {
+      "op": "<=",
+      "defined_out": [
+        "new_total_saved#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%2#0"
+      ]
+    },
+    "789": {
+      "op": "bz deposit_after_if_else@31",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "792": {
+      "op": "pushint 3",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "794": {
+      "op": "bury 9",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "796": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36"
+    },
+    "799": {
+      "block": "deposit_after_if_else@31",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0"
+      ]
+    },
+    "800": {
+      "op": "bytec 9 // \"milestone_50\"",
+      "defined_out": [
+        "\"milestone_50\"",
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0",
+        "\"milestone_50\""
+      ]
+    },
+    "802": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "803": {
+      "error": "check self.milestone_50 exists",
+      "op": "assert // check self.milestone_50 exists",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "804": {
+      "op": "dig 2",
+      "defined_out": [
+        "maybe_value%3#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%3#0",
+        "new_total_saved#0"
+      ]
+    },
+    "806": {
+      "op": "<=",
+      "defined_out": [
+        "new_total_saved#0",
+        "tmp%3#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%3#1"
+      ]
+    },
+    "807": {
+      "op": "bz deposit_after_if_else@33",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "810": {
+      "op": "pushint 2",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "812": {
+      "op": "bury 9",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "814": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36"
+    },
+    "817": {
+      "block": "deposit_after_if_else@33",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0"
+      ]
+    },
+    "818": {
+      "op": "bytec 8 // \"milestone_10\"",
+      "defined_out": [
+        "\"milestone_10\"",
+        "0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "0",
+        "\"milestone_10\""
+      ]
+    },
+    "820": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%4#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "821": {
+      "error": "check self.milestone_10 exists",
+      "op": "assert // check self.milestone_10 exists",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "822": {
+      "op": "dig 2",
+      "defined_out": [
+        "maybe_value%4#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "maybe_value%4#0",
+        "new_total_saved#0"
+      ]
+    },
+    "824": {
+      "op": "<=",
+      "defined_out": [
+        "new_total_saved#0",
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%4#1"
+      ]
+    },
+    "825": {
+      "op": "bz deposit_after_if_else@35",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "828": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "829": {
+      "op": "bury 9",
+      "defined_out": [
+        "new_milestone#0",
+        "new_total_saved#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "831": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36"
+    },
+    "834": {
+      "block": "deposit_after_if_else@35",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "new_milestone#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_milestone#0"
+      ]
+    },
+    "835": {
+      "op": "bury 9",
+      "defined_out": [
+        "new_milestone#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "837": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._check_milestone@36"
+    },
+    "840": {
+      "block": "deposit_after_if_else@15",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dig 7",
+      "defined_out": [
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0"
+      ]
+    },
+    "842": {
+      "op": "pushint 1500",
+      "defined_out": [
+        "1500",
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "1500"
+      ]
+    },
+    "845": {
+      "op": "<",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%1#1"
+      ]
+    },
+    "846": {
+      "op": "bz deposit_after_if_else@17",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "849": {
+      "op": "pushint 2",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ]
+    },
+    "851": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24"
+    },
+    "854": {
+      "block": "deposit_after_if_else@17",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dig 7",
+      "defined_out": [
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0"
+      ]
+    },
+    "856": {
+      "op": "pushint 3000",
+      "defined_out": [
+        "3000",
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "3000"
+      ]
+    },
+    "859": {
+      "op": "<",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%2#0"
+      ]
+    },
+    "860": {
+      "op": "bz deposit_after_if_else@19",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "863": {
+      "op": "pushint 3",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ]
+    },
+    "865": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24"
+    },
+    "868": {
+      "block": "deposit_after_if_else@19",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dig 7",
+      "defined_out": [
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0"
+      ]
+    },
+    "870": {
+      "op": "pushint 5000",
+      "defined_out": [
+        "5000",
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "5000"
+      ]
+    },
+    "873": {
+      "op": "<",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%3#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%3#1"
+      ]
+    },
+    "874": {
+      "op": "bz deposit_after_if_else@21",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "877": {
+      "op": "intc_3 // 4",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ]
+    },
+    "878": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24"
+    },
+    "881": {
+      "block": "deposit_after_if_else@21",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dig 7",
+      "defined_out": [
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0"
+      ]
+    },
+    "883": {
+      "op": "pushint 8000",
+      "defined_out": [
+        "8000",
+        "new_xp#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_xp#0",
+        "8000"
+      ]
+    },
+    "886": {
+      "op": "<",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%4#1"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%4#1"
+      ]
+    },
+    "887": {
+      "op": "bz deposit_after_if_else@23",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "890": {
+      "op": "intc_2 // 5",
+      "defined_out": [
+        "new_xp#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ]
+    },
+    "891": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24"
+    },
+    "894": {
+      "block": "deposit_after_if_else@23",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "pushint 6",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%22#0"
+      ]
+    },
+    "896": {
+      "op": "b deposit_after_inlined_smart_contracts.savings_wallet.contract.SavingsVault._calculate_level@24"
+    },
+    "899": {
+      "block": "deposit_else_body@3",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "rounds_since_last#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "900": {
+      "op": "pushint 1440",
+      "defined_out": [
+        "1440",
+        "rounds_since_last#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "rounds_since_last#0",
+        "1440"
+      ]
+    },
+    "903": {
+      "op": "<=",
+      "defined_out": [
+        "rounds_since_last#0",
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%15#0"
+      ]
+    },
+    "904": {
+      "op": "bz deposit_else_body@5",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "907": {
+      "op": "dig 4",
+      "defined_out": [
+        "rounds_since_last#0",
+        "streak_days#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "streak_days#0"
+      ]
+    },
+    "909": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "rounds_since_last#0",
+        "streak_days#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "streak_days#0",
+        "1"
+      ]
+    },
+    "910": {
+      "op": "+",
+      "defined_out": [
+        "new_streak#0",
+        "rounds_since_last#0",
+        "streak_days#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0"
+      ]
+    },
+    "911": {
+      "op": "b deposit_after_if_else@10"
+    },
+    "914": {
+      "block": "deposit_else_body@5",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "rounds_since_last#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "915": {
+      "op": "pushint 2880",
+      "defined_out": [
+        "2880",
+        "rounds_since_last#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "rounds_since_last#0",
+        "2880"
+      ]
+    },
+    "918": {
+      "op": "<=",
+      "defined_out": [
+        "rounds_since_last#0",
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "tmp%17#0"
+      ]
+    },
+    "919": {
+      "op": "bz deposit_else_body@7",
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ]
+    },
+    "922": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "new_streak#0",
+        "rounds_since_last#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0"
+      ]
+    },
+    "923": {
+      "op": "b deposit_after_if_else@10"
+    },
+    "926": {
+      "block": "deposit_else_body@7",
+      "stack_in": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0"
+      ],
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "new_streak#0"
+      ],
+      "stack_out": [
+        "new_milestone#0",
+        "new_xp#0",
+        "account#0",
+        "tmp%6#0",
+        "streak_days#0",
+        "xp_points#0",
+        "highest_milestone#0",
+        "new_total_saved#0",
+        "rounds_since_last#0",
+        "new_streak#0"
+      ]
+    },
+    "927": {
+      "op": "b deposit_after_if_else@10"
+    },
+    "930": {
+      "subroutine": "smart_contracts.savings_wallet.contract.SavingsVault.withdraw[routing]",
+      "params": {},
+      "block": "withdraw",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "933": {
+      "op": "dup",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%0#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%0#0 (copy)"
+      ]
+    },
+    "934": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "len%0#0"
+      ]
+    },
+    "935": {
+      "op": "pushint 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "937": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "eq%0#0"
+      ]
+    },
+    "938": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "939": {
+      "op": "btoi",
+      "defined_out": [
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "940": {
+      "op": "txn Sender",
+      "defined_out": [
+        "account#0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0"
+      ]
+    },
+    "942": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "account#0 (copy)",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "943": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "944": {
+      "op": "bytec_1 // \"total_saved\"",
+      "defined_out": [
+        "\"total_saved\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "account#0 (copy)",
+        "0",
+        "\"total_saved\""
+      ]
+    },
+    "945": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "amount#0",
+        "current_total_saved#0",
+        "exists#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "exists#0"
+      ]
+    },
+    "946": {
+      "error": "Account must opt in first",
+      "op": "assert // Account must opt in first",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "947": {
+      "op": "dig 2",
+      "defined_out": [
+        "account#0",
+        "amount#0",
+        "amount#0 (copy)",
+        "current_total_saved#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "949": {
+      "error": "Withdraw amount must be positive",
+      "op": "assert // Withdraw amount must be positive",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "950": {
+      "op": "dig 2",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "952": {
+      "op": "dig 1",
+      "defined_out": [
+        "account#0",
+        "amount#0",
+        "amount#0 (copy)",
+        "current_total_saved#0",
+        "current_total_saved#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "amount#0 (copy)",
+        "current_total_saved#0 (copy)"
+      ]
+    },
+    "954": {
+      "op": "<=",
+      "defined_out": [
+        "account#0",
+        "amount#0",
+        "current_total_saved#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "tmp%2#0"
+      ]
+    },
+    "955": {
+      "error": "Insufficient balance",
+      "op": "assert // Insufficient balance",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "956": {
+      "op": "itxn_begin"
+    },
+    "957": {
+      "op": "pushbytes 0x5769746864726177616c2066726f6d20536176696e67735661756c74",
+      "defined_out": [
+        "0x5769746864726177616c2066726f6d20536176696e67735661756c74",
+        "account#0",
+        "amount#0",
+        "current_total_saved#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "0x5769746864726177616c2066726f6d20536176696e67735661756c74"
+      ]
+    },
+    "987": {
+      "op": "itxn_field Note",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "989": {
+      "op": "dig 2",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "991": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "993": {
+      "op": "dig 1",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "account#0 (copy)"
+      ]
+    },
+    "995": {
+      "op": "itxn_field Receiver",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "997": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "account#0",
+        "amount#0",
+        "current_total_saved#0",
+        "pay"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "pay"
+      ]
+    },
+    "998": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "1000": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "0"
+      ]
+    },
+    "1001": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0"
+      ]
+    },
+    "1003": {
+      "op": "itxn_submit"
+    },
+    "1004": {
+      "op": "dig 2",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "current_total_saved#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "1006": {
+      "op": "-",
+      "defined_out": [
+        "account#0",
+        "amount#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "tmp%3#0"
+      ]
+    },
+    "1007": {
+      "op": "bytec_1 // \"total_saved\""
+    },
+    "1008": {
+      "op": "swap",
+      "stack_out": [
+        "amount#0",
+        "account#0",
+        "\"total_saved\"",
+        "tmp%3#0"
+      ]
+    },
+    "1009": {
+      "op": "app_local_put",
+      "stack_out": [
+        "amount#0"
+      ]
+    },
+    "1010": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "amount#0",
+        "0"
+      ]
+    },
+    "1011": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "defined_out": [
+        "\"total_deposited_global\"",
+        "0",
+        "amount#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "1012": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "amount#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1013": {
+      "error": "check self.total_deposited_global exists",
+      "op": "assert // check self.total_deposited_global exists",
+      "stack_out": [
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1014": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_value%1#0",
+        "amount#0"
+      ]
+    },
+    "1015": {
+      "op": "-",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "1016": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "stack_out": [
+        "tmp%4#0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "1017": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_deposited_global\"",
+        "tmp%4#0"
+      ]
+    },
+    "1018": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "1019": {
+      "op": "pushbytes \"Withdrawal successful\"",
+      "defined_out": [
+        "\"Withdrawal successful\""
+      ],
+      "stack_out": [
+        "\"Withdrawal successful\""
+      ]
+    },
+    "1042": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1043": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1044": {
+      "op": "return",
+      "stack_out": []
+    },
+    "1045": {
+      "subroutine": "smart_contracts.savings_wallet.contract.SavingsVault.get_savings[routing]",
+      "params": {},
+      "block": "get_savings",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "1047": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1",
+        "0"
+      ]
+    },
+    "1048": {
+      "op": "bytec_1 // \"total_saved\"",
+      "defined_out": [
+        "\"total_saved\"",
+        "0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1",
+        "0",
+        "\"total_saved\""
+      ]
+    },
+    "1049": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1050": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0",
+        "0"
+      ]
+    },
+    "1051": {
+      "op": "cover 2",
+      "stack_out": [
+        "0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1053": {
+      "op": "select",
+      "defined_out": [
+        "state_get%0#0"
+      ],
+      "stack_out": [
+        "state_get%0#0"
+      ]
+    },
+    "1054": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "1055": {
+      "op": "bytec 7 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "1057": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "1058": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "1059": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1060": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1061": {
+      "op": "return",
+      "stack_out": []
+    },
+    "1062": {
+      "subroutine": "smart_contracts.savings_wallet.contract.SavingsVault.get_stats[routing]",
+      "params": {},
+      "block": "get_stats",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "account#0"
+      ],
+      "stack_out": [
+        "account#0"
+      ]
+    },
+    "1064": {
+      "op": "dup",
+      "defined_out": [
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "account#0 (copy)"
+      ]
+    },
+    "1065": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "1066": {
+      "op": "bytec_1 // \"total_saved\"",
+      "defined_out": [
+        "\"total_saved\"",
+        "0",
+        "account#0",
+        "account#0 (copy)"
+      ],
+      "stack_out": [
+        "account#0",
+        "account#0 (copy)",
+        "0",
+        "\"total_saved\""
+      ]
+    },
+    "1067": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1068": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0",
+        "0"
+      ]
+    },
+    "1069": {
+      "op": "cover 2",
+      "stack_out": [
+        "account#0",
+        "0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1071": {
+      "op": "select",
+      "defined_out": [
+        "account#0",
+        "state_get%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0"
+      ]
+    },
+    "1072": {
+      "op": "dig 1",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "account#0 (copy)"
+      ]
+    },
+    "1074": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "1075": {
+      "op": "bytec_3 // \"deposit_count\"",
+      "defined_out": [
+        "\"deposit_count\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "state_get%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "account#0 (copy)",
+        "0",
+        "\"deposit_count\""
+      ]
+    },
+    "1076": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "state_get%0#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1077": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0",
+        "0"
+      ]
+    },
+    "1078": {
+      "op": "cover 2",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1080": {
+      "op": "select",
+      "defined_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0"
+      ]
+    },
+    "1081": {
+      "op": "dig 2",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "account#0 (copy)"
+      ]
+    },
+    "1083": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "1084": {
+      "op": "bytec 5 // \"streak_days\"",
+      "defined_out": [
+        "\"streak_days\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "state_get%0#0",
+        "state_get%1#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "account#0 (copy)",
+        "0",
+        "\"streak_days\""
+      ]
+    },
+    "1086": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "state_get%0#0",
+        "state_get%1#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1087": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0",
+        "0"
+      ]
+    },
+    "1088": {
+      "op": "cover 2",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1090": {
+      "op": "select",
+      "defined_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0"
+      ]
+    },
+    "1091": {
+      "op": "dig 3",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "account#0 (copy)"
+      ]
+    },
+    "1093": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "1094": {
+      "op": "bytec 6 // \"xp_points\"",
+      "defined_out": [
+        "\"xp_points\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "account#0 (copy)",
+        "0",
+        "\"xp_points\""
+      ]
+    },
+    "1096": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%3#0",
+        "maybe_value%3#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1097": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0",
+        "0"
+      ]
+    },
+    "1098": {
+      "op": "cover 2",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1100": {
+      "op": "select",
+      "defined_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0"
+      ]
+    },
+    "1101": {
+      "op": "dig 4",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "account#0 (copy)"
+      ]
+    },
+    "1103": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "account#0 (copy)",
+        "0"
+      ]
+    },
+    "1104": {
+      "op": "bytec 14 // \"level\"",
+      "defined_out": [
+        "\"level\"",
+        "0",
+        "account#0",
+        "account#0 (copy)",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "account#0 (copy)",
+        "0",
+        "\"level\""
+      ]
+    },
+    "1106": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "account#0",
+        "maybe_exists%4#0",
+        "maybe_value%4#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "1107": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "account#0",
+        "maybe_exists%4#0",
+        "maybe_value%4#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0",
+        "1"
+      ]
+    },
+    "1108": {
+      "op": "cover 2",
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "1",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "1110": {
+      "op": "select",
+      "defined_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0"
+      ],
+      "stack_out": [
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0"
+      ]
+    },
+    "1111": {
+      "op": "uncover 5",
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "account#0"
+      ]
+    },
+    "1113": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "account#0",
+        "0"
+      ]
+    },
+    "1114": {
+      "op": "bytec 4 // \"highest_milestone\"",
+      "defined_out": [
+        "\"highest_milestone\"",
+        "0",
+        "account#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0"
+      ],
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "account#0",
+        "0",
+        "\"highest_milestone\""
+      ]
+    },
+    "1116": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%5#0",
+        "maybe_value%5#0",
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0"
+      ],
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "1117": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0",
+        "0"
+      ]
+    },
+    "1118": {
+      "op": "cover 2",
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "1120": {
+      "op": "select",
+      "defined_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ]
+    },
+    "1121": {
+      "op": "uncover 5",
+      "stack_out": [
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "state_get%0#0"
+      ]
+    },
+    "1123": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "1124": {
+      "op": "uncover 5",
+      "stack_out": [
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%val_as_bytes%0#0",
+        "state_get%1#0"
+      ]
+    },
+    "1126": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ]
+    },
+    "1127": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%1#0",
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%1#0"
+      ]
+    },
+    "1128": {
+      "op": "uncover 4",
+      "stack_out": [
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%1#0",
+        "state_get%2#0"
+      ]
+    },
+    "1130": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%1#0",
+        "aggregate%val_as_bytes%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%1#0",
+        "aggregate%val_as_bytes%2#0"
+      ]
+    },
+    "1131": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%2#0",
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%3#0",
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%2#0"
+      ]
+    },
+    "1132": {
+      "op": "uncover 3",
+      "stack_out": [
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%2#0",
+        "state_get%3#0"
+      ]
+    },
+    "1134": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%2#0",
+        "aggregate%val_as_bytes%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%2#0",
+        "aggregate%val_as_bytes%3#0"
+      ]
+    },
+    "1135": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%3#0",
+        "state_get%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%4#0",
+        "state_get%5#0",
+        "aggregate%head%3#0"
+      ]
+    },
+    "1136": {
+      "op": "uncover 2",
+      "stack_out": [
+        "state_get%5#0",
+        "aggregate%head%3#0",
+        "state_get%4#0"
+      ]
+    },
+    "1138": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%3#0",
+        "aggregate%val_as_bytes%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%5#0",
+        "aggregate%head%3#0",
+        "aggregate%val_as_bytes%4#0"
+      ]
+    },
+    "1139": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%4#0",
+        "state_get%5#0"
+      ],
+      "stack_out": [
+        "state_get%5#0",
+        "aggregate%head%4#0"
+      ]
+    },
+    "1140": {
+      "op": "swap",
+      "stack_out": [
+        "aggregate%head%4#0",
+        "state_get%5#0"
+      ]
+    },
+    "1141": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%4#0",
+        "aggregate%val_as_bytes%5#0"
+      ],
+      "stack_out": [
+        "aggregate%head%4#0",
+        "aggregate%val_as_bytes%5#0"
+      ]
+    },
+    "1142": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%5#0"
+      ],
+      "stack_out": [
+        "aggregate%head%5#0"
+      ]
+    },
+    "1143": {
+      "op": "bytec 7 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%head%5#0"
+      ],
+      "stack_out": [
+        "aggregate%head%5#0",
+        "0x151f7c75"
+      ]
+    },
+    "1145": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%head%5#0"
+      ]
+    },
+    "1146": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "1147": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1148": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1149": {
+      "op": "return",
+      "stack_out": []
+    },
+    "1150": {
+      "subroutine": "smart_contracts.savings_wallet.contract.SavingsVault.get_global_stats[routing]",
+      "params": {},
+      "block": "get_global_stats",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1151": {
+      "op": "bytec_0 // \"total_deposited_global\"",
+      "defined_out": [
+        "\"total_deposited_global\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_deposited_global\""
+      ]
+    },
+    "1152": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1153": {
+      "error": "check self.total_deposited_global exists",
+      "op": "assert // check self.total_deposited_global exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1154": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "1155": {
+      "op": "bytec_2 // \"total_users\"",
+      "defined_out": [
+        "\"total_users\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"total_users\""
+      ]
+    },
+    "1156": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1157": {
+      "error": "check self.total_users exists",
+      "op": "assert // check self.total_users exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1158": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1159": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "1160": {
+      "op": "swap",
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1161": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ]
+    },
+    "1162": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%1#0"
+      ],
+      "stack_out": [
+        "aggregate%head%1#0"
+      ]
+    },
+    "1163": {
+      "op": "bytec 7 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%head%1#0"
+      ],
+      "stack_out": [
+        "aggregate%head%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "1165": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%head%1#0"
+      ]
+    },
+    "1166": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "1167": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1168": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1169": {
+      "op": "return",
+      "stack_out": []
+    },
+    "1170": {
+      "subroutine": "smart_contracts.savings_wallet.contract.SavingsVault.get_milestone_thresholds[routing]",
+      "params": {},
+      "block": "get_milestone_thresholds",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1171": {
+      "op": "bytec 8 // \"milestone_10\"",
+      "defined_out": [
+        "\"milestone_10\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"milestone_10\""
+      ]
+    },
+    "1173": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1174": {
+      "error": "check self.milestone_10 exists",
+      "op": "assert // check self.milestone_10 exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1175": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "1176": {
+      "op": "bytec 9 // \"milestone_50\"",
+      "defined_out": [
+        "\"milestone_50\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"milestone_50\""
+      ]
+    },
+    "1178": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1179": {
+      "error": "check self.milestone_50 exists",
+      "op": "assert // check self.milestone_50 exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1180": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "1181": {
+      "op": "bytec 10 // \"milestone_100\"",
+      "defined_out": [
+        "\"milestone_100\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0",
+        "\"milestone_100\""
+      ]
+    },
+    "1183": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1184": {
+      "error": "check self.milestone_100 exists",
+      "op": "assert // check self.milestone_100 exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1185": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0"
+      ]
+    },
+    "1186": {
+      "op": "bytec 11 // \"milestone_500\"",
+      "defined_out": [
+        "\"milestone_500\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0",
+        "\"milestone_500\""
+      ]
+    },
+    "1188": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1189": {
+      "error": "check self.milestone_500 exists",
+      "op": "assert // check self.milestone_500 exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "1190": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "0"
+      ]
+    },
+    "1191": {
+      "op": "bytec 12 // \"milestone_1000\"",
+      "defined_out": [
+        "\"milestone_1000\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "0",
+        "\"milestone_1000\""
+      ]
+    },
+    "1193": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%4#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "1194": {
+      "error": "check self.milestone_1000 exists",
+      "op": "assert // check self.milestone_1000 exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "1195": {
+      "op": "uncover 4",
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1197": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "1198": {
+      "op": "uncover 4",
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%val_as_bytes%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1200": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%val_as_bytes%0#0",
+        "aggregate%val_as_bytes%1#0"
+      ]
+    },
+    "1201": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%head%1#0"
+      ]
+    },
+    "1202": {
+      "op": "uncover 3",
+      "stack_out": [
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%head%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1204": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%1#0",
+        "aggregate%val_as_bytes%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%head%1#0",
+        "aggregate%val_as_bytes%2#0"
+      ]
+    },
+    "1205": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%2#0",
+        "maybe_value%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%3#0",
+        "maybe_value%4#0",
+        "aggregate%head%2#0"
+      ]
+    },
+    "1206": {
+      "op": "uncover 2",
+      "stack_out": [
+        "maybe_value%4#0",
+        "aggregate%head%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "1208": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%2#0",
+        "aggregate%val_as_bytes%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%4#0",
+        "aggregate%head%2#0",
+        "aggregate%val_as_bytes%3#0"
+      ]
+    },
+    "1209": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%3#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "maybe_value%4#0",
+        "aggregate%head%3#0"
+      ]
+    },
+    "1210": {
+      "op": "swap",
+      "stack_out": [
+        "aggregate%head%3#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "1211": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%head%3#0",
+        "aggregate%val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "aggregate%head%3#0",
+        "aggregate%val_as_bytes%4#0"
+      ]
+    },
+    "1212": {
+      "op": "concat",
+      "defined_out": [
+        "aggregate%head%4#0"
+      ],
+      "stack_out": [
+        "aggregate%head%4#0"
+      ]
+    },
+    "1213": {
+      "op": "bytec 7 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%head%4#0"
+      ],
+      "stack_out": [
+        "aggregate%head%4#0",
+        "0x151f7c75"
+      ]
+    },
+    "1215": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%head%4#0"
+      ]
+    },
+    "1216": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "1217": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1218": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1219": {
+      "op": "return",
+      "stack_out": []
+    }
+  }
+}

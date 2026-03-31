@@ -2,158 +2,111 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Home,
+  ArrowLeft,
+  LayoutDashboard,
+  ShieldCheck,
   Target,
-  Users,
   Trophy,
   User,
-  Menu,
-  X,
-  Wallet,
+  Users,
 } from "lucide-react";
-import { useState } from "react";
+
+const navItems = [
+  { path: "/vault", label: "Dashboard", icon: LayoutDashboard },
+  { path: "/vault/goals", label: "Goals", icon: Target },
+  { path: "/vault/social", label: "Social", icon: Users },
+  { path: "/vault/rewards", label: "Rewards", icon: Trophy },
+  { path: "/vault/profile", label: "Profile", icon: User },
+];
+
+function isActivePath(currentPath, itemPath) {
+  if (itemPath === "/vault") {
+    return currentPath === "/vault";
+  }
+
+  return currentPath.startsWith(itemPath);
+}
 
 export default function VaultNavBar() {
   const location = useLocation();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navItems = [
-    { path: "/vault", label: "Home", icon: Home },
-    { path: "/vault/goals", label: "Goals", icon: Target },
-    { path: "/vault/social", label: "Social", icon: Users },
-    { path: "/vault/rewards", label: "Rewards", icon: Trophy },
-    { path: "/vault/profile", label: "Profile", icon: User },
-  ];
-
-  const isActive = (path) => location.pathname === path;
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <nav className="hidden md:flex flex-col fixed left-0 top-0 h-screen w-64 bg-sec border-r border-[var(--border)] z-40 pt-8">
-        {/* Logo */}
-        <Link
-          to="/vault"
-          className="px-6 mb-8 flex items-center gap-3 group cursor-pointer"
-        >
+      <aside className="hidden min-h-screen border-r border-white/10 bg-[#0f1014]/90 px-4 py-6 backdrop-blur lg:flex lg:flex-col">
+        <Link to="/" className="group mb-8 flex items-center gap-3">
           <motion.div
-            className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center font-bold text-lg"
-            whileHover={{ scale: 1.05 }}
+            className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#ff2f68] to-[#a10d31] text-white shadow-[0_12px_30px_rgba(255,47,104,0.35)]"
+            whileHover={{ scale: 1.04 }}
           >
-            💰
+            <ShieldCheck className="h-5 w-5" />
           </motion.div>
-          <span className="font-bold text-lg group-hover:txt-red transition-colors">
-            Vault
-          </span>
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-[#ff9fb6]/70">
+              VaultSave
+            </p>
+            <p className="text-sm font-semibold text-white transition group-hover:text-[#ff9fb6]">
+              Savings vault
+            </p>
+          </div>
         </Link>
 
-        {/* Navigation items */}
-        <div className="flex-1 px-4 space-y-1">
+        <nav className="flex flex-col gap-1">
           {navItems.map(({ path, label, icon: Icon }) => (
             <Link key={path} to={path}>
               <motion.div
-                className={`
-                  flex items-center gap-3 px-4 py-3 rounded-lg transition-colors cursor-pointer
-                  ${
-                    isActive(path)
-                      ? "bg-active-red txt-red"
-                      : "txt-dim hover:bg-hover-red hover:txt-red"
-                  }
-                `}
-                whileHover={{ x: 4 }}
+                className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-sm transition ${
+                  isActivePath(location.pathname, path)
+                    ? "border border-[#713042] bg-[#26131a] text-[#ffd2dc]"
+                    : "border border-transparent text-[#b4a5ab] hover:bg-white/5 hover:text-white"
+                }`}
+                whileHover={{ x: 2 }}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="h-4 w-4" />
                 <span className="font-medium">{label}</span>
               </motion.div>
             </Link>
           ))}
-        </div>
+        </nav>
 
-        {/* Wallet button at bottom */}
-        <div className="px-4 pb-6 border-t border-[var(--border)] pt-4">
-          <motion.button
-            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg font-semibold transition-colors"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+        <div className="mt-auto rounded-[26px] border border-white/10 bg-white/5 p-4">
+          <p className="text-[11px] uppercase tracking-[0.28em] text-[#8f8187]">
+            Navigation
+          </p>
+          <p className="mt-2 text-sm leading-6 text-[#d1c4c9]">
+            Active routes stay connected to the wallet session and TestNet vault contract.
+          </p>
+          <Link
+            to="/"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#ff93ad] transition hover:text-[#ffb0c2]"
           >
-            <Wallet className="w-4 h-4" />
-            Connect Wallet
-          </motion.button>
+            <ArrowLeft className="h-4 w-4" />
+            Back to landing
+          </Link>
         </div>
-      </nav>
+      </aside>
 
-      {/* Mobile Top Bar */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 h-16 bg-primary border-b border-[var(--border)] z-50 flex items-center justify-between px-4">
-        <Link to="/vault" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-red-500 to-red-600 text-white flex items-center justify-center font-bold text-sm">
-            💰
-          </div>
-          <span className="font-bold">Vault</span>
-        </Link>
+      <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-[#0f1014]/95 px-2 py-3 backdrop-blur lg:hidden">
+        <div className="flex items-center justify-between gap-1">
+          <Link
+            to="/"
+            className="flex min-w-[56px] flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[#b4a5ab] transition hover:text-white"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span className="text-[11px] font-medium">Home</span>
+          </Link>
 
-        <motion.button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="p-2 hover:bg-hover-red rounded-lg transition-colors"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {mobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
-        </motion.button>
-      </nav>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          className="md:hidden fixed top-16 left-0 right-0 bg-primary border-b border-[var(--border)] z-40 p-4 space-y-2"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
           {navItems.map(({ path, label, icon: Icon }) => (
             <Link
               key={path}
               to={path}
-              onClick={() => setMobileMenuOpen(false)}
+              className={`flex min-w-[56px] flex-1 flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-medium transition ${
+                isActivePath(location.pathname, path)
+                  ? "bg-[#26131a] text-[#ffd2dc]"
+                  : "text-[#b4a5ab] hover:text-white"
+              }`}
             >
-              <motion.div
-                className={`
-                  flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
-                  ${
-                    isActive(path)
-                      ? "bg-active-red txt-red"
-                      : "txt-dim hover:bg-hover-red hover:txt-red"
-                  }
-                `}
-              >
-                <Icon className="w-5 h-5" />
-                <span className="font-medium">{label}</span>
-              </motion.div>
-            </Link>
-          ))}
-        </motion.div>
-      )}
-
-      {/* Mobile Bottom Nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-20 bg-primary border-t border-[var(--border)] z-40">
-        <div className="flex items-end justify-around h-full px-4 pb-4">
-          {navItems.map(({ path, label, icon: Icon }) => (
-            <Link
-              key={path}
-              to={path}
-              className={`
-                flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-lg transition-colors
-                ${
-                  isActive(path)
-                    ? "txt-red"
-                    : "txt-dim hover:txt-red"
-                }
-              `}
-            >
-              <Icon className="w-5 h-5" />
-              <span className="text-xs font-medium">{label}</span>
+              <Icon className="h-4 w-4" />
+              <span>{label}</span>
             </Link>
           ))}
         </div>

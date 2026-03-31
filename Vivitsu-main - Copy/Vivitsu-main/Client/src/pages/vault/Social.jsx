@@ -6,7 +6,7 @@ import { communityGoal } from "@/mock/data";
 
 export default function SocialPage() {
   const { user, leaderboard } = useVault();
-  const [view, setView] = useState("global"); // "global" or "friends"
+  const [view, setView] = useState("global");
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -21,7 +21,7 @@ export default function SocialPage() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const currentUserRank = leaderboard.find((u) => u.address === user.address);
+  const currentUserRank = leaderboard.find((entry) => entry.address === user.address);
   const topThree = leaderboard.slice(0, 3);
   const restOfLeaderboard = leaderboard.slice(3);
 
@@ -31,20 +31,18 @@ export default function SocialPage() {
     : 100;
 
   return (
-    <div className="min-h-screen bg-primary txt pb-24 md:pb-8">
+    <div className="min-h-screen bg-transparent txt pb-24 md:pb-8">
       <motion.div
         className="max-w-4xl mx-auto px-4 py-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Header */}
         <motion.div variants={itemVariants} className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Top Savers This Month
           </h1>
 
-          {/* View toggle */}
           <div className="flex gap-2">
             <motion.button
               onClick={() => setView("global")}
@@ -73,17 +71,16 @@ export default function SocialPage() {
           </div>
         </motion.div>
 
-        {/* Top 3 cards */}
         <motion.div
           variants={itemVariants}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 relative"
         >
-          {topThree.map((user, idx) => (
-            <div key={user.id} className="relative">
+          {topThree.map((entry, idx) => (
+            <div key={entry.id} className="relative">
               <LeaderboardCard
-                user={user}
-                rank={user.rank}
-                isCurrentUser={user.address === user.address}
+                user={entry}
+                rank={entry.rank}
+                isCurrentUser={entry.address === currentUserRank?.address}
                 compact={false}
               />
               {idx === 0 && (
@@ -92,14 +89,13 @@ export default function SocialPage() {
                   animate={{ y: [-2, 2, -2] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  👑
+                  ðŸ‘‘
                 </motion.div>
               )}
             </div>
           ))}
         </motion.div>
 
-        {/* Community vault */}
         <motion.div
           variants={itemVariants}
           className="p-6 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 mb-8"
@@ -129,25 +125,24 @@ export default function SocialPage() {
             animate={{ opacity: [0.6, 1, 0.6] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            🌟 {communityGoal.contributors} savers working together
+            ðŸŒŸ {communityGoal.contributors} savers working together
           </motion.div>
         </motion.div>
 
-        {/* Rest of leaderboard */}
         <motion.div variants={itemVariants}>
           <h2 className="font-semibold mb-4">Rankings</h2>
           <div className="space-y-3">
-            {restOfLeaderboard.map((u, idx) => (
+            {restOfLeaderboard.map((entry, idx) => (
               <motion.div
-                key={u.id}
+                key={entry.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.05 }}
               >
                 <LeaderboardCard
-                  user={u}
-                  rank={u.rank}
-                  isCurrentUser={u.address === user.address}
+                  user={entry}
+                  rank={entry.rank}
+                  isCurrentUser={entry.address === user.address}
                   compact={true}
                 />
               </motion.div>
@@ -155,7 +150,6 @@ export default function SocialPage() {
           </div>
         </motion.div>
 
-        {/* Current user highlight (sticky) */}
         {currentUserRank && (
           <motion.div
             className="fixed bottom-24 md:bottom-8 left-4 right-4 md:left-auto md:right-4 md:w-80 p-4 rounded-lg bg-white dark:bg-gray-800 border-2 border-blue-500 shadow-lg z-40"
@@ -176,7 +170,8 @@ export default function SocialPage() {
               <div>
                 <div className="font-bold text-sm">{currentUserRank.displayName}</div>
                 <div className="text-xs txt-dim">
-                  Rank #{currentUserRank.rank} • {currentUserRank.totalSaved.toLocaleString()} ALGO
+                  Rank #{currentUserRank.rank} â€¢{" "}
+                  {currentUserRank.totalSaved.toLocaleString()} ALGO
                 </div>
               </div>
             </div>

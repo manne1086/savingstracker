@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
@@ -6,48 +7,60 @@ import "react-toastify/dist/ReactToastify.css";
 import { VaultProvider } from "./contexts/VaultContext";
 import { WalletProvider } from "./contexts/WalletContext";
 import { ToastProvider } from "./contexts/ToastContext";
-import VaultLayout from "./components/VaultLayout";
-import VaultDashboard from "./pages/vault/Dashboard";
-import VaultGoals from "./pages/vault/Goals";
-import VaultSocial from "./pages/vault/Social";
-import VaultRewards from "./pages/vault/Rewards";
-import VaultProfile from "./pages/vault/Profile";
-import PageNotFound from "./pages/PageNotFound";
+
+const LandingPage = lazy(() => import("./pages/LandingPage"));
+const VaultLayout = lazy(() => import("./components/VaultLayout"));
+const VaultDashboard = lazy(() => import("./pages/vault/Dashboard"));
+const VaultGoals = lazy(() => import("./pages/vault/Goals"));
+const VaultSocial = lazy(() => import("./pages/vault/Social"));
+const VaultRewards = lazy(() => import("./pages/vault/Rewards"));
+const VaultProfile = lazy(() => import("./pages/vault/Profile"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+
+const queryClient = new QueryClient();
+
+function AppFallback() {
+  return (
+    <div className="min-h-screen bg-primary txt flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-sm txt-dim uppercase tracking-[0.2em]">
+          Loading Vault
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
-  const queryClient = new QueryClient();
-
   return (
     <ToastProvider>
       <QueryClientProvider client={queryClient}>
         <WalletProvider>
           <VaultProvider>
-            <Routes>
-            {/* Vault Routes */}
-            <Route path="/vault" element={<VaultLayout />}>
-              <Route index element={<VaultDashboard />} />
-              <Route path="goals" element={<VaultGoals />} />
-              <Route path="social" element={<VaultSocial />} />
-              <Route path="rewards" element={<VaultRewards />} />
-              <Route path="profile" element={<VaultProfile />} />
-            </Route>
+            <Suspense fallback={<AppFallback />}>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
 
-            {/* Fallback */}
-            <Route path="/" element={<VaultLayout />}>
-              <Route index element={<VaultDashboard />} />
-            </Route>
+                <Route path="/vault" element={<VaultLayout />}>
+                  <Route index element={<VaultDashboard />} />
+                  <Route path="goals" element={<VaultGoals />} />
+                  <Route path="social" element={<VaultSocial />} />
+                  <Route path="rewards" element={<VaultRewards />} />
+                  <Route path="profile" element={<VaultProfile />} />
+                </Route>
 
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
+                <Route path="*" element={<PageNotFound />} />
+              </Routes>
 
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            closeOnClick
-            pauseOnHover
-            theme="light"
-          />
+              <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover
+                theme="light"
+              />
+            </Suspense>
           </VaultProvider>
         </WalletProvider>
       </QueryClientProvider>

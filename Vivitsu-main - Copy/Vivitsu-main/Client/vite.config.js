@@ -12,6 +12,10 @@ export default defineConfig(({ mode }) => {
       global: "globalThis",
     },
     plugins: [react()],
+    server: {
+      host: "0.0.0.0",
+      allowedHosts: [".trycloudflare.com"],
+    },
     resolve: {
       alias: { "@/": path.resolve(__dirname, "src") + "/" },
     },
