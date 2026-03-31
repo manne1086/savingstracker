@@ -12,7 +12,6 @@ const LandingPage = lazy(() => import("./pages/LandingPage"));
 const VaultLayout = lazy(() => import("./components/VaultLayout"));
 const VaultDashboard = lazy(() => import("./pages/vault/Dashboard"));
 const VaultGoals = lazy(() => import("./pages/vault/Goals"));
-const VaultSocial = lazy(() => import("./pages/vault/Social"));
 const VaultRewards = lazy(() => import("./pages/vault/Rewards"));
 const VaultProfile = lazy(() => import("./pages/vault/Profile"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
@@ -44,7 +43,6 @@ function App() {
                 <Route path="/vault" element={<VaultLayout />}>
                   <Route index element={<VaultDashboard />} />
                   <Route path="goals" element={<VaultGoals />} />
-                  <Route path="social" element={<VaultSocial />} />
                   <Route path="rewards" element={<VaultRewards />} />
                   <Route path="profile" element={<VaultProfile />} />
                 </Route>

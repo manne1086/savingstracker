@@ -18,12 +18,6 @@ const pageMeta = {
     description:
       "Goal progress, milestones, and recent deposit history stay routed through the same vault state.",
   },
-  "/vault/social": {
-    eyebrow: "Community Layer",
-    title: "See how your vault stacks up",
-    description:
-      "Leaderboards and badges remain connected to the active vault context instead of static mock routes.",
-  },
   "/vault/rewards": {
     eyebrow: "Rewards Center",
     title: "Review XP, badges, and milestones",

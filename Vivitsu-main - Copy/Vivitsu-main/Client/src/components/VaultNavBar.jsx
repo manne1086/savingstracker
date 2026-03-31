@@ -8,13 +8,11 @@ import {
   Target,
   Trophy,
   User,
-  Users,
 } from "lucide-react";
 
 const navItems = [
   { path: "/vault", label: "Dashboard", icon: LayoutDashboard },
   { path: "/vault/goals", label: "Goals", icon: Target },
-  { path: "/vault/social", label: "Social", icon: Users },
   { path: "/vault/rewards", label: "Rewards", icon: Trophy },
   { path: "/vault/profile", label: "Profile", icon: User },
 ];
